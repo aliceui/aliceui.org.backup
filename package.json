@@ -1,0 +1,14 @@
+{
+  "name": "Alice",
+  "version": "0.0.1",
+  "root": "",
+  "description": "写样式的更好方式",
+  "homepage": "http://aliceui.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliceui/aliceui.org"
+  },
+  "bugs": {
+    "url": "https://github.com/aliceui/aliceui.org/issues"
+  }
+}

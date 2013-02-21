@@ -1,0 +1,94 @@
+body {
+    color: #555;
+}
+
+a {
+    color: #7CAE23;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#body-wrapper,
+#footer-wrapper {    
+    max-width: 90%;
+}
+
+.side-area {
+    width: 320px;
+    font-size: 14px;
+    position: fixed;
+    top: 20px;
+    left: 70px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #888;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    background: #fff url(/static/alice.png) 160px 15px no-repeat;
+}
+
+.title {
+    padding: 30px 0 0 30px;
+}
+
+.title h1 {
+    font-size: 56px;
+    font-family: 'Trebuchet MS';
+    margin: 0;    
+}
+
+.title h1 a {
+    color: #7CAE23;
+}
+
+.title h1 a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.title .description {
+    margin: 0;
+    font-size: 12px;
+}
+
+.dashed-line {
+    margin: 36px 20px 15px 20px;
+    height: 0;
+    border: none;
+    border-top: 1px dashed #ccc;
+}
+
+.sidenav {
+    list-style-position: inside;
+    line-height: 1.8;
+    border-radius: 4px;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.sidenav li {
+    padding-left: 20px;
+}
+
+.main-area {
+    margin-left: 348px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px 30px;
+    border-radius: 4px;    
+}
+
+/* responsive */
+@media (max-width: 980px) {
+    .side-area {
+        position: static!important;
+        width: 100%;
+    }
+    .main-area {
+        margin-left: 0;  
+    }
+}

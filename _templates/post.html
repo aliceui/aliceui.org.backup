@@ -17,17 +17,9 @@
   </div>
   <hr class="dashed-line">
   <ol class="sidenav">
-    {%- for item in resource.pages|find_all('alice') %}
-    {%- if item.filename != 'index' %}
+    {%- for item in resource.pages %}
     <li><a href="{{permalink_url(item)}}">{{item.title}}</a></li>
-    {%- endif %}
     {%- endfor %}
-    <li><a href="{{permalink_url(item)}}">测试标题</a></li>    
-    <li><a href="{{permalink_url(item)}}">测试标题</a></li>    
-    <li><a href="{{permalink_url(item)}}">测试标题</a></li>    
-    <li><a href="{{permalink_url(item)}}">测试标题</a></li>    
-    <li><a href="{{permalink_url(item)}}">测试标题</a></li>    
-    <li><a href="{{permalink_url(item)}}">测试标题</a></li>    
   </ol>
 </div>
 <div class="main-area">

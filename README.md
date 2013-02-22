@@ -1,6 +1,7 @@
 # 首页 - 关于 Alice
 
 - order: 1
+- category: alice
 
 ---
 

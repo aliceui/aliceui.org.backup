@@ -1,0 +1,36 @@
+{
+    "name": "allinone",
+    "version": "1.0.0",
+    "root": "alice-style",
+    "description": "alice 模块集合",
+    "homepage": "",
+    "author": "",
+    "repository": {
+        "type": "git",
+        "url": "https://aliceui.github.com/"
+    },
+    "bugs": {
+        "url": "https://aliceui.github.com/"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "grid": "alice/grid/1.0.0/grid.css",        
+        "button": "alice/button/1.0.0/button.css",
+        "button-dropdown": "alice/button-dropdown/1.0.0/button-dropdown.css",
+        "box": "alice/box/1.0.0/box.css",
+        "list": "alice/list/1.0.0/list.css",
+        "poptip": "alice/poptip/1.0.0/poptip.css",
+        "paging": "alice/paging/1.0.0/paging.css",
+        "tab": "alice/tab/1.0.0/tab.css",
+        "table": "alice/table/1.0.0/table.css",
+        "tipbox": "alice/tipbox/1.0.0/tipbox.css",
+        "tiptext": "alice/tiptext/1.0.0/tiptext.css",
+        "animate": "alice/animate/1.0.0/animate.css",
+        "step": "alice/step/1.0.0/step.css",
+        "form": "alice/form/1.0.0/form.css"
+    },
+    "tests": ["allinone"],
+    "output": {
+        "allinone.css": "*"
+    }
+}

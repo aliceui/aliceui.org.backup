@@ -1,0 +1,16 @@
+/* alice.allinone 样式模块 */
+
+@import url('grid');
+@import url('button');
+@import url('button-dropdown');
+@import url('box');
+@import url('list');
+@import url('poptip');
+@import url('paging');
+@import url('tab');
+@import url('table');
+@import url('tipbox');
+@import url('tiptext');
+@import url('animate');
+@import url('step');
+@import url('form');

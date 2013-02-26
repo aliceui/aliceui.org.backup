@@ -148,12 +148,11 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
                     moduleNode.find('.alice-module-version')
                         .html(data.find('.version a').html());
 
-                    data.find('.nico-insert-code').each(function(item) {
+                    data.find('.nico-insert-code').each(function(index, item) {
                         item = $(item);
                         var subtitle = item.prev().html();
                         var code = item.next().html();
                         
-                        console.log(subtitle, code);
                         moduleNode.find('.alice-module-subtitle').html(subtitle);
                         moduleNode.find('.alice-module-dom').html(item.html());                        
                         moduleNode.find('.alice-module-code').html(code);

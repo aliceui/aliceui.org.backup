@@ -140,10 +140,11 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
                 url: '/' + dep[0],
                 dataType: 'html',
                 success: function(data) {
-                    console.log(data);
                     data = $(data);
-                    console.log(data);
-                    console.log(data.find('.description').html());
+                    moduleNode.find('.entry-content p:first-child')
+                        .html(data.find('.description').html());
+                    moduleNode.find('.alice-module-version')
+                        .html(data.find('.version a').html());
                 }
             });
 

@@ -133,7 +133,9 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
         var deps = _.pairs(data.dependencies);
         _.each(deps, function(dep) {
             var moduleNode = $($('#alice-module').html());
-            moduleNode.find('.alice-module-title a').html(dep[0]);
+            moduleNode.find('.alice-module-title a')
+                .attr('href', '/' + dep[0])
+                .html(dep[0]);
             moduleNode.appendTo('.alice-modules');
 
             $.ajax({

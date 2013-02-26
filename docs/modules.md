@@ -17,14 +17,16 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
                 <h2 class="module-title"></h2>\
                 <div class="module-code"></div>\
             </div>';
+        console.log(html);
         var moduleNode = $(html);
+        console.log(moduleNode);
         moduleNode.find('.module-title').html(data.name);
 
         var deps = _.keys(data.dependencies);
         _.each(deps, function(dep) {
-            moduleNode.find('. module-code')
-                .load('/' + dep + ' .nico-insert-code')
-                .appendTo('.alice-modules');
+            moduleNode.find('.module-code')
+                .load('/' + dep + ' .nico-insert-code');
+            moduleNode.appendTo('.alice-modules');
         });
     });
 });

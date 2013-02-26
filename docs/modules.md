@@ -40,7 +40,6 @@
     border-bottom: 1px solid #eee;    
     padding: 0;
     margin-bottom: 20px;
-    overflow: hidden;
 }
 .alice-module-head {
     overflow: hidden;
@@ -76,6 +75,7 @@
     border-bottom: none;
     padding: 30px 130px 20px 30px;
     position: relative;
+    overflow: hidden;    
 }
 .alice-module-demo:hover {
     background: #fdfdfd;

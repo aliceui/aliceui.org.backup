@@ -107,6 +107,7 @@
     background: #EFFFE4;
     border-radius: 3px;    
     display: none;
+    z-index: 99;
 }
 .nico-insert-code a {
     color: #08c;

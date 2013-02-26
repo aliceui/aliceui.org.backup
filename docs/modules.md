@@ -32,6 +32,9 @@
 </script>
 
 <style>
+.content img {
+    max-width: 100%;
+}
 .alice-module {
     border-bottom: 1px solid #eee;    
     padding: 0;
@@ -39,7 +42,7 @@
 }
 .alice-module-head {
     overflow: hidden;
-    margin: 40px 0 0 0;    
+    margin: 50px 0 0 0;    
 }
 .alice-module-title {
     margin: 0;

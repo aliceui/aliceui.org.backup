@@ -141,8 +141,8 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
                 dataType: 'html',
                 success: function(data) {
                     data = $(data);
-                    moduleNode.find('.entry-content p:first-child')
-                        .html(data.find('.description').html());
+                    moduleNode.find('.alice-module-description')
+                        .html(data.find('.entry-content > p:first-child').html());
                     moduleNode.find('.alice-module-version')
                         .html(data.find('.version a').html());
                 }

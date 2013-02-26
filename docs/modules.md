@@ -71,10 +71,6 @@
     padding: 20px 130px 20px 20px;
     position: relative;
     overflow: hidden;
-
-    min-height: 70px;
-    height:auto !important;
-    height: 70px;
 }
 .alice-module-demo:hover {
     background: #fdfdfd;

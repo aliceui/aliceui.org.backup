@@ -38,7 +38,7 @@
 }
 .alice-module-head {
     overflow: hidden;
-    margin: 20px 0 0 0;    
+    margin: 40px 0 0 0;    
 }
 .alice-module-title {
     margin: 0;
@@ -84,7 +84,7 @@
     right: 0;
     border-radius: 3px;
     margin: 0;
-    color: #666;
+    color: #777;
     font-size: 12px;
     background: #F8F8F8;
     border-bottom: 1px solid #ddd;

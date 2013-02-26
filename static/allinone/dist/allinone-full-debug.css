@@ -875,7 +875,6 @@ a.ui-paging-next:hover {
 @charset "utf-8";
 
 .ui-poptip {
-    position: absolute;
     color: #DB7C22;
     z-index: 101;
     font-size: 12px;

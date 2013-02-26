@@ -117,16 +117,19 @@
 <script>
 seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
     
-    $('.alice-module-demo').hover(function() {
+    $('.alice-modules').on('mouseover', '.alice-module-demo', function() {
         $(this).find('.alice-module-sourcecode').fadeIn(200);
-    }, function() {
+    }).on('mouseout', '.alice-module-demo', function() {
         $(this).find('.alice-module-sourcecode').fadeOut(200);         
     });
 
-    $('.alice-module-sourcecode').toggle(function() {
-        $(this).parent().find('.alice-module-code').slideDown(200);
-    }, function() {
-        $(this).parent().find('.alice-module-code').slideUp(200);
+    $('.alice-modules').on('click', '.alice-module-sourcecode', function() {
+        var code = $(this).parent().find('.alice-module-code');
+        if (code.is(':hidden')) {
+            code.slideDown(200);
+        } else {
+            code.slideUp(200);
+        }
     });
 
     $.getJSON('../static/allinone/package.json', function(data) {

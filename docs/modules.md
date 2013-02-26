@@ -5,9 +5,9 @@
 
 ---
 
-这里是 Alice 的通用样式模块库。
+这里是 Alice 的通用样式模块库。找到你需要的模块，复制代码，然后享受生活去吧。
 
----
+![](../static/modules.jpg)
 
 <script type="text/template" id="alice-module">
     <div class="alice-module">

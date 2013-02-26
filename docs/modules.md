@@ -68,13 +68,13 @@
 .alice-module-demo {
     border: 1px solid #eee;
     border-bottom: none;
-    padding: 30px 130px 20px 30px;
+    padding: 20px 130px 20px 20px;
     position: relative;
     overflow: hidden;
 
-    min-height: 100px;
+    min-height: 70px;
     height:auto !important;
-    height:500px;
+    height: 70px;
 }
 .alice-module-demo:hover {
     background: #fdfdfd;

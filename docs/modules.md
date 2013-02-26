@@ -174,7 +174,7 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
         var code = html;
         code = code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
         code = code.replace(/^\s*\n/, '').replace(/\n\s*$/, '');
-        code = prettyPrintOne(code, 'html', true);
+        code = PR.prettyPrintOne(code, 'html', true);
         return code;
     } 
 

@@ -112,7 +112,7 @@
     z-index: 99;
     opacity: 0.8;   
 }
-.nico-insert-code a {
+.alice-module-dom a {
     color: #08c;
 }
 </style>

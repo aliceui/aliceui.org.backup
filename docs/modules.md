@@ -70,7 +70,11 @@
     border-bottom: none;
     padding: 30px 130px 20px 30px;
     position: relative;
-    overflow: hidden;    
+    overflow: hidden;
+
+    min-height: 100px;
+    height:auto !important;
+    height:500px;
 }
 .alice-module-demo:hover {
     background: #fdfdfd;

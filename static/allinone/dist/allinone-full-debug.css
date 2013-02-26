@@ -1461,6 +1461,7 @@ a.ui-poptip-close:hover {
     top: 0;
     left: 0;
     font-style: normal;
+    line-height: 1.5;
 }
 
 .ui-tiptext-arrowup, .ui-tiptext-arrowleft, .ui-tiptext-arrowdown {

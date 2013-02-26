@@ -9,11 +9,6 @@
 
 ---
 
-<link type="text/css" rel="stylesheet" media="screen" href="../static/allinone/dist/allinone-full.css">
-<link type="text/css" rel="stylesheet" media="screen" href="../static/tomorrow.css">
-
-<div class="alice-modules"></div>
-
 <script type="text/template" id="alice-module">
     <div class="alice-module">
         <div class="alice-module-head">
@@ -117,6 +112,10 @@
 }
 </style>
 
+<div class="alice-modules"></div>
+
+<link type="text/css" rel="stylesheet" media="screen" href="../static/allinone/dist/allinone-full.css">
+<link type="text/css" rel="stylesheet" media="screen" href="../static/tomorrow.css">
 <script src="../static/google-code-prettify/run_prettify.js"></script>
 <script>
 seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {

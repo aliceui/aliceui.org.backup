@@ -73,7 +73,7 @@
 .alice-module-demo {
     border: 1px solid #eee;
     border-bottom: none;
-    padding: 20px 130px 20px 20px;
+    padding: 30px 130px 20px 30px;
     position: relative;
 }
 .alice-module-demo:hover {
@@ -97,17 +97,21 @@
     font-size: 12px;
     width: 100px;
     padding: 5px 10px;
+    opacity: 0.8;
 }
 .alice-module-sourcecode {
     position: absolute;
     right: 125px;
     top: 0;
     font-size: 12px;
-    padding: 5px 10px 6px;
+    padding: 5px 10px;
     background: #EFFFE4;
+    border-bottom: 1px solid #7CAE23;
+    border-left: 1px solid #7CAE23;
     border-radius: 3px;    
     display: none;
     z-index: 99;
+    opacity: 0.8;    
 }
 .nico-insert-code a {
     color: #08c;

@@ -31,7 +31,7 @@
         <h3 class="alice-module-subtitle"></h3>
         <a class="alice-module-sourcecode" href="javascript:;">查看源码</a>
         <div class="alice-module-dom"></div>
-        <pre class="alice-module-code prettyprint"></pre>
+        <pre class="alice-module-code highlight"></pre>
     </div>
 </script>
 
@@ -156,7 +156,7 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
                         var demoNode = $($('#alice-module-demo').html());
                         item = $(item);
                         var subtitle = item.prev().html();
-                        var code = item.next().html();
+                        var code = item.next().find('pre').html();
                         
                         demoNode.find('.alice-module-subtitle').html(subtitle);
                         demoNode.find('.alice-module-dom').html(item.html());                        

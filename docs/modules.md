@@ -165,7 +165,7 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
                         var subtitle = item.prev().html();
                         var code = HtmlToCode(item.html());
                         
-                        demoNode.find('.alice-module-subtitle').html(subtitle);
+                        demoNode.find('.alice-module-subtitle').html(subtitle || '默认');
                         demoNode.find('.alice-module-dom').html(item.html());                        
                         demoNode.find('.alice-module-code').html(code);
                         demoNode.appendTo(moduleNode);

@@ -20,8 +20,8 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
         var deps = _.pairs(data.dependencies);
         _.each(deps, function(dep) {
             var moduleNode = $(html);
-            moduleNode.find('.module-title').html(dep.key);
-            moduleNode.find('.module-code').load('/' + dep.key + ' .nico-insert-code');
+            moduleNode.find('.module-title').html(dep[0]);
+            moduleNode.find('.module-code').load('/' + dep[0] + ' .nico-insert-code');
             moduleNode.appendTo('.alice-modules');
         });
     });

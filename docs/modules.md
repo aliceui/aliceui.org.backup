@@ -149,13 +149,15 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
                         .html(data.find('.version a').html());
 
                     data.find('.nico-insert-code').each(function(index, item) {
+                        var demoNode = $($('#alice-module-demo').html());
                         item = $(item);
                         var subtitle = item.prev().html();
                         var code = item.next().html();
                         
-                        moduleNode.find('.alice-module-subtitle').html(subtitle);
-                        moduleNode.find('.alice-module-dom').html(item.html());                        
-                        moduleNode.find('.alice-module-code').html(code);
+                        demoNode.find('.alice-module-subtitle').html(subtitle);
+                        demoNode.find('.alice-module-dom').html(item.html());                        
+                        demoNode.find('.alice-module-code').html(code);
+                        demoNode.appendTo(moduleNode);
                     });
                 }
             });

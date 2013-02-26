@@ -19,6 +19,10 @@ publish: clean build-doc
 clean:
 	@rm -fr _site
 
+upgrade-alice:
+	@cd static/allinone && spm build
+	@cd ../..
+	@git commit -am 'upgrade allinone modules'
 
 reporter = spec
 url = tests/runner.html

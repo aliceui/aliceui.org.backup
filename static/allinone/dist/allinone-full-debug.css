@@ -1182,6 +1182,7 @@ a.ui-poptip-close:hover {
     border:1px solid #ccc;
     width:100%;
     text-align: left;
+    font-size: 12px;
 }
 .ui-table tr:nth-child(even),
 .ui-table-split /* 隔行换色效果 */,

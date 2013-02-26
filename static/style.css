@@ -11,6 +11,14 @@ a:hover {
     text-decoration: underline;
 }
 
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    color: #CCCCCC;
+    height: 4px;
+    padding: 0;
+}
+
 #body-wrapper,
 #footer-wrapper {    
     max-width: 90%;

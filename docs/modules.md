@@ -117,9 +117,9 @@
 <script>
 seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
     
-    $('.alice-modules').on('mouseover', '.alice-module-demo', function() {
+    $('.alice-modules').on('mouseenter', '.alice-module-demo', function() {
         $(this).find('.alice-module-sourcecode').fadeIn(200);
-    }).on('mouseout', '.alice-module-demo', function() {
+    }).on('mouseleave', '.alice-module-demo', function() {
         $(this).find('.alice-module-sourcecode').fadeOut(200);         
     });
 

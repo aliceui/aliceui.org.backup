@@ -12,9 +12,17 @@
 <script>
 seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
     $.getJSON('../static/allinone/package.json', function(data) {
+        var html = '\
+            <div class="module">\
+                <h2 class="module-title"></h2>
+                <div class="module-code"></div>
+            </div>\';
+        var moduleNode = $(html);
+        moduleNode.find('.module-title').html(data.name);
+
         var deps = _.keys(data.dependencies);
         _.each(deps, function(dep) {
-            $('<div class="alice-module"></div>')
+            moduleNode.find('. module-code')
                 .load('/' + dep + ' .nico-insert-code')
                 .appendTo('.alice-modules');
         });

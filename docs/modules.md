@@ -40,6 +40,7 @@
     border-bottom: 1px solid #eee;    
     padding: 0;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 .alice-module-head {
     overflow: hidden;
@@ -88,11 +89,11 @@
     right: 0;
     border-radius: 3px;
     margin: 0;
-    color: #777;
+    color: #666;
     font-size: 12px;
-    background: #F9F9F9;
-    border-bottom: 1px solid #eee;
-    border-left: 1px solid #eee;
+    background: #F8F8F8;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
     display: block;
     font-size: 12px;
     width: 100px;
@@ -106,12 +107,10 @@
     font-size: 12px;
     padding: 5px 10px;
     background: #EFFFE4;
-    border-bottom: 1px solid #7CAE23;
-    border-left: 1px solid #7CAE23;
     border-radius: 3px;    
     display: none;
     z-index: 99;
-    opacity: 0.8;    
+    opacity: 0.8;   
 }
 .nico-insert-code a {
     color: #08c;

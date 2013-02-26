@@ -171,7 +171,7 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
                         demoNode.find('.alice-module-subtitle').html(subtitle);
                         demoNode.find('.alice-module-dom').html(item.html());
                         demoNode.find('.alice-module-code').html(code);
-                        moduleNode.find('.loading').remove();
+                        moduleNode.find('.alice-loading').remove();
                         demoNode.appendTo(moduleNode);
                     });
                 }

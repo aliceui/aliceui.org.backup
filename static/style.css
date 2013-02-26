@@ -27,7 +27,7 @@ a:hover {
     color: #888;
     padding-bottom: 15px;
     margin-bottom: 15px;
-    background: #fff url(/static/alice.png) 160px 15px no-repeat;
+    background: #fff url(alice.png) 160px 15px no-repeat;
 }
 
 .title {

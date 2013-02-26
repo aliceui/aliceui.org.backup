@@ -14,7 +14,6 @@
     },
     "license": "MIT",
     "dependencies": {
-        "animate": "alice/animate/1.0.0/animate.css",
         "box": "alice/box/1.0.0/box.css",
         "button": "alice/button/1.0.0/button.css",
         "button-dropdown": "alice/button-dropdown/1.0.0/button-dropdown.css",

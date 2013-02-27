@@ -42,7 +42,7 @@
 }
 .alice-module-head {
     overflow: hidden;
-    margin: 50px 0 0 0;    
+    margin: 0 0 50px 0;    
 }
 .alice-module-title {
     margin: 0;

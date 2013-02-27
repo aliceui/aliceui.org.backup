@@ -1,0 +1,32 @@
+{%- extends "layout.html" %}
+
+{%- block title -%}{{config.package.name|title}} - {{post.title}}{%- endblock -%}
+
+{%- block afterstyle %}
+<link rel="stylesheet" href="{{static_url('style.css')}}" />
+<script src="{{static_url('index.js')}}"></script>
+{%- endblock %}
+
+{% block body %}
+<div class="side-area">
+  <div class="title">            
+    <h1>
+      <a href="{{content_url('index.html')}}">{{config.package.name|title}}</a>
+    </h1>
+    <p class="description">{{config.package.description}}</p>
+  </div>
+  <hr class="dashed-line">
+  <ol class="sidenav">
+    <li><a href="/">首页</a></li>    
+    {%- for item in resource.pages|find_all('alice') %}
+    <li><a href="{{permalink_url(item)}}">{{item.title}}</a></li>
+    {%- endfor %}
+  </ol>
+</div>
+<div class="main-area">
+    <h1>{{post.title}}</h1>
+    <div class="content">{{post.html}}</div>
+</div>
+{%- endblock %}
+
+{%- block footer %}{% include "snippet/foot.html" %}{% endblock %}

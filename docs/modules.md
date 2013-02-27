@@ -38,11 +38,10 @@
 .alice-module {
     border-bottom: 1px solid #eee;    
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 .alice-module-head {
     overflow: hidden;
-    margin: 0 0 50px 0;    
 }
 .alice-module-title {
     margin: 0;

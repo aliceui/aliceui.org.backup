@@ -312,7 +312,7 @@ pre, code, tt {
 }
 
 #module-output {
-    margin: 10px 0 0;
+    margin: 20px 0 0;
     padding: 0;
     overflow: hidden;
 }
@@ -350,7 +350,7 @@ pre, code, tt {
 #module-output li.module-multiable {
     font-size: 10px;
     padding: 2px;
-    background: #81A6EA;
+    background: #88C438;
     text-shadow: none;
     color: #fff;
     margin-right: 5px;

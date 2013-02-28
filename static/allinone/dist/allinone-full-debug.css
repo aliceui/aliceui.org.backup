@@ -735,6 +735,125 @@ a.ui-button-sblue {
 
 
 
+/** alice/nav/1.0.0/nav.css **/
+.ui-nav {
+  position: relative;
+}
+.ui-nav ul,
+.ui-nav li {
+  list-style-type: none;
+}
+.ui-nav-main {
+  zoom: 1;
+  margin: 0;
+  padding-left: 10px;
+  -webkit-border-radius: 2px 2px 0 0;
+  border-radius: 2px 2px 0 0;
+  background: -webkit-linear-gradient(top, #f39100, #f17a00);
+  background: -moz-linear-gradient(top, #f39100, #f17a00);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#f39100, endColorstr=#f17a00);
+}
+.ui-nav-main:before,
+.ui-nav-main:after {
+  content: "";
+  display: table;
+}
+.ui-nav-main:after {
+  clear: both;
+}
+.ui-nav-item {
+  float: left;
+  margin: 7px 5px 0 0;
+}
+.ui-nav-item a {
+  display: inline-block;
+  _display: inline;
+  _zoom: 1;
+  height: 35px;
+  padding: 0 15px;
+  line-height: 35px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+.ui-nav-item a:hover {
+  background: -webkit-linear-gradient(top, #f49c25, #f49726);
+  background: -moz-linear-gradient(top, #f49c25, #f49726);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#f49c25, endColorstr=#f49726);
+  -webkit-border-radius: 2px 2px 0 0;
+  border-radius: 2px 2px 0 0;
+}
+.ui-nav-item-current a,
+.ui-nav-item-current a:hover {
+  background: #fff;
+  filter: none;
+  color: #6d6969;
+  -webkit-border-radius: 2px 2px 0 0;
+  border-radius: 2px 2px 0 0;
+}
+.ui-nav-submain {
+  display: none;
+  position: absolute;
+  left: 10px;
+  top: 42px;
+  margin: 0;
+  padding: 0;
+}
+.ui-nav-subitem {
+  float: left;
+  margin: 5px 10px 0 0;
+}
+.ui-nav-subitem a {
+  padding: 0 15px;
+  height: 24px;
+  line-height: 26px;
+  background: transparent;
+  border: 1px solid transparent;
+  _border-color: #ff6347;
+  _filter: chroma(#ff6347);
+  color: #868686;
+  font-weight: normal;
+  font-size: 12px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.ui-nav-subitem a:hover {
+  background: transparent;
+  filter: none;
+  -webkit-box-shadow: 0px -1px 0px #f6f6f6;
+  box-shadow: 0px -1px 0px #f6f6f6;
+  border: 1px solid #cecece;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.ui-nav-subitem-current a,
+.ui-nav-subitem-current a:hover {
+  border-left: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  border-top: 1px solid #bebebe;
+  border-bottom: 1px solid transparent;
+  -webkit-box-shadow: inset 0px 1px 0px #dadada;
+  box-shadow: inset 0px 1px 0px #dadada;
+  background: #e7e7e7;
+}
+.ui-nav-subcontainer {
+  height: 37px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: -webkit-linear-gradient(top, #fefefe, #f7f7f7);
+  background: -moz-linear-gradient(top, #fefefe, #f7f7f7);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#fefefe, endColorstr=#f7f7f7);
+}
+.ui-nav-item-current .ui-nav-submain {
+  display: block;
+}
+.ui-nav-nosub .ui-nav-subcontainer,
+.ui-nav-nosub .ui-nav-subitem {
+  display: none;
+}
+
+
 /** alice/paging/1.0.0/paging.css **/
 /* alice.paging 样式模块 */
 
@@ -1749,6 +1868,7 @@ a.ui-poptip-close:hover {
 
 /** alice-style/allinone/1.0.0/allinone.css **/
 /* alice.allinone 样式模块 */
+
 
 
 

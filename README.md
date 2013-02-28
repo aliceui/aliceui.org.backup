@@ -1,37 +1,19 @@
-# 首页 - 关于 Alice
+# 关于 Alice
 
 - order: 1
 - category: alice
 
 ---
 
-## alice 首页
- - 什么是 alice
- - 包括组件
- - 兼容性
- - 和 arale 的关系
- 
-## 基础框架
- - base.css
- - animate.css
- - iconfont.css
- - grid.css
+## Alice 是什么
 
-## 样式库
- - button
- - step
- - nav
- - paging
- - ...
+## Alice 有什么
 
-## JavaScript
- - 和 Arale 结合使用的范例
- 
-## 开始使用
- 
-## 样式库构建规范
+## Alice 能做什么
 
-## 开发一个样式模块
+## 兼容性
 
-## 下载
+## 和 Arale 的关系
+
+## 加入我们
 

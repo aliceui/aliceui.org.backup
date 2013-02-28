@@ -1,4 +1,4 @@
-# 开发一个样式模块
+# 开发样式模块
 
 - order: 7
 - category: alice

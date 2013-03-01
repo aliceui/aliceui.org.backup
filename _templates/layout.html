@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="{{theme.lang}}">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{config.package.name|title}} - {{post.title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="{{system.name}} {{system.version}}" />
+        {%- block assets %}
+        <link type="image/x-icon" href="{{static_url('css/favicon.ico')}}" rel="icon">
+        <link rel="stylesheet" href="{{static_url('css/normalize.css')}}" />
+        <link rel="stylesheet" href="{{static_url('css/site.css')}}" />
+        <link rel="stylesheet" href="{{static_url('style.css')}}" />
+        <script src="http://static.alipayobjects.com/seajs/1.3.1/sea.js"></script>
+        {%- if config.args|debug %}
+        <script>seajs._nicodebug = true</script>
+        {%- endif %}
+        <script src="{{static_url('js/arale-helper.js')}}"></script>
+        {%- include "snippet/head.html" %}
+        <!--[if lt IE 9]>
+        <script src="{{static_url('js/html5shiv.js')}}"></script>
+        <![endif]-->
+        {%- endblock %}
+        <script src="{{static_url('index.js')}}"></script>        
+    </head>
+    <body>
+        <div id="body-wrapper">
+            <div class="head-area">
+                <div class="title">            
+                    <h1>
+                        <a href="{{content_url('index.html')}}">{{config.package.name|title}}</a>
+                    </h1>
+                    <p class="description">{{config.package.description}}</p>
+                </div>
+            </div>
+            <div class="nav-area">
+                <ol class="main-nav">
+                    <li><a href="/">首页</a></li>
+                    {%- for item in resource.pages|find_all('alice') %}
+                    <li><a href="{{permalink_url(item)}}">{{item.title}}</a></li>
+                    {%- endfor %}
+                </ol>
+            </div>
+            <div class="main-area">
+                <ul class="side-area">
+                    <script type="text/template" id="list-template">
+                        <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
+                    </script>
+                </ul>
+                <div class="content-area">
+                    <h1>{{post.title}}</h1>
+                    <div class="content">{{post.html}}</div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-wrapper">
+            <footer>
+            <p class="powered">
+            {%- include "snippet/foot.html" %}
+            </p>
+            </footer>
+        </div>
+    </body>
+</html>
+

@@ -1,12 +1,12 @@
 body {
-    color: #555;
+    color: #666;
     background: #fdfdfd;
+    font-family: "Marcellus",sans-serif;    
 }
 
 a {
     color: #7CAE23;
     text-decoration: none;
-    font-family: "Marcellus",sans-serif;
 }
 
 a:hover {
@@ -104,15 +104,14 @@ hr {
 .main-area {
     width: 1140px;
     margin: 30px auto 0;
-    overflow: hidden;
     position: relative;
 }
 
 .content-area {
     background: #fff;
     border: 1px solid #ddd;
-    padding: 0 20px;
-    width: 878px;
+    padding: 0 29px;
+    width: 860px;
     margin-left: 220px;
 }
 
@@ -153,6 +152,33 @@ hr {
 
 .side-area a:hover .iconfont {
     color: #aaa;
+}
+
+.content-area h1 {
+    font-size: 28px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.content-area h1:before, 
+.content-area h1:after {
+    content: '—';
+    color: #eee;
+    margin: 1.5em;
+}
+
+.content-area h2 {
+    font-size: 22px;
+    color: #7CAE23;
+    margin-top: 40px;
+}
+
+.content-area h3 {
+    font-size: 18px;
+}
+
+.content-area h4 {
+    font-size: 14px;
 }
 
 /* responsive */

@@ -126,6 +126,15 @@
 
 <script>
 seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
+
+    var substractTitle = function(item) {
+        item = item.find('a');
+        var list = $($('#list-template').html());
+        list.find('a i').html(item.attr('keywords'));
+        list.find('a').html(item.html() + list.find('a').html());
+        list.find('a').attr('href', '#' + item.attr('id'));
+        list.appendTo('.side-area');
+    };
     
     $('.alice-modules').on('mouseenter', '.alice-module-demo', function() {
         $(this).find('.alice-module-sourcecode').fadeIn(200);
@@ -161,7 +170,9 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
                     moduleNode.find('.alice-module-description')
                         .html(data.find('.entry-content > p:first-child').html());
                     moduleNode.find('.alice-module-version')
-                        .html(data.find('.version a').html());
+                        .html(data.find('.sidebar-wrapper .version a').html());
+                    moduleNode.attr('keywords',
+                        data.find('.sidebar-wrapper .keywords').html());
 
                     data.find('.nico-insert-code').each(function(index, item) {
                         var demoNode = $($('#alice-module-demo').html());

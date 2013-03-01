@@ -120,7 +120,7 @@ h3.alice-module-subtitle {
 
 <div class="alice-modules"></div>
 
-<link type="text/css" rel="stylesheet" media="screen" href="../static/allinone/dist/allinone-full.css">
+<link type="text/css" rel="stylesheet" media="screen" href="../static/widgets/dist/widgets-full.css">
 <link type="text/css" rel="stylesheet" media="screen" href="../static/tomorrow.css">
 <script src="../static/google-code-prettify/run_prettify.js"></script>
 

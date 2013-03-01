@@ -1,4 +1,4 @@
-/* alice.allinone 样式模块 */
+/* alice.widgets 样式模块 */
 
 @import url('box');
 @import url('button');
@@ -12,4 +12,5 @@
 @import url('table');
 @import url('tipbox');
 @import url('tiptext');
+@import url('select');
 @import url('step');

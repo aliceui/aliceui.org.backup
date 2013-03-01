@@ -244,7 +244,7 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
                         .html(data.find('.entry-content > p:first-child').html());
                     moduleNode.find('.alice-module-version')
                         .html(data.find('#sidebar-wrapper .version a').html());
-                    moduleNode.attr('keywords',
+                    moduleNode.find('h2 a').attr('keywords',
                         data.find('#sidebar-wrapper .keywords').html());
 
                     data.find('.nico-insert-code').each(function(index, item) {

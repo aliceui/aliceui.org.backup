@@ -19,8 +19,8 @@ clean:
 	@rm -fr _site
 
 upgrade-alice:
-	@cd static/allinone && spm build
-	@git commit -am 'upgrade allinone modules'
+	@cd static/widgets && spm build
+	@git commit -am 'upgrade widgets modules'
 
 reporter = spec
 url = tests/runner.html

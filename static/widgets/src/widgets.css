@@ -1,0 +1,16 @@
+/* alice.widgets 样式模块 */
+
+@import url('box');
+@import url('button');
+@import url('button-dropdown');
+@import url('form');
+@import url('list');
+@import url('nav');
+@import url('paging');
+@import url('poptip');
+@import url('tab');
+@import url('table');
+@import url('tipbox');
+@import url('tiptext');
+@import url('select');
+@import url('step');

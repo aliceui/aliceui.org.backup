@@ -1,7 +1,8 @@
 body {
     color: #666;
     background: #fdfdfd;
-    font-family: "Marcellus",sans-serif;    
+    font-family: "Marcellus",sans-serif;
+    line-height: 1.5;
 }
 
 a {
@@ -19,6 +20,16 @@ hr {
     color: #CCCCCC;
     height: 4px;
     padding: 0;
+}
+
+.content code {
+    background-color: #FEE9CC;
+    border-radius: 3px 3px 3px 3px;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 13px;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 1px 3px;
 }
 
 #body-wrapper {
@@ -124,6 +135,14 @@ hr {
     list-style: none;
     border-bottom: 1px solid #ddd;
     background: #fff;
+}
+
+.side-loading {
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid #ddd;
+    border-bottom: none;
 }
 
 .side-area a {

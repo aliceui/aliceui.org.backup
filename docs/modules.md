@@ -183,7 +183,6 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
                     // 在这里写到左边索引栏中
                     moduleNode.find('.alice-module-version')
                     var keywords = data.find('#sidebar-wrapper .keywords').html();
-                    console.log(keywords);
                     if (keywords) {
                         list.find('i').html(keywords);
                     }
@@ -203,6 +202,7 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
     } 
 
     function substractTitle(item) {
+        $('.side-loading').remove();        
         item = item.find('a');
         var list = $($('#list-template').html());
         list.find('a').html(item.html() + list.find('a').html());

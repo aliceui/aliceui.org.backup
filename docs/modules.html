@@ -154,7 +154,7 @@
 .alice-module-code {
     display: none;
 }
-.alice-module-subtitle {
+h3.alice-module-subtitle {
     position: absolute;
     top: 0;
     right: 0;
@@ -243,9 +243,9 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
                     moduleNode.find('.alice-module-description')
                         .html(data.find('.entry-content > p:first-child').html());
                     moduleNode.find('.alice-module-version')
-                        .html(data.find('.sidebar-wrapper .version a').html());
+                        .html(data.find('#sidebar-wrapper .version a').html());
                     moduleNode.attr('keywords',
-                        data.find('.sidebar-wrapper .keywords').html());
+                        data.find('#sidebar-wrapper .keywords').html());
 
                     data.find('.nico-insert-code').each(function(index, item) {
                         var demoNode = $($('#alice-module-demo').html());

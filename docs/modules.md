@@ -13,7 +13,7 @@
     <div class="alice-module">
         <div class="alice-module-head">
             <h2 class="alice-module-title">
-                <a herf="/button"></a>
+                <a href="#"></a>
             </h2>
             <span class="alice-module-version">1.0.0</span>
             <p class="alice-module-description"></p>
@@ -148,8 +148,10 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
             var moduleNode = $($('#alice-module').html());
             moduleNode.find('.alice-module-title a')
                 .attr('href', '/' + dep[0])
+                .attr('id', 'modules-' + dep[0])
                 .html(dep[0]);
             moduleNode.appendTo('.alice-modules');
+            substractTitle(moduleNode.find('h2'));        
 
             $.ajax({
                 url: '/' + dep[0],

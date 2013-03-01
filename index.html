@@ -1,17 +1,16 @@
 <!DOCTYPE HTML>
 <html lang="zh">
-  <head>
-    <meta charset="UTF-8">
-    <title>Alice - 首页 - 关于 Alice</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="nico 0.2.3" />
-    <link type="image/x-icon" href="./static/css/favicon.ico" rel="icon">
-    <link rel="stylesheet" href="./static/css/normalize.css" />
-    <link rel="stylesheet" href="./static/css/site.css" />
-    <link rel="stylesheet" href="./static/css/solarized.css" />
-    <script src="http://static.alipayobjects.com/seajs/1.3.1/sea.js"></script>
-    <script src="./static/js/arale-helper.js"></script>
-    <script src="./static/js/site.js"></script><script type="text/javascript">
+    <head>
+        <meta charset="UTF-8">
+        <title>Alice - 关于 Alice</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="nico 0.2.3" />
+        <link type="image/x-icon" href="./static/css/favicon.ico" rel="icon">
+        <link rel="stylesheet" href="./static/css/normalize.css" />
+        <link rel="stylesheet" href="./static/css/site.css" />
+        <link rel="stylesheet" href="./static/style.css" />
+        <script src="http://static.alipayobjects.com/seajs/1.3.1/sea.js"></script>
+        <script src="./static/js/arale-helper.js"></script><script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-36247332-1']);
   _gaq.push(['_trackPageview']);
@@ -43,71 +42,49 @@
 
   })();
 </script>
-    <!--[if lt IE 9]>
-    <script src="./static/js/html5shiv.js"></script>
-    <![endif]-->
-    
-<link rel="stylesheet" href="./static/style.css" />
-<script src="./static/index.js"></script>
-
-  </head>
-  <body>
-    <div id="body-wrapper">
-      
-<div class="side-area">
-  <div class="title">            
-    <h1>
-      <a href="./">Alice</a>
-    </h1>
-    <p class="description">写样式的更好方式</p>
-  </div>
-  <hr class="dashed-line">
-  <ol class="sidenav">
-    <li><a href="/">首页</a></li>
-    <li><a href="./docs/basic-framwork.html">基础框架</a></li>
-    <li><a href="./docs/modules.html">样式库</a></li>
-    <li><a href="./docs/javascript.html">JavaScript</a></li>
-    <li><a href="./docs/use.html">开始使用</a></li>
-    <li><a href="./docs/alice-rules.html">样式库构建规范</a></li>
-    <li><a href="./docs/add-new-module.html">开发一个样式模块</a></li>
-    <li><a href="./docs/download.html">下载</a></li>
-  </ol>
-</div>
-<div class="main-area">
-    <h1>首页 - 关于 Alice</h1>
-    <div class="content"><h2 id="alice-%E9%A6%96%E9%A1%B5">alice 首页</h2>
-<ul>
-<li>什么是 alice</li>
-<li>包括组件</li>
-<li>兼容性</li>
-<li>和 arale 的关系</li>
-</ul>
-<h2 id="%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6">基础框架</h2>
-<ul>
-<li>base.css</li>
-<li>animate.css</li>
-<li>iconfont.css</li>
-<li>grid.css</li>
-</ul>
-<h2 id="%E6%A0%B7%E5%BC%8F%E5%BA%93">样式库</h2>
-<ul>
-<li>button</li>
-<li>step</li>
-<li>nav</li>
-<li>paging</li>
-<li>...</li>
-</ul>
-<h2 id="javascript">JavaScript</h2>
-<ul>
-<li>和 Arale 结合使用的范例</li>
-</ul>
-<h2 id="%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8">开始使用</h2><h2 id="%E6%A0%B7%E5%BC%8F%E5%BA%93%E6%9E%84%E5%BB%BA%E8%A7%84%E8%8C%83">样式库构建规范</h2><h2 id="%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E6%A0%B7%E5%BC%8F%E6%A8%A1%E5%9D%97">开发一个样式模块</h2><h2 id="%E4%B8%8B%E8%BD%BD">下载</h2></div>
-</div>
-
-    </div>
-    <div id="footer-wrapper">
-      <footer>
-        <p class="powered"><script type="text/javascript" charset="utf-8">
+        <!--[if lt IE 9]>
+        <script src="./static/js/html5shiv.js"></script>
+        <![endif]-->
+        
+        <script src="./static/index.js"></script>        
+    </head>
+    <body>
+        <div id="body-wrapper">
+            <div class="head-area">
+                <div class="title">            
+                    <h1>
+                        <a href="./">Alice</a>
+                    </h1>
+                    <p class="description">写样式的更好方式</p>
+                </div>
+            </div>
+            <div class="nav-area">
+                <ol class="main-nav">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="./docs/basic-framwork.html">基础框架</a></li>
+                    <li><a href="./docs/modules.html">通用样式库</a></li>
+                    <li><a href="./docs/javascript.html">JavaScript</a></li>
+                    <li><a href="./docs/use.html">开始使用</a></li>
+                    <li><a href="./docs/alice-rules.html">规范和最佳实践</a></li>
+                    <li><a href="./docs/add-new-module.html">开发样式模块</a></li>
+                    <li><a href="./docs/stylelib.html">搭建样式库</a></li>
+                </ol>
+            </div>
+            <div class="main-area">
+                <ul class="side-area">
+                    <script type="text/template" id="list-template">
+                        <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
+                    </script>
+                </ul>
+                <div class="content-area">
+                    <h1>关于 Alice</h1>
+                    <div class="content"><h2 id="alice-%E6%98%AF%E4%BB%80%E4%B9%88">Alice 是什么</h2><h2 id="alice-%E6%9C%89%E4%BB%80%E4%B9%88">Alice 有什么</h2><h2 id="alice-%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88">Alice 能做什么</h2><h2 id="%E5%85%BC%E5%AE%B9%E6%80%A7">兼容性</h2><h2 id="%E5%92%8C-arale-%E7%9A%84%E5%85%B3%E7%B3%BB">和 Arale 的关系</h2><h2 id="%E5%8A%A0%E5%85%A5%E6%88%91%E4%BB%AC">加入我们</h2></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-wrapper">
+            <footer>
+            <p class="powered"><script type="text/javascript" charset="utf-8">
   (function(){
     var _w = 72 , _h = 16;
     var param = {
@@ -128,12 +105,13 @@
     document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
   })()
 </script>
-        <a href="http://aralejs.org">Arale</a> •
-        <a href="http://aliceui.org">Alice</a> •
-        <a href="https://github.com/spmjs/spm">spm</a> •
-        <a href="http://lab.lepture.com/nico/">nico</a>
-        </p>
-      </footer>
-    </div>
-  </body>
+<a href="http://aralejs.org">Arale</a> •
+<a href="http://aliceui.org">Alice</a> •
+<a href="http://seajs.org">SeaJS</a> •
+<a href="https://github.com/spmjs/spm">spm</a> •
+<a href="http://lab.lepture.com/nico/">nico</a>
+            </p>
+            </footer>
+        </div>
+    </body>
 </html>

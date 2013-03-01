@@ -5,7 +5,7 @@
 
 ---
 
-## Base
+## Base 重设
 
 base.css 是 Alice 的浏览器重设样式。（[关于 reset.css](http://meyerweb.com/eric/tools/css/reset/)）
 

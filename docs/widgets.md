@@ -32,9 +32,6 @@
 </script>
 
 <style>
-.content img {
-    max-width: 100%;
-}
 .alice-module {
     border-bottom: 1px solid #eee;    
     padding: 0;

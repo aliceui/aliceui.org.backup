@@ -75,13 +75,11 @@ Rei 目前涵盖了网站常用各类图标约 70 多个，兼容包括 `ie6/7/8
     *display: inline;
     *zoom: 1;
     height: 22px;
-    width: 155px;
+    width: 158px;
     color: #888;
     font-size: 14px;
     line-height: 22px;
     margin-bottom: 5px;
-    position: relative;
-    top: 4px;
 }
 .icon .iconfont {
     margin-right: 10px;
@@ -90,6 +88,8 @@ Rei 目前涵盖了网站常用各类图标约 70 多个，兼容包括 `ie6/7/8
     display: inline-block;
     *display: inline;
     *zoom: 1;
+    position: relative;
+    top: 2px;
 }
 </style>
 

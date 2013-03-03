@@ -21,7 +21,7 @@ Alice 的 base.css 是结合支付宝开发经验，借鉴 [normalize.css](http:
 
 ```css
 body {
-    font:12px/1.5 tahoma,arial,Hiragino Sans GB,\5b8b\4f53;
+    font:12px/1.5 tahoma,arial,Hiragino Sans GB,"Microsoft Yahei",\5b8b\4f53;
 }
 ```
 

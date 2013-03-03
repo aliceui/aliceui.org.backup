@@ -1,4 +1,4 @@
-# 通用样式库
+# 通用组件库
 
 - order: 3
 - category: alice

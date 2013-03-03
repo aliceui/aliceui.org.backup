@@ -294,7 +294,6 @@ body .fn-hide {
 
 /* 人民币符号 */
 .fn-rmb {
-    font-size: .75em;
     font-family: arial;
     font-style: normal;
     padding-right: 4px;

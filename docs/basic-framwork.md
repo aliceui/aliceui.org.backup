@@ -41,9 +41,7 @@ body {
 
 - `fn-linear-light` 浅色的简单渐变
 
-- `fn-rmb` 金额样式
-
-    <span class="fn-rmb">￥23.67</span>
+- `fn-rmb` 金额样式 <span class="fn-rmb">￥23.67</span>
 
 - `fn-webkit-adjust` 用于修复 webkit 下小于 10px 的中文字体
 

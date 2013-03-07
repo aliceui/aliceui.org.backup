@@ -215,7 +215,7 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
         }
     });
 
-    $.getJSON('../static/widgets/package.json', function(data) {
+    $.getJSON('../package.json', function(data) {
         var deps = _.pairs(data.dependencies);
         _.each(deps, function(dep) {
             var moduleNode = $($('#alice-module').html());

@@ -7,7 +7,7 @@
 
 这里是 Alice 的通用样式模块库。找到你需要的模块，复制代码，然后享受生活去吧。
 
-![](../static/modules.jpg)
+![](https://i.alipayobjects.com/e/201303/2MQNiaBkFJ.png)
 
 <script type="text/template" id="alice-module">
     <div class="alice-module">
@@ -35,6 +35,7 @@
 .alice-module {
     border-bottom: 1px solid #eee;    
     padding: 0;
+    margin-top: 20px;
     margin-bottom: 50px;
     font:12px/1.5 tahoma,arial,Hiragino Sans GB,"Microsoft Yahei",\5b8b\4f53;
 }
@@ -108,7 +109,7 @@ h3.alice-module-subtitle {
     z-index: 99;
     opacity: 0.8;   
 }
-.alice-module-dom a {
+a {
     color: #08c;
 }
 .alice-loading {
@@ -118,7 +119,6 @@ h3.alice-module-subtitle {
 
 <div class="alice-modules"></div>
 
-<link type="text/css" rel="stylesheet" media="screen" href="../static/widgets/dist/widgets-full.css">
 <link type="text/css" rel="stylesheet" media="screen" href="../static/tomorrow.css">
 <script src="../static/google-code-prettify/run_prettify.js"></script>
 
@@ -140,7 +140,7 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
         }
     });
 
-    $.getJSON('../static/widgets/package.json', function(data) {
+    $.getJSON('../package.json', function(data) {
         var deps = _.pairs(data.dependencies);
         _.each(deps, function(dep) {
             var moduleNode = $($('#alice-module').html());

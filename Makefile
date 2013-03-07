@@ -18,10 +18,6 @@ publish: clean build-doc
 clean:
 	@rm -fr _site
 
-upgrade-alice:
-	@cd static/widgets && spm build
-	@git commit -am 'upgrade widgets modules'
-
 reporter = spec
 url = tests/runner.html
 test:

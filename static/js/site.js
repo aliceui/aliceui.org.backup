@@ -10,7 +10,7 @@ seajs.use(['$', 'arale/popup/0.9.11/popup'], function($, Popup) {
     // 给 code 加收起和展开
     $('.highlight').each(function(i, item) {
       var $item = $(item)
-      if ($item.height() > 400) {
+      if ($item.height() > 300) {
         $item.append('<a class="code-toggle" href="#">展开</a>')
         $item.addClass('collapse')
       }

@@ -126,7 +126,7 @@ hr {
     margin: 0 auto;
     padding: 0;
     margin-top: 10px;
-    width: 840px;
+    width: 850px;
 }
 
 .main-nav li {
@@ -304,3 +304,44 @@ body .fn-hide {
 .fn-webkit-adjust {
     -webkit-text-size-adjust: none;
 }
+
+
+.content .nico-iframe {
+    position: relative;
+}
+.content .nico-iframe iframe {
+    width: 100%;
+}
+.content .nico-iframe .new-window {
+    position: absolute;
+    top: 30px;
+    right: -40px;
+    font-size: 12px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+}
+.content .highlight {
+    background-color: transparent;
+    padding-top: 1px;
+    position: relative;
+}
+.content .collapse pre {
+    overflow: hidden;
+    height: 60px;
+}
+
+.content .highlight .code-toggle {
+    position: absolute;
+    top: -10px;
+    right: 2px;
+    font-size: 12px;
+    padding: 3px 5px;
+    background: rgba(0, 0, 0, 0.16);
+    border-radius: 4px 4px 0 0;
+    text-decoration: none;
+    color: #fff;
+    line-height: 1;
+}
+

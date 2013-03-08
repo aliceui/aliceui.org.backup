@@ -206,12 +206,11 @@ hr {
 }
 
 .side-area a .iconfont {
-    color: #ccc;
+    color: #aaa;
     position: absolute;
     right: 12px;
     top: 11px;
     font-size: 12px;
-    text-shadow: 0 0 3px #eee;
 }
 
 .side-area a:hover {

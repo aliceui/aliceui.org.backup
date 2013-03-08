@@ -81,7 +81,135 @@
                 </ul>
                 <div class="content-area">
                     <h1>开始使用</h1>
-                    <div class="content"><h2 id="%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BE%8B%E5%AD%90">一个简单的例子</h2><h2 id="%E4%B8%8B%E8%BD%BD">下载</h2></div>
+                    <div class="content"><blockquote>
+<p>You jump, I jump!   <em>「Titanic」1997</em></p>
+</blockquote>
+
+<p>准备要使用 Alice 了吗，太棒了！请随我来。</p>
+
+<hr/>
+<h2 id="%E4%B8%80%E4%B8%AA%E7%AE%80%E9%99%8B%E7%9A%84%E4%BE%8B%E5%AD%90">一个简陋的例子</h2><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">title</span>&gt;</span>Alice 的简单例子<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+<span class="tag">&lt;<span class="title">link</span> <span class="attribute">media</span>=<span class="value">"all"</span> <span class="attribute">href</span>=<span class="value">"http://modules.spmjs.org/alice/one/1.0.0/one-full.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
+    <span class="class">.wrapper</span> <span class="rules">{
+        <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">990</span>px;</span></span>
+        <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> auto;</span></span>
+    <span class="rule">}</span></span>
+    <span class="tag">h1</span> <span class="rules">{
+        <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">26</span>px;</span></span>
+    <span class="rule">}</span></span>
+    <span class="class">.ui-grid-row</span> <span class="rules">{
+        <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">15</span>px;</span></span>
+    <span class="rule">}</span></span>
+</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"wrapper"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-grid-row"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-grid-25"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">h1</span>&gt;</span>这是一个简陋的页面<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-grid-row"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-grid-25"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-nav"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-nav-main"</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-item"</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>一级导航 1<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-nav-submain"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-subitem ui-nav-subitem-current"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>二级导航 1-1<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-subitem"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>二级导航 1-2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-subitem"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>二级导航 1-3<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-item ui-nav-item-current"</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>一级导航 2<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-nav-submain"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-subitem"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>二级导航 2-1<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-subitem ui-nav-subitem-current"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>二级导航 2-2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-subitem"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>二级导航 2-3<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-item"</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>一级导航 3<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-nav-submain"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-subitem"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>二级导航 3-1<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-subitem"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>二级导航 3-2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-subitem ui-nav-subitem-current"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>二级导航 3-3<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-item"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>一级导航 4<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-nav-subcontainer"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-grid-row"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-grid-6"</span>&gt;</span>
+
+
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-box"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-box-head"</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-box-head-border"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"ui-box-head-title"</span>&gt;</span>区块标题<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-box-head-text"</span>&gt;</span>其他文字<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"ui-box-head-more"</span>&gt;</span>更多<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-box-container"</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-box-content"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-list"</span>&gt;</span>
+                            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-list-item"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>如何申请认证？<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-list-item"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>如何提现？<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-list-item"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>支付宝数字证书有什么作用？<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-list-item"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>如何申请认证？<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+                        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-grid-19"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tipbox ui-tipbox-success"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tipbox-icon"</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"成功"</span>&gt;</span>ï<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-tipbox-content"</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"ui-tipbox-title"</span>&gt;</span>成功标题<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"ui-tipbox-explain"</span>&gt;</span>完成的说明完成的说明。<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"ui-tipbox-explain"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>查询缴费记录<span class="tag">&lt;/<span class="title">a</span>&gt;</span> | <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>我的支付宝<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+</code></pre></div>
+<p>把上述代码复制到一个新的 html 文件中，然后用浏览器打开。</p>
+
+<p>你会看到一个使用了 grid、box、nav 和 tipbox 四个组件的页面。</p>
+
+<p>这里我们引用了一个 <a href="http://modules.spmjs.org/alice/one/1.0.0/one-full.css">one-full.css</a> 文件，
+这是一个打包了所有 alice 模块的集合文件，github 地址<a href="https://github.com/aliceui/one">在此</a>。</p>
+
+<p>使用 alice 非常简单，只需要引入样式，复制对应的 DOM 结构，就能构建需要的页面了。
+相关的文档和 DOM 结构可以访问菜单上的 <a href="/docs/basic-framwork.html">基础框架</a>、<a href="/docs/widgets.html">通用组件库</a>、<a href="/docs/javascript.html">JavaScript</a> 这三个链接。</p>
+<h2 id="%E4%B8%8B%E8%BD%BD">下载</h2>
+<ol>
+<li><p>可以直接下载上面的 css 文件，这里提供一个未压缩的版本。</p>
+
+<p><a href="http://modules.spmjs.org/alice/one/1.0.0/one-full-debug.css">http://modules.spmjs.org/alice/one/1.0.0/one-full-debug.css</a></p></li>
+<li><p>或者通过 <a href="https://github.com/spmjs/spm/">spm</a> 工具进行下载。</p>
+
+<pre>$ spm install alice
+</pre>
+
+<p>和 Arale 模块一样，这行命令会把所有的 Alice 模块安装到 sea-modules 目录中，您可以自由合并和调用。</p></li>
+<li><p>当然也可以到我们的 <a href="https://github.com/aliceui/">github 仓库</a> 中 clone 对应的模块。</p></li>
+</ol>
+</div>
                 </div>
             </div>
         </div>

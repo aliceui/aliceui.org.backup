@@ -24,9 +24,14 @@ hr {
 
 .content blockquote {
     border-left: 0.4em solid #DDDDDD;
-    color: #777777;
+    color: #888;
     margin: 15px 0;
     padding: 0 15px;
+}
+
+.content blockquote em {
+    color: #9C6C6C;
+    margin-left: 1em;
 }
 
 .content img {

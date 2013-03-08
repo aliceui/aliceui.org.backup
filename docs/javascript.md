@@ -10,7 +10,7 @@
 
 只有样式模块是无法开发页面的，现在我们需要一些 JavaScript 的功能。
 
-还好，我们有 [Arale](http://aralejs.org/) 。本页面将用几个常用的范例介绍如何搭配使用 Alice 和 AraleJS。
+万幸，我们有 [Arale](http://aralejs.org/) 。本页面将用几个常用的范例介绍如何搭配使用 Alice 和 Arale。(这里的 Arale 特指 JS 解决方案)
 
 ![](https://i.alipayobjects.com/e/201303/2MPpg2ju9k.jpg)
 

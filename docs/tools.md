@@ -15,4 +15,4 @@
 
 ## Peaches - 雪碧图
 
-## AliceLib - 样式库搭建工具
+## Alib - 样式库搭建工具

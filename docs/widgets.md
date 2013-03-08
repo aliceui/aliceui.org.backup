@@ -204,7 +204,7 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
     } 
 
     function substractTitle(item) {
-        $('.side-loading').remove();        
+        $('.side-loading').remove();
         item = item.find('a');
         var list = $($('#list-template').html());
         list.find('a').html(item.html() + list.find('a').html());

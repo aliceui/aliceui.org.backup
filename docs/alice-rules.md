@@ -5,7 +5,7 @@
 
 ---
 
-> When other men are limited by of laws, remember, Every thing is permitted. 
+> When other men are limited by of laws, remember, Everything is permitted. 
 *「 Assassin's Creed: Brotherhood 」*
 
 ---

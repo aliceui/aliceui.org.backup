@@ -239,6 +239,10 @@ hr {
     font-size: 14px;
 }
 
+.content-area p {
+    margin: 1.5em 0;
+}
+
 /* responsive */
 @media (max-width: 980px) {
 

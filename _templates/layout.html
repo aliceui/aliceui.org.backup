@@ -22,7 +22,11 @@
         <script src="{{static_url('js/html5shiv.js')}}"></script>
         <![endif]-->
         {%- endblock %}
-        <script src="{{static_url('index.js')}}"></script>
+        <script>
+        seajs.use(['arale/fixed/1.0.0/fixed'], function(Fixed) {
+            Fixed('.side-area', 20);
+        });
+        </script>
     </head>
     <body>
         <div id="body-wrapper">
@@ -43,12 +47,18 @@
                 </ol>
             </div>
             <div class="main-area">
-                <ul class="side-area">
-                    <li class="side-loading"><img width="160" alt="加载中..." src="/static/loading.gif"></li>
-                    <script type="text/template" id="list-template">
-                        <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
-                    </script>
-                </ul>
+                {%- if post.toc %}
+                <div class="side-area">{{post.toc}}</div>
+                {% else %}
+                <div class="side-area">
+                    <ul>
+                        <li class="side-loading"><img width="160" alt="加载中..." src="/static/loading.gif"></li>
+                    </ul>
+                </div>                
+                {%- endif %}
+                <script type="text/template" id="list-template">
+                    <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
+                </script>
                 <div class="content-area">
                     <h1>{{post.title}}</h1>
                     <div class="content">{{post.html}}</div>
@@ -58,6 +68,7 @@
         <div id="footer-wrapper">
             <footer>
             <p class="powered">
+            <!--
             <script type="text/javascript" charset="utf-8">
               (function(){
                 var _w = 72 , _h = 16;
@@ -79,6 +90,7 @@
                 document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
               })()
             </script>
+            -->
             {%- include "snippet/foot.html" %}
             </p>
             </footer>

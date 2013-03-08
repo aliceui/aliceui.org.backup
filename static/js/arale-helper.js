@@ -1,4 +1,8 @@
 ;(function() {
+
+  // 跨子域补丁
+  document.domain = document.domain.split(".").slice(-2).join("."); 
+
   var CDN_MODULES = [
     'jquery', 'zepto', 'json', 'jasmine', 'underscore', 'handlebars',
     'seajs', 'moment', 'async', 'store', 'swfobject', 'backbone', 'raphael'

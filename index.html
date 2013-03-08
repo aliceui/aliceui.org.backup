@@ -48,7 +48,11 @@
         <script src="./static/js/html5shiv.js"></script>
         <![endif]-->
         
-        <script src="./static/index.js"></script>
+        <script>
+        seajs.use(['arale/fixed/1.0.0/fixed'], function(Fixed) {
+            Fixed('.side-area', 20);
+        });
+        </script>
     </head>
     <body>
         <div id="body-wrapper">
@@ -73,12 +77,11 @@
                 </ol>
             </div>
             <div class="main-area">
-                <ul class="side-area">
-                    <li class="side-loading"><img width="160" alt="加载中..." src="/static/loading.gif"></li>
-                    <script type="text/template" id="list-template">
-                        <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
-                    </script>
-                </ul>
+                <div class="side-area"><ul><li><a href="#alice-%E6%98%AF%E4%BB%80%E4%B9%88">Alice 是什么</a></li><li><a href="#alice-%E6%9C%89%E4%BB%80%E4%B9%88">Alice 有什么</a></li><li><a href="#alice-%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88">Alice 能做什么</a></li><li><a href="#%E5%85%BC%E5%AE%B9%E6%80%A7">兼容性</a></li><li><a href="#%E5%92%8C-arale-%E7%9A%84%E5%85%B3%E7%B3%BB">和 Arale 的关系</a></li><li><a href="#%E5%8A%A0%E5%85%A5%E6%88%91%E4%BB%AC">加入我们</a></li></ul></div>
+                
+                <script type="text/template" id="list-template">
+                    <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
+                </script>
                 <div class="content-area">
                     <h1>关于 Alice</h1>
                     <div class="content"><h2 id="alice-%E6%98%AF%E4%BB%80%E4%B9%88">Alice 是什么</h2><h2 id="alice-%E6%9C%89%E4%BB%80%E4%B9%88">Alice 有什么</h2><h2 id="alice-%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88">Alice 能做什么</h2><h2 id="%E5%85%BC%E5%AE%B9%E6%80%A7">兼容性</h2><h2 id="%E5%92%8C-arale-%E7%9A%84%E5%85%B3%E7%B3%BB">和 Arale 的关系</h2><h2 id="%E5%8A%A0%E5%85%A5%E6%88%91%E4%BB%AC">加入我们</h2></div>
@@ -88,6 +91,7 @@
         <div id="footer-wrapper">
             <footer>
             <p class="powered">
+            <!--
             <script type="text/javascript" charset="utf-8">
               (function(){
                 var _w = 72 , _h = 16;
@@ -108,7 +112,8 @@
                 }
                 document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
               })()
-            </script><a href="http://aralejs.org">Arale</a> •
+            </script>
+            --><a href="http://aralejs.org">Arale</a> •
 <a href="http://aliceui.org">Alice</a> •
 <a href="http://seajs.org">SeaJS</a> •
 <a href="https://github.com/spmjs/spm">spm</a> •

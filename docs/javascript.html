@@ -48,7 +48,11 @@
         <script src="../static/js/html5shiv.js"></script>
         <![endif]-->
         
-        <script src="../static/index.js"></script>
+        <script>
+        seajs.use(['arale/fixed/1.0.0/fixed'], function(Fixed) {
+            Fixed('.side-area', 20);
+        });
+        </script>
     </head>
     <body>
         <div id="body-wrapper">
@@ -73,12 +77,11 @@
                 </ol>
             </div>
             <div class="main-area">
-                <ul class="side-area">
-                    <li class="side-loading"><img width="160" alt="加载中..." src="/static/loading.gif"></li>
-                    <script type="text/template" id="list-template">
-                        <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
-                    </script>
-                </ul>
+                <div class="side-area"><ul><li><a href="#%E5%9C%A8-arale-%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%A0%B7%E5%BC%8F">在 Arale 中使用样式</a></li><li><a href="#switchable">Switchable</a></li><li><a href="#autocomplete">AutoComplete</a></li><li><a href="#tip">Tip</a></li><li><a href="#dialog">Dialog</a></li><li><a href="#%E6%9B%B4%E5%A4%9A%E5%8A%9F%E8%83%BD">更多功能</a></li></ul></div>
+                
+                <script type="text/template" id="list-template">
+                    <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
+                </script>
                 <div class="content-area">
                     <h1>JavaScript</h1>
                     <div class="content"><blockquote>
@@ -88,7 +91,7 @@
 
 <p>只有样式模块是无法开发页面的，现在我们需要一些 JavaScript 的功能。</p>
 
-<p>还好，我们有 <a href="http://aralejs.org/">Arale</a> 。本页面将用几个常用的范例介绍如何搭配使用 Alice 和 AraleJS。</p>
+<p>万幸，我们有 <a href="http://aralejs.org/">Arale</a> 。本页面将用几个常用的范例介绍如何搭配使用 Alice 和 Arale。(这里的 Arale 特指 JS 解决方案)</p>
 
 <p><img src="https://i.alipayobjects.com/e/201303/2MPpg2ju9k.jpg" alt=""/></p>
 
@@ -336,6 +339,7 @@ Arale 提供了完善的 JavaScript 解决方案，
         <div id="footer-wrapper">
             <footer>
             <p class="powered">
+            <!--
             <script type="text/javascript" charset="utf-8">
               (function(){
                 var _w = 72 , _h = 16;
@@ -356,7 +360,8 @@ Arale 提供了完善的 JavaScript 解决方案，
                 }
                 document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
               })()
-            </script><a href="http://aralejs.org">Arale</a> •
+            </script>
+            --><a href="http://aralejs.org">Arale</a> •
 <a href="http://aliceui.org">Alice</a> •
 <a href="http://seajs.org">SeaJS</a> •
 <a href="https://github.com/spmjs/spm">spm</a> •

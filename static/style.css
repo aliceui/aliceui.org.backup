@@ -16,13 +16,14 @@ a:hover {
 
 hr {
     border: 0;
-    border-top: 1px solid #ddd;
-    color: #CCCCCC;
-    height: 4px;
-    padding: 0;
+    height: 2px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.3), rgba(0,0,0,0));
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.3), rgba(0,0,0,0)); 
+    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.3), rgba(0,0,0,0)); 
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.3), rgba(0,0,0,0)); 
 }
 
-.content blockquote {
+ .content blockquote {
     border-left: 0.4em solid #DDDDDD;
     color: #888;
     margin: 15px 0;
@@ -78,6 +79,7 @@ hr {
 #footer-wrapper {
     width: 1140px;
     max-width: 1140px;
+    font-family: "Marcellus",sans-serif;    
 }
 
 /* - - - - - - - */
@@ -123,6 +125,7 @@ hr {
     margin-bottom: 15px;
     background: #E8FBCE;
     border-top: 4px solid #9ACD4B;
+    text-align: center;
 }
 
 .main-nav {
@@ -165,14 +168,22 @@ hr {
 }
 
 .side-area {
-    width: 220px;
+    overflow: hidden;
     position: absolute;
     top: 0;
+    width: 220px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.side-area ul {
     padding: 0;
     margin: 0;
     list-style: none;
-    border-bottom: 1px solid #ddd;
-    background: #fff;
+}
+
+.side-area ul li ul {
+    display: none;
 }
 
 .side-loading {
@@ -309,12 +320,12 @@ body .fn-hide {
     padding-right: 4px;
 }
 
-
 /* chrome 下字体过小的问题 */
 .fn-webkit-adjust {
     -webkit-text-size-adjust: none;
 }
 
+/* --- */
 
 .content .nico-iframe {
     position: relative;

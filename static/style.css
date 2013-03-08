@@ -249,14 +249,6 @@ hr {
     font-size: 14px;
 }
 
-.content-area p {
-    margin: 1.5em 0;
-}
-
-.alice-modules p {
-    margin: auto;
-}
-
 /* responsive */
 @media (max-width: 980px) {
 

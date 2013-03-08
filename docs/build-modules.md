@@ -237,7 +237,7 @@ $ curl https://raw.github.com/aliceui/Alib/master/Alib-alipay.sh | sh
 
 然后就可以将这个库部署到对应的 git 托管环境下，然后运行一个命令就可以将样式库部署到相应位置。
 若是托管在 github 则是部署到对应的 gh-pages 页面，支付宝的前端则可以部署到 site.alipay.im 服务上。
-具体的地址是 http://css.alipay.im/{{在 package.json 中写的 name }} 。
+具体的地址是 `http://css.alipay.im/{{package.json中的name}}` 。
 
 ````
 $ make publish

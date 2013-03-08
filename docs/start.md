@@ -131,7 +131,7 @@
 
     [http://modules.spmjs.org/alice/one/1.0.0/one-full-debug.css](http://modules.spmjs.org/alice/one/1.0.0/one-full-debug.css)
 
-2. 或者通过 [spm](https://github.com/spmjs/spm/) 工具进行下载。
+2. 或者通过 [spm](https://github.com/spmjs/spm/) 工具进行下载。（这个工具在后面会大量使用）
 
     ```
     $ spm install alice

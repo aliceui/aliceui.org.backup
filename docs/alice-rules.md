@@ -5,3 +5,10 @@
 
 ---
 
+> When other men blindly follow the truth, remember, Nothing is ture. 
+
+> When other men are limited by of laws, remember, Every thing is permitted. 
+*「 Assassin's Creed: Brotherhood 」*
+
+
+---

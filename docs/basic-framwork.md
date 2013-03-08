@@ -5,6 +5,11 @@
 
 ---
 
+> Louis, I think this is the beginning of a beautiful friendship.
+*「 Casablanca 」1942*
+
+---
+
 <link rel="stylesheet" href="http://modules.spmjs.org/alice/grid/1.0.0/grid.css" />
 <link rel="stylesheet" href="http://modules.spmjs.org/alice/animate/1.0.0/animate.css" />
 

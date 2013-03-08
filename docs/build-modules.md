@@ -5,6 +5,10 @@
 
 ---
 
+> More power comes more responsibility. *「 Spider Man 」2012*
+
+---
+
 ## 开发一个样式组件
 
 ## 开发某页面的样式

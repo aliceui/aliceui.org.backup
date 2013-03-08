@@ -5,6 +5,9 @@
 
 ---
 
+> I'm going to make him an offer he can't refuse.
+*「 The GodFather 」1942*
+
 只有样式模块是无法开发页面的，现在我们需要一些 JavaScript 的功能。
 
 还好，我们有 [Arale](http://aralejs.org/) 。本页面将用几个常用的范例介绍如何搭配使用 Alice 和 AraleJS。

@@ -42,12 +42,25 @@ Nico 也是服务于 CMD 生态圈的文档构建和调试工具。它在 Alice 
 
 在 Alice 中，有一个针对 Alice 模块的主题 [nico-alice](https://github.com/aliceui/nico-alice)，使用前请确保安装。
 
-这是目前前端文档和调试界最简单且出色的工具，没有之一。用了它，你会爱上写文档。
+这是目前前端文档和调试界最出色且简单的工具，没有之一。用了它，你会爱上写文档。
+
+[nico 主页](http://lab.lepture.com/nico/)
 
 ## Peaches - 雪碧图
 
-等 @蔡伦 来写。
+虽然 Alice 中不推荐在通用组件中使用图片背景，但是在业务线的开发中不能避免的会碰到需要图片才能实现的需求。
+痛苦的合成雪碧图技术就成了前端必不可少的技能之一，所以我们有了 Peaches 这样的工具来帮助我们。
 
+Peaches 是支付宝前端工程师 @蔡伦 同学开发的，是一个 CSS 雪碧图编译工具。
+
+Peaches 通过分析 CSS 样式规则，提取背景图片，自动合并成雪碧图，
+并自动更新背景定位。免去了手动合并图片和定位的麻烦，而且也大大提升后续修改样式的效率。
+
+更多功能请访问 peaches 主页：
+
+[![](https://raw.github.com/slowhost/upload/1362839444253/peaches.png)](http://peaches.io/)
+
+在 spm2 中将会集成 Peaches 工具，尽请期待。
 
 ## Alib - 样式库搭建工具
 

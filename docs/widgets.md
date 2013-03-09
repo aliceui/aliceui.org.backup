@@ -193,7 +193,6 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
 
         });
     });
-
     
     function HtmlToCode(html) {
         var code = html;

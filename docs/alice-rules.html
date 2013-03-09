@@ -77,7 +77,7 @@
                 </ol>
             </div>
             <div class="main-area">
-                <div class="side-area"><ul><li><a href="#%E6%A8%A1%E5%9D%97%E7%BB%84%E7%BB%87%E8%A7%84%E8%8C%83">模块组织规范</a></li><li><a href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">模块化命名规范</a></li><li><a href="#css-%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83">CSS 编码规范</a></li><li><a href="#%E5%86%99%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">写样式的最佳实践</a></li><li><a href="#%E5%B8%B8%E8%A7%81%E5%85%BC%E5%AE%B9%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">常见兼容解决方案</a></li></ul></div>
+                <div class="side-area"><ul><li><a href="#%E6%A8%A1%E5%9D%97%E7%BB%84%E7%BB%87%E8%A7%84%E8%8C%83">模块组织规范</a></li><li><a href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">模块化命名规范</a><ul><li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E6%A0%B7%E5%BC%8F">什么是模块化的样式</a></li><li><a href="#%E6%80%8E%E6%A0%B7%E6%89%8D%E8%83%BD%E5%86%99%E5%87%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E6%A0%B7%E5%BC%8F">怎样才能写出模块化的样式</a></li><li><a href="#alice-%E7%B1%BB%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">Alice 类命名规范</a></li><li><a href="#%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83%E7%9A%84%E6%9C%80%E5%90%8E">命名规范的最后</a></li></ul></li><li><a href="#css-%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83">CSS 编码规范</a></li><li><a href="#%E5%86%99%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">写样式的最佳实践</a></li><li><a href="#%E5%B8%B8%E8%A7%81%E5%85%BC%E5%AE%B9%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">常见兼容解决方案</a></li></ul></div>
                 
                 <script type="text/template" id="list-template">
                     <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
@@ -89,10 +89,149 @@
 <em>「 Assassin&#39;s Creed: Brotherhood 」</em></p>
 </blockquote>
 
-<p>入乡随俗，有一些规则是必须要遵守的，有一些则是经验总结。</p>
+<p>入乡随俗，有一些规则是必须要遵守的，有一些则是经验总结，欢迎拍砖。</p>
 
 <hr/>
-<h2 id="%E6%A8%A1%E5%9D%97%E7%BB%84%E7%BB%87%E8%A7%84%E8%8C%83">模块组织规范</h2><h2 id="%E6%A8%A1%E5%9D%97%E5%8C%96%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">模块化命名规范</h2><h2 id="css-%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83">CSS 编码规范</h2><h2 id="%E5%86%99%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">写样式的最佳实践</h2><h2 id="%E5%B8%B8%E8%A7%81%E5%85%BC%E5%AE%B9%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">常见兼容解决方案</h2></div>
+<h2 id="%E6%A8%A1%E5%9D%97%E7%BB%84%E7%BB%87%E8%A7%84%E8%8C%83">模块组织规范</h2>
+<p>Alice 的样式模块组织方式追求扁平化的方式，分为三个层级：</p>
+
+<ol>
+<li><p>基础框架（reset + iconfont + 栅格）</p></li>
+<li><p>通用模块（符合 Alice 规范的样式模块）</p></li>
+<li><p>页面样式（继承通用模块）</p></li>
+</ol>
+
+<p>Alice 推荐采用上述的层次来组织你的样式文件，在基础框架的基础上开发一定数量的通用模块，
+在页面样式模块中继承基础框架和通用模块，并进一步开发。</p>
+<h2 id="%E6%A8%A1%E5%9D%97%E5%8C%96%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">模块化命名规范</h2>
+<p>本文主要内容来自原 <a href="http://aliceui.com/alice-css-guide/">http://aliceui.com/alice-css-guide/</a> 一文。</p>
+<h3 id="%E4%BB%80%E4%B9%88%E6%98%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E6%A0%B7%E5%BC%8F">什么是模块化的样式</h3>
+<p>Alice 对于模块话样式的理解是组件应该像一个盒模型，不和页面的其他元素互相影响。
+完美的 Alice 模块应该是一个“口”字型结构。比如 box 组件：</p>
+
+<p><img src="https://raw.github.com/slowhost/upload/1362842084975/box.png" alt=""/></p>
+
+<p>ui-box 组件能够嵌到页面上任何一个位置，box 内部也能够嵌入别的模块（比如 list 组件），它们之间不会互相影响。</p>
+<h3 id="%E6%80%8E%E6%A0%B7%E6%89%8D%E8%83%BD%E5%86%99%E5%87%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E6%A0%B7%E5%BC%8F">怎样才能写出模块化的样式</h3>
+<p>一种简单的方式是使用 Alice 的类命名规范，当团队中都能采用这种方式书写样式，就能很好地避免样式冲突。
+在模块化和命名上，以一个Tab组件为例，分解如下：</p>
+
+<p><img src="https://raw.github.com/slowhost/upload/1362844273297/222.jpg" alt=""/></p>
+
+<p>值得注意的是：</p>
+
+<ul>
+<li>组件名是必选的</li>
+<li>状态请参照下文中“状态的规范”</li>
+<li><p>在组件窗口最外一层添加状态，而非给每一个内容添加状态。除非内容有独立的状态</p>
+
+<p>比如，我们可以这样写：</p>
+<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-new ui-new-hover"</span>&gt;</span>
+   <span class="tag">&lt;<span class="title">h3</span>&gt;</span>TITLE<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+   <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"ui-new-cnt"</span>&gt;</span>
+      ....
+   <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre></div>
+<p>但不要这样写：</p>
+<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-new"</span>&gt;</span>
+   <span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"ui-new-title-hover"</span>&gt;</span>TITLE<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+   <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"ui-new-cnt ui-new-cnt-hover"</span>&gt;</span>
+       ....
+   <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre></div></li>
+<li><p>充分考虑组件标签的语义化</p>
+
+<p>语义化是什么？什么样的写法才是正确的。这里给一个建议，把你将要构建的页面当成一本书。是段落的，你就用P(aragraph)；是标题的，就用 H(eader)；是引用的，就用Blockquote。而不是简单的，块状的东西由块状元素包含，行内的元素用行内的标签包含。这里有点要求就是， 去深入了解每个 HTML 标签的用法。关于灵活。像 “在组件窗口最外一层添加状态，而非给每一个内容添加状态。除非内容有独立的状态” 就是一种灵活的表现。让你更灵活去地改变状态。</p>
+
+<p>关于 HTML 的语义化，可以参考：<a href="http://sofish.de/1688">这样去写你的 HTML</a> 。</p></li>
+</ul>
+<h3 id="alice-%E7%B1%BB%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">Alice 类命名规范</h3>
+<p><img src="http://aliceui.com/images/alice-css-guide/dcbzbj8j_35c92sj7fs_b.png" alt=""/></p>
+
+<ul>
+<li><p>组件名</p>
+
+<p>尽量让人看到名字就能知道是什么组件，比较 ui-tab，比如 ui-nav 这样的命名。所有小图标都使用 .ui-icon .ui-icon- 前缀，建议同一系统（域）人的常用小图标全部合成 sprite。用 HTML ENTRY 来引用，不要写空标签，应使用 HTML ENTRY 来替代，以达到语义化的要求。HTML ENTRY 请参考这个文档：<a href="https://docs.google.com/Doc?docid=0AWiI12yCmwaoZGNiemJqOGpfMTVmaHZtOWNkeg">https://docs.google.com/Doc?docid=0AWiI12yCmwaoZGNiemJqOGpfMTVmaHZtOWNkeg</a></p></li>
+<li><p>组件整体状态 = 组件名 + 状态</p>
+
+<p>常用的状态有：hover, current, selected, disabled, focus, blur, checked, success, error 等。通常你的命名应该看起来像 .ui-name-hover, .ui-name-error 这样。</p></li>
+<li><p>组件模块 = 组件名 + 模块名</p>
+
+<p>常用模块名有：cnt(content), hd(header), text(txt), img(images/pic),item, cell 等，只要词义表达了组件要实现的功能或者要表现出来的的外观就可以了。</p></li>
+<li><p>组件模块状态 = 组件模块 + 状态</p>
+
+<p>参照常用状态。</p></li>
+</ul>
+
+<p>命名注意：</p>
+
+<ul>
+<li><p>组件嵌套：大组件可有子组件命名。</p>
+
+<p>拿支付宝某项目中的的 .ui-nav 为例，如果有多级，可以这样命名：</p>
+
+<p>ui-nav &gt; ui-subnav(ui-nav的子类) &gt; ui-list(嵌套进去的其他组件)</p>
+<div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-nav"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-nav-item"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>nav Triggle Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-subnav"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"ui-subnav-item"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>subNav Triggle Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"ui-list"</span> <span class="attribute">....</span>
+</code></pre></div></li>
+<li><p>多状态：用唯一的命名来代替，而非抽象名词。</p>
+
+<p>拿 ui-button 为例：</p>
+
+<pre>ui-button ui-button-1pxcorner [, ui-button-indexsign [, ui-button-SOMEID]]
+</pre>
+
+<p>而不要用 ui-button-round，这样，就可能会有： ui-button-round-a ui-button-round-b … 了。
+按钮又有多个状态，命名就会太长了 ui-button-round-a-disabled 。</p></li>
+<li><p>格调统一：</p>
+
+<p>比如你比较喜欢 ui-tip-container ，另外的一个相同作用的地方，就不要写 ui-message-cnt 了，用 <code>ui-tip-container ui-message-container</code> 或 <code>ui-tip-cnt ui-messages-cnt</code> 这样会是更好的选择。</p></li>
+</ul>
+<h3 id="%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83%E7%9A%84%E6%9C%80%E5%90%8E">命名规范的最后</h3>
+<p>说了这么多，其实简单就是一句话，用 <code>-</code> 来做命名空间上的区隔，最小化两个组件之间的命名冲突。</p>
+
+<p>在 Alice 中，第一个 <code>ui-</code> 是作为通用组件的标识。你可以选取其他前缀来分类你的模块。</p>
+<h2 id="css-%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83">CSS 编码规范</h2>
+<p>直接参考 Google 的规范吧，懒得写了。</p>
+
+<p><a href="http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml">http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml</a></p>
+<h2 id="%E5%86%99%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">写样式的最佳实践</h2>
+<ol>
+<li><p>使用 iconfont 代替雪碧图。</p></li>
+<li><p>坚持渐进增强策略，大胆使用新的 CSS3 技术，对低级浏览器保持基本的视觉支持。</p></li>
+<li><p>设计 Html 结构是开发样式模块的核心工作，不要为了视觉效果迁就 Html 结构。</p></li>
+<li><p>使用 fn-clear 来清除浮动，慎用 <code>overflow: hidden;</code> 。</p></li>
+<li><p>样式模块不要依赖 reset.css ，要有对自身的 reset 代码。</p></li>
+<li><p>欢迎补充。</p></li>
+</ol>
+<h2 id="%E5%B8%B8%E8%A7%81%E5%85%BC%E5%AE%B9%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">常见兼容解决方案</h2>
+<ol>
+<li><p>inline-block</p>
+<div class="highlight"><pre><code class="css"><span class="tag">display</span>: <span class="tag">inline</span>-<span class="tag">block</span>;
+*<span class="tag">display</span>: <span class="tag">inline</span>;
+*<span class="tag">zoom</span>: 1;
+</code></pre></div></li>
+<li><p>最小高度 min-height</p>
+<div class="highlight"><pre><code class="css">min-height: 200px;
+_height: 200px; / hack for ie6 */
+</code></pre></div></li>
+<li><p>顺时针翻转 90 度。</p>
+<div class="highlight"><pre><code class="css">-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+-o-transform: rotate(90deg);
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+transform: rotate(90deg);
+</code></pre></div></li>
+</ol>
+</div>
                 </div>
             </div>
         </div>

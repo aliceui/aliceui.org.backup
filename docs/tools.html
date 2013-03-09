@@ -117,9 +117,23 @@ $ spm deploy    &#47;&#47; 部署到开发机器上
 
 <p>在 Alice 中，有一个针对 Alice 模块的主题 <a href="https://github.com/aliceui/nico-alice">nico-alice</a>，使用前请确保安装。</p>
 
-<p>这是目前前端文档和调试界最简单且出色的工具，没有之一。用了它，你会爱上写文档。</p>
+<p>这是目前前端文档和调试界最出色且简单的工具，没有之一。用了它，你会爱上写文档。</p>
+
+<p><a href="http://lab.lepture.com/nico/">nico 主页</a></p>
 <h2 id="peaches-%E9%9B%AA%E7%A2%A7%E5%9B%BE">Peaches - 雪碧图</h2>
-<p>等 @蔡伦 来写。</p>
+<p>虽然 Alice 中不推荐在通用组件中使用图片背景，但是在业务线的开发中不能避免的会碰到需要图片才能实现的需求。
+痛苦的合成雪碧图技术就成了前端必不可少的技能之一，所以我们有了 Peaches 这样的工具来帮助我们。</p>
+
+<p>Peaches 是支付宝前端工程师 @蔡伦 同学开发的，是一个 CSS 雪碧图编译工具。</p>
+
+<p>Peaches 通过分析 CSS 样式规则，提取背景图片，自动合并成雪碧图，
+并自动更新背景定位。免去了手动合并图片和定位的麻烦，而且也大大提升后续修改样式的效率。</p>
+
+<p>更多功能请访问 peaches 主页：</p>
+
+<p><a href="http://peaches.io/"><img src="https://raw.github.com/slowhost/upload/1362839444253/peaches.png" alt=""/></a></p>
+
+<p>在 spm2 中将会集成 Peaches 工具，尽请期待。</p>
 <h2 id="alib-%E6%A0%B7%E5%BC%8F%E5%BA%93%E6%90%AD%E5%BB%BA%E5%B7%A5%E5%85%B7">Alib - 样式库搭建工具</h2>
 <p>这个工具在 &lt;构建团队的样式库&gt; 一文中提到，没错，这就是构建团队的样式库的模板和工具。
 具体使用方式参见此文就好。</p>

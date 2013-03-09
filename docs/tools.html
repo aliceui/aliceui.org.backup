@@ -88,8 +88,44 @@
 <p>城里的女人就是白啊! <em>「 让子弹飞 」2010</em></p>
 </blockquote>
 
+<p>Alice 作为 Arale 的一部分，离不开 Arale 体系下的 spm 和 nico 两大工具，
+使用方式也大同小异。另外 Alice 还产出了一些其他工具来帮助开发。</p>
+
+<p>Alice 目前源文件都是纯 css 代码，但我们不排斥二次编译的 css 语言（比如stylus、less、scss等），
+目前 <a href="http://aliceui.org/select">alice.select</a> 和 <a href="http://aliceui.org/nav">alice.nav</a> 这两个组件的源码就是用 stylus 写的。
+我们希望有更多业界优秀的工具和语言参与到 Alice 的样式世界中来。</p>
+
 <hr/>
-<h2 id="spm-%E5%8C%85%E7%AE%A1%E7%90%86">Spm - 包管理</h2><h2 id="nico-%E8%B0%83%E8%AF%95-amp-%E6%96%87%E6%A1%A3">Nico - 调试&amp;文档</h2><h2 id="peaches-%E9%9B%AA%E7%A2%A7%E5%9B%BE">Peaches - 雪碧图</h2><h2 id="alib-%E6%A0%B7%E5%BC%8F%E5%BA%93%E6%90%AD%E5%BB%BA%E5%B7%A5%E5%85%B7">Alib - 样式库搭建工具</h2></div>
+<h2 id="spm-%E5%8C%85%E7%AE%A1%E7%90%86">Spm - 包管理</h2>
+<p>Spm 是 CMD 社区的构建和包管理工具，在 1.6 及以前的版本都是为 JavaScript 服务的。
+我们针对样式模块的特点研究出了一套在 CMD 生态圈中如何管理和使用样式的方案，
+并在 spm@1.7+ 中实现了很多重要功能。相关 issue 可以看下 <a href="https://github.com/spmjs/spm/issues/645">#645</a>。
+您会对 spm 对样式的支持有更多的了解。</p>
+
+<p>spm2 之后的版本会对前面的版本做支持，基本使用方式和目前的版本保持一致。</p>
+
+<pre>$ spm init      &#47;&#47; 初始化模块
+$ spm build     &#47;&#47; 完成开发，构建模块
+$ spm upload    &#47;&#47; 将模块上传到源中
+$ spm deploy    &#47;&#47; 部署到开发机器上
+</pre>
+
+<p>常用的命令基本就是这四个，更多 spm 的使用方式，请参考前面的开发教程或 Arale 的相关文档。</p>
+<h2 id="nico-%E8%B0%83%E8%AF%95-amp-%E6%96%87%E6%A1%A3">Nico - 调试&amp;文档</h2>
+<p>Nico 也是服务于 CMD 生态圈的文档构建和调试工具。它在 Alice 中的使用方式和 JS 下如出一辙。
+你如果对 Arale 那套东西熟悉的话很容易就能上手。</p>
+
+<p>在 Alice 中，有一个针对 Alice 模块的主题 <a href="https://github.com/aliceui/nico-alice">nico-alice</a>，使用前请确保安装。</p>
+
+<p>这是目前前端文档和调试界最简单且出色的工具，没有之一。用了它，你会爱上写文档。</p>
+<h2 id="peaches-%E9%9B%AA%E7%A2%A7%E5%9B%BE">Peaches - 雪碧图</h2>
+<p>等 @蔡伦 来写。</p>
+<h2 id="alib-%E6%A0%B7%E5%BC%8F%E5%BA%93%E6%90%AD%E5%BB%BA%E5%B7%A5%E5%85%B7">Alib - 样式库搭建工具</h2>
+<p>这个工具在 &lt;构建团队的样式库&gt; 一文中提到，没错，这就是构建团队的样式库的模板和工具。
+具体使用方式参见此文就好。</p>
+
+<p>支付宝的各业务线有搭建自己的样式库需求的，欢迎使用本工具和提出建议。</p>
+</div>
                 </div>
             </div>
         </div>

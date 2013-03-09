@@ -10,7 +10,7 @@
 Alice 作为 Arale 的一部分，离不开 Arale 体系下的 spm 和 nico 两大工具，
 使用方式也大同小异。另外 Alice 还产出了一些其他工具来帮助开发。
 
-Alice 目前源文件都是纯 css 代码，但我们不排斥二次编译的 css 语言（比如stylus、less、scss等），
+Alice 目前源文件大多是纯 css 代码，但我们不排斥二次编译的 css 语言（比如stylus、less、scss等），
 目前 [alice.select](http://aliceui.org/select) 和 [alice.nav](http://aliceui.org/nav) 这两个组件的源码就是用 stylus 写的。
 我们希望有更多业界优秀的工具和语言参与到 Alice 的样式世界中来。
 

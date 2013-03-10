@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Alice - 规范和最佳实践</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="generator" content="nico 0.2.3" />
+        <meta name="generator" content="nico 0.2.4" />
         <link type="image/x-icon" href="../static/css/favicon.ico" rel="icon">
         <link rel="stylesheet" href="../static/css/normalize.css" />
         <link rel="stylesheet" href="../static/css/site.css" />
@@ -77,7 +77,7 @@
                 </ol>
             </div>
             <div class="main-area">
-                <div class="side-area"><ul><li><a href="#%E6%A8%A1%E5%9D%97%E7%BB%84%E7%BB%87%E8%A7%84%E8%8C%83">模块组织规范</a></li><li><a href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">模块化命名规范</a><ul><li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E6%A0%B7%E5%BC%8F">什么是模块化的样式</a></li><li><a href="#%E6%80%8E%E6%A0%B7%E6%89%8D%E8%83%BD%E5%86%99%E5%87%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E6%A0%B7%E5%BC%8F">怎样才能写出模块化的样式</a></li><li><a href="#alice-%E7%B1%BB%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">Alice 类命名规范</a></li><li><a href="#%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83%E7%9A%84%E6%9C%80%E5%90%8E">命名规范的最后</a></li></ul></li><li><a href="#css-%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83">CSS 编码规范</a></li><li><a href="#%E5%86%99%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">写样式的最佳实践</a></li><li><a href="#%E5%B8%B8%E8%A7%81%E5%85%BC%E5%AE%B9%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">常见兼容解决方案</a></li></ul></div>
+                <div class="side-area"><ul><li><a href="#模块组织规范">模块组织规范</a></li><li><a href="#模块化命名规范">模块化命名规范</a><ul><li><a href="#什么是模块化的样式">什么是模块化的样式</a></li><li><a href="#怎样才能写出模块化的样式">怎样才能写出模块化的样式</a></li><li><a href="#Alice 类命名规范">Alice 类命名规范</a></li><li><a href="#命名规范的最后">命名规范的最后</a></li></ul></li><li><a href="#CSS 编码规范">CSS 编码规范</a></li><li><a href="#写样式的最佳实践">写样式的最佳实践</a></li><li><a href="#常见兼容解决方案">常见兼容解决方案</a></li></ul></div>
                 
                 <script type="text/template" id="list-template">
                     <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
@@ -92,7 +92,7 @@
 <p>入乡随俗，有一些规则是必须要遵守的，有一些则是经验总结，欢迎拍砖。</p>
 
 <hr/>
-<h2 id="%E6%A8%A1%E5%9D%97%E7%BB%84%E7%BB%87%E8%A7%84%E8%8C%83">模块组织规范</h2>
+<h2 id="模块组织规范">模块组织规范</h2>
 <p>Alice 的样式模块组织方式追求扁平化的方式，分为三个层级：</p>
 
 <ol>
@@ -103,16 +103,16 @@
 
 <p>Alice 推荐采用上述的层次来组织你的样式文件，在基础框架的基础上开发一定数量的通用模块，
 在页面样式模块中继承基础框架和通用模块，并进一步开发。</p>
-<h2 id="%E6%A8%A1%E5%9D%97%E5%8C%96%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">模块化命名规范</h2>
+<h2 id="模块化命名规范">模块化命名规范</h2>
 <p>本文主要内容来自原 <a href="http://aliceui.com/alice-css-guide/">http://aliceui.com/alice-css-guide/</a> 一文。</p>
-<h3 id="%E4%BB%80%E4%B9%88%E6%98%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E6%A0%B7%E5%BC%8F">什么是模块化的样式</h3>
+<h3 id="什么是模块化的样式">什么是模块化的样式</h3>
 <p>Alice 对于模块话样式的理解是组件应该像一个盒模型，不和页面的其他元素互相影响。
 完美的 Alice 模块应该是一个“口”字型结构。比如 box 组件：</p>
 
 <p><img src="https://raw.github.com/slowhost/upload/1362842084975/box.png" alt=""/></p>
 
 <p>ui-box 组件能够嵌到页面上任何一个位置，box 内部也能够嵌入别的模块（比如 list 组件），它们之间不会互相影响。</p>
-<h3 id="%E6%80%8E%E6%A0%B7%E6%89%8D%E8%83%BD%E5%86%99%E5%87%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E6%A0%B7%E5%BC%8F">怎样才能写出模块化的样式</h3>
+<h3 id="怎样才能写出模块化的样式">怎样才能写出模块化的样式</h3>
 <p>一种简单的方式是使用 Alice 的类命名规范，当团队中都能采用这种方式书写样式，就能很好地避免样式冲突。
 在模块化和命名上，以一个Tab组件为例，分解如下：</p>
 
@@ -148,7 +148,7 @@
 
 <p>关于 HTML 的语义化，可以参考：<a href="http://sofish.de/1688">这样去写你的 HTML</a> 。</p></li>
 </ul>
-<h3 id="alice-%E7%B1%BB%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">Alice 类命名规范</h3>
+<h3 id="Alice 类命名规范">Alice 类命名规范</h3>
 <p><img src="http://aliceui.com/images/alice-css-guide/dcbzbj8j_35c92sj7fs_b.png" alt=""/></p>
 
 <ul>
@@ -197,15 +197,15 @@ HTML ENTRY 请参考这个文档：<a href="https://docs.google.com/Doc?docid=0A
 
 <p>比如你比较喜欢 ui-tip-container ，另外的一个相同作用的地方，就不要写 ui-message-cnt 了，用 <code>ui-tip-container ui-message-container</code> 或 <code>ui-tip-cnt ui-messages-cnt</code> 这样会是更好的选择。</p></li>
 </ul>
-<h3 id="%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83%E7%9A%84%E6%9C%80%E5%90%8E">命名规范的最后</h3>
+<h3 id="命名规范的最后">命名规范的最后</h3>
 <p>说了这么多，其实简单就是一句话，用 <code>-</code> 来做命名空间上的区隔，最小化两个组件之间的命名冲突。</p>
 
 <p>在 Alice 中，第一个 <code>ui-</code> 是作为通用组件的标识。你可以选取其他前缀来分类你的模块。</p>
-<h2 id="css-%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83">CSS 编码规范</h2>
+<h2 id="CSS 编码规范">CSS 编码规范</h2>
 <p>直接参考 Google 的规范吧，懒得写了。</p>
 
 <p><a href="http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml">http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml</a></p>
-<h2 id="%E5%86%99%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">写样式的最佳实践</h2>
+<h2 id="写样式的最佳实践">写样式的最佳实践</h2>
 <ol>
 <li><p>使用 iconfont 代替雪碧图。</p></li>
 <li><p>坚持渐进增强策略，大胆使用新的 CSS3 技术，对低级浏览器保持基本的视觉支持。</p></li>
@@ -214,7 +214,7 @@ HTML ENTRY 请参考这个文档：<a href="https://docs.google.com/Doc?docid=0A
 <li><p>样式模块不要依赖 reset.css ，要有对自身的 reset 代码。</p></li>
 <li><p>欢迎补充。</p></li>
 </ol>
-<h2 id="%E5%B8%B8%E8%A7%81%E5%85%BC%E5%AE%B9%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">常见兼容解决方案</h2>
+<h2 id="常见兼容解决方案">常见兼容解决方案</h2>
 <ol>
 <li><p>inline-block</p>
 <div class="highlight"><pre><code class="css"><span class="tag">display</span>: <span class="tag">inline</span>-<span class="tag">block</span>;

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Alice - JavaScript</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="generator" content="nico 0.2.3" />
+        <meta name="generator" content="nico 0.2.4" />
         <link type="image/x-icon" href="../static/css/favicon.ico" rel="icon">
         <link rel="stylesheet" href="../static/css/normalize.css" />
         <link rel="stylesheet" href="../static/css/site.css" />
@@ -77,7 +77,7 @@
                 </ol>
             </div>
             <div class="main-area">
-                <div class="side-area"><ul><li><a href="#%E5%9C%A8-arale-%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%A0%B7%E5%BC%8F">在 Arale 中使用样式</a></li><li><a href="#switchable">Switchable</a></li><li><a href="#autocomplete">AutoComplete</a></li><li><a href="#tip">Tip</a></li><li><a href="#dialog">Dialog</a></li><li><a href="#%E6%9B%B4%E5%A4%9A%E5%8A%9F%E8%83%BD">更多功能</a></li></ul></div>
+                <div class="side-area"><ul><li><a href="#在 Arale 中使用样式">在 Arale 中使用样式</a></li><li><a href="#Switchable">Switchable</a></li><li><a href="#AutoComplete">AutoComplete</a></li><li><a href="#Tip">Tip</a></li><li><a href="#Dialog">Dialog</a></li><li><a href="#更多功能">更多功能</a></li></ul></div>
                 
                 <script type="text/template" id="list-template">
                     <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
@@ -96,7 +96,7 @@
 <p><img src="https://i.alipayobjects.com/e/201303/2MPpg2ju9k.jpg" alt=""/></p>
 
 <hr/>
-<h2 id="%E5%9C%A8-arale-%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%A0%B7%E5%BC%8F">在 Arale 中使用样式</h2>
+<h2 id="在 Arale 中使用样式">在 Arale 中使用样式</h2>
 <p>Alice 是 Arale 整个前端解决方案的子集，有些简单页面使用 Alice 组件就可以搭建出来了，有些则需要配合 JavaScript 才能实现。那么如何在 AraleJS 中使用 Alice 呢？</p>
 
 <p>在 Arale 的解决方案中，使用样式主要有两种方式。</p>
@@ -123,7 +123,7 @@
 </ol>
 
 <p>以上是使用样式的两种方式，下面将针对如何结合 Alice 的模块和 Arale 的模块完成功能。</p>
-<h2 id="switchable">Switchable</h2>
+<h2 id="Switchable">Switchable</h2>
 <p><a href="http://aralejs.org/switchable">Switchable</a> 是 Arale 中的一个 JS 组件，主要负责面板切换等功能。
 Alice 中的 tab 模块就非常适合和 Switchable 进行配合。</p>
 
@@ -207,7 +207,7 @@ seajs.use('arale/switchable/0.9.12/tabs', function(Tabs) {
         activeTriggerClass: <span class="string">'ui-tab-item-current'</span>
     }).render();
 });
-</code></pre></div><h2 id="autocomplete">AutoComplete</h2>
+</code></pre></div><h2 id="AutoComplete">AutoComplete</h2>
 <p><a href="http://aralejs.org/autocomplete">AutoComplete</a> 是自动完成组件，
 可以和 alice.select 进行配合。</p>
 
@@ -265,7 +265,7 @@ seajs.use(['$', 'arale/autocomplete/1.2.0/autocomplete'], function($, AutoComple
         classPrefix: <span class="string">'ui-select'</span>
     }).render();
 });
-</code></pre></div><h2 id="tip">Tip</h2>
+</code></pre></div><h2 id="Tip">Tip</h2>
 <p><a href="http://aralejs.org/tip">Tip</a> 组件是典型的应用型组件，样式可以使用 JS 来进行载入。</p>
 
 <p>在 arale/tip/1.0.0/atip 的代码中有这样的调用：</p>
@@ -299,7 +299,7 @@ seajs.use(['arale/tip/1.0.0/atip'], function(Atip) {
         content: <span class="string">'我是 Tip 的内容'</span>
     });
 });
-</code></pre></div><h2 id="dialog">Dialog</h2>
+</code></pre></div><h2 id="Dialog">Dialog</h2>
 <p><a href="http://aralejs.org/dialog">Dialog</a> 模块和 Tip 类似，也是通过 JS 来内联需要的样式。
 不过 Dialog 没有依赖外部的 Alice 模块，因为它的样式只有他自己会使用，于是就把对应的样式
 放在 Dialog 的模块内进行管理。（这也是一种样式的实践方式！）</p>
@@ -328,7 +328,7 @@ seajs.use(['arale/dialog/1.0.0/confirmbox'], function(ConfirmBox) {
 });
 </code></pre></div>
 <hr/>
-<h2 id="%E6%9B%B4%E5%A4%9A%E5%8A%9F%E8%83%BD">更多功能</h2>
+<h2 id="更多功能">更多功能</h2>
 <p>上面几个示例是常见的 Arale 模块的使用范例，
 Arale 提供了完善的 JavaScript 解决方案，
 更多功能和演示请访问 <a href="http://aralejs.org/">http://aralejs.org/</a> 。 </p>

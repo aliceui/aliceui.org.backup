@@ -246,8 +246,14 @@ $ curl https://raw.github.com/aliceui/Alib/master/Alib-alipay.sh | sh
 $ make publish
 ````
 
-假设你建立的 Alib 是部署到 http://alice-css.alipay.im/apps 的，那么 Alib 页面会用 Ajax 的方式去读取
-alice-css.alipay.im/box、alice-css.alipay.im/button 和 alice-css.alipay.im/nav 这三个页面并取到
+样式库会读取 dependencies 中配置的各模块的文档内容到样式库中，读取的文档地址是：
+
+```
+样式库根路径 + 模块名 
+```
+
+比如你建立的 Alib 是部署到 http://css.alipay.im/apps 的，那么 Alib 页面会用 Ajax 的方式去读取
+css.alipay.im/box、css.alipay.im/button 和 css.alipay.im/nav 这三个页面并取到
 对应的示例展示在 Alib 的页面上。
 
 如果是部署到 http://afc163.github.com/Alib 的，那么 Alib 页面会读取

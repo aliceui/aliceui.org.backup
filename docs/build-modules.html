@@ -294,8 +294,13 @@ publish:
 <pre>$ make publish
 </pre>
 
-<p>假设你建立的 Alib 是部署到 <a href="http://alice-css.alipay.im/apps">http://alice-css.alipay.im/apps</a> 的，那么 Alib 页面会用 Ajax 的方式去读取
-alice-css.alipay.im/box、alice-css.alipay.im/button 和 alice-css.alipay.im/nav 这三个页面并取到
+<p>样式库会读取 dependencies 中配置的各模块的文档内容到样式库中，读取的文档地址是：</p>
+
+<pre>样式库根路径 + 模块名 
+</pre>
+
+<p>比如你建立的 Alib 是部署到 <a href="http://css.alipay.im/apps">http://css.alipay.im/apps</a> 的，那么 Alib 页面会用 Ajax 的方式去读取
+css.alipay.im/box、css.alipay.im/button 和 css.alipay.im/nav 这三个页面并取到
 对应的示例展示在 Alib 的页面上。</p>
 
 <p>如果是部署到 <a href="http://afc163.github.com/Alib">http://afc163.github.com/Alib</a> 的，那么 Alib 页面会读取

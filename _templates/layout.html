@@ -2,7 +2,11 @@
 <html lang="{{theme.lang}}">
     <head>
         <meta charset="UTF-8">
+        {%- if post.filename == 'index' %}        
+        <title>{{config.package.name|title}} - {{config.package.description}}</title>
+        {%- else %}        
         <title>{{config.package.name|title}} - {{post.title}}</title>
+        {%- endif %}
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="generator" content="{{system.name}} {{system.version}}" />
         {%- block assets %}
@@ -68,7 +72,6 @@
         <div id="footer-wrapper">
             <footer>
             <p class="powered">
-            <!--
             <script type="text/javascript" charset="utf-8">
               (function(){
                 var _w = 72 , _h = 16;
@@ -90,7 +93,6 @@
                 document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
               })()
             </script>
-            -->
             {%- include "snippet/foot.html" %}
             </p>
             </footer>

@@ -37,7 +37,7 @@ $ spm deploy    // 部署到开发机器上
 
 ## Nico - 调试&文档
 
-Nico 也是服务于 CMD 生态圈的文档构建和调试工具。它在 Alice 中的使用方式和 JS 下如出一辙。
+Nico 是一个 JavaScript 的静态文件生成工具，在 CMD 生态圈中被用于文档构建和 Demo 调试。它在 Alice 中的使用方式和 JS 下如出一辙。
 你如果对 Arale 那套东西熟悉的话很容易就能上手。
 
 在 Alice 中，有一个针对 Alice 模块的主题 [nico-alice](https://github.com/aliceui/nico-alice)，使用前请确保安装。

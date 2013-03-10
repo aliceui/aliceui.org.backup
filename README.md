@@ -56,7 +56,7 @@ Alice 是 Arale 的子集，是原有的 Arale 体系中对样式的补充。
 
 ## 加入我们
 
-这是一个开发的体系，非常欢迎大家在 Alice 的规范下产出自己的模块和样式库。
+这是一个开放的体系，非常欢迎大家在 Alice 的规范下产出自己的模块和样式库。
 
 若对 Alice 有任何问题或建议，欢迎提 [issue](https://github.com/aliceui/aliceui.github.com/issues/new) 与我们沟通。
 

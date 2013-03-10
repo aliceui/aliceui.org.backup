@@ -193,8 +193,6 @@ seajs.use(['arale/dialog/1.0.0/confirmbox'], function(ConfirmBox) {
 });
 ````
 
----
-
 ## 更多功能
 
 上面几个示例是常见的 Arale 模块的使用范例，

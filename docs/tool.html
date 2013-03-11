@@ -111,6 +111,11 @@ $ spm deploy    &#47;&#47; 部署到开发机器上
 </pre>
 
 <p>常用的命令基本就是这四个，更多 spm 的使用方式，请参考前面的开发教程或 Arale 的相关文档。</p>
+
+<blockquote>
+<p>注意：支付宝内部需要将 <code>~/.spm/config.json</code> 中的 source 配置为 <code>modules.alipay.im</code>，
+其他请配置为 <code>modules.spmjs.org</code> 或自己搭建的私有源。</p>
+</blockquote>
 <h2 id="Nico - 调试&amp;文档">Nico - 调试&amp;文档</h2>
 <p>Nico 是一个 JavaScript 的静态文档生成工具，在 CMD 生态圈中被用于文档构建和 Demo 调试。它在 Alice 中的使用方式和 JS 下如出一辙。
 你如果对 Arale 那套东西熟悉的话很容易就能上手。</p>
@@ -129,7 +134,7 @@ $ spm deploy    &#47;&#47; 部署到开发机器上
 <p>Peaches 通过分析 CSS 样式规则，提取背景图片，自动合并成雪碧图，
 并自动更新背景定位。免去了手动合并图片和定位的麻烦，而且也大大提升后续修改样式的效率。</p>
 
-<p>更多功能请访问 peaches 主页：</p>
+<p>更多功能请访问 Peaches 主页：</p>
 
 <p><a href="http://peaches.io/"><img src="https://raw.github.com/slowhost/upload/1362839444253/peaches.png" alt=""/></a></p>
 

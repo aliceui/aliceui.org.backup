@@ -210,11 +210,11 @@ publish:
     @nico build -v -C $(THEME)&#47;nico.js
     @rm -f ${tmpfile}
     @tar --exclude=&#39;.git&#47;*&#39; -czf ${tmpfile} ${html}
-    @curl -F name=${name} -F file=@${tmpfile} http:&#47;&#47;site.alipay.im&#47;repository&#47;upload&#47;${root}
+    @curl -F name=${root}&#47;${name} -F file=@${tmpfile} http:&#47;&#47;site.alipay.im&#47;repository&#47;upload&#47;arale
     @rm -f ${tmpfile}
 </pre>
 
-<p>这样用 <code>make publish</code> 就会部署到内部提供的静态站点服务上，访问的路径为 <code>http://css.alipay.im/alipay-css/box</code> 。</p>
+<p>这样用 <code>make publish</code> 就会部署到内部提供的静态站点服务上，访问的路径为 <code>http://arale.alipay.im/alipay-css/box</code> 。</p>
 <h2 id="开发某页面的样式">开发某页面的样式</h2>
 <p>这里你将会知道如何依赖和打包 alice 模块。</p>
 
@@ -272,7 +272,8 @@ publish:
 <pre>$ curl https:&#47;&#47;raw.github.com&#47;aliceui&#47;Alib&#47;master&#47;Alib.sh | sh
 </pre>
 
-<p>命令运行后会在当前目录建立一个样式库，在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：</p>
+<p>命令运行后会在当前目录建立一个样式库文件夹 <code>Alib-template</code>，
+现在在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：</p>
 <div class="highlight"><pre><code class="javascript"><span class="string">"dependencies"</span>: {
   <span class="string">"box"</span>: <span class="string">"alice/box/1.0.0/box.css"</span>,
   <span class="string">"button"</span>: <span class="string">"alice/button/1.0.0/button.css"</span>,
@@ -302,7 +303,7 @@ afc163.github.com/box、afc163.github.com/button 和 afc163.github.com/nav 这�
 <pre>$ curl https:&#47;&#47;raw.github.com&#47;aliceui&#47;Alib&#47;master&#47;Alib-alipay.sh | sh
 </pre>
 
-<p>命令运行后会在当前目录建立一个样式库，在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：</p>
+<p>命令运行后会在当前目录建立一个样式库文件夹 <code>Alib-template</code>，在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：</p>
 <div class="highlight"><pre><code class="javascript"><span class="string">"dependencies"</span>: {
   <span class="string">"box"</span>: <span class="string">"app/box/1.0.0/box.css"</span>,
   <span class="string">"button"</span>: <span class="string">"app/button/1.0.0/button.css"</span>,
@@ -325,11 +326,11 @@ $ git push origin master
 
 <p>这个样式库页面会读取 dependencies 中配置的各模块的文档内容到样式库中，读取的各文档地址是：</p>
 
-<pre>http:&#47;&#47;css.alipay.im&#47;模块root&#47;模块名
+<pre>http:&#47;&#47;arale.alipay.im&#47;模块root&#47;模块名
 </pre>
 
 <p>比如你建立的 Alib 是部署到 <a href="http://style.alipay.im/app">http://style.alipay.im/app</a> 的，那么 Alib 页面会用 Ajax 的方式去读取
-css.alipay.im/app/box、css.alipay.im/app/button 和 css.alipay.im/app/nav 这三个页面并取到
+arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav 这三个页面并取到
 对应的示例展示在 Alib 的页面上。</p>
 <h3 id="注意事项">注意事项</h3>
 <blockquote>

@@ -12,7 +12,7 @@
 以下内容默认在 Linux\Unix 环境下运行，
 并确保你已经安装了 [spm](https://github.com/spmjs/spm) 的 1.7.2 及以上版本、 [nico](http://lab.lepture.com/nico/)、
 以及 Alice 所对应的 nico [主题](https://github.com/aliceui/nico-alice/)。
-若对工具这块有疑问，可以先阅读 [工具](/docs/tools.html) 。
+若对工具这块有疑问，可以先阅读 [工具](/docs/tool.html) 。
 
 本页略长，请坐稳。
 
@@ -37,7 +37,7 @@ $ spm init
 prompt: Please select module type:                                     2
 Downloading: http://modules.alipay.im/template/alice/1.0.0/alice.tgz:  
 Downloaded: http://modules.alipay.im/template/alice/1.0.0/alice.tgz
-prompt: Define value for property 'root': :  alice
+prompt: Define value for property 'root': :  alipay-css
 prompt: Define value for property 'name': :  box
 ```
 
@@ -140,17 +140,18 @@ publish: clean build-doc
 
 ```
 name = `cat package.json | grep name | awk -F'"' '{print $$4}'`
+root = `cat package.json | grep root | awk -F'"' '{print $$4}'`
 html = _site
 tmpfile = tmp.tar.gz
 publish:
 	@nico build -v -C $(THEME)/nico.js
 	@rm -f ${tmpfile}
 	@tar --exclude='.git/*' -czf ${tmpfile} ${html}
-	@curl -F name=${name} -F file=@${tmpfile} http://site.alipay.im/repository/upload/alipay-css
+	@curl -F name=${name} -F file=@${tmpfile} http://site.alipay.im/repository/upload/${root}
 	@rm -f ${tmpfile}
 ```
 
-这样用 `make publish` 就会部署到内部提供的静态站点服务上，访问的路径为 http://css.alipay.im/box 。
+这样用 `make publish` 就会部署到内部提供的静态站点服务上，访问的路径为 `http://css.alipay.im/alipay-css/box` 。
 
 
 ## 开发某页面的样式
@@ -161,15 +162,15 @@ publish:
 拿到 psd 稿后我们发现这个页面上有很多的 alice 通用组件，也有很多的个性化的样式需求。
 
 这时会需要一个我的支付宝的样式模块，命名为 myalipay ，操作步骤和上面的 box 模块类似。
-在 Alice 中，一切样式皆模块，所以这个 myalipay 其实和上面的 box 没有本质区别，只不过它
-是直接用在页面上的。
+在 Alice 中，一切样式皆模块，所以这个 myalipay 其实和上面的 box 没有本质区别，
+只不过它是直接用在页面上的。
 
 > 注意在支付宝内部，root 一般填写对应的系统名称。
 
 生成目录后，我们打开 myalipay/package.json 文件，编辑其中的 dependencies 字段。假设我们需要
 用到 alice.box、alice.nav、alice.button 三个组件。
 
-```
+```js
 {
   "name": "myalipay",
   "version": "1.0.0",
@@ -205,32 +206,26 @@ publish:
 @import url('./user.css');  /* 引入内部文件 */
 ```
 
-最后，和上面一样，用 `spm build` 命令打包出文件，再把 dist 下的文件部署到线上就可以了。
+最后，和上面一样，用 `spm build` 命令打包出文件，再把 dist 下的文件部署到线上对应目录就可以了。
 
 
 ## 构建团队的样式库
 
-当你构建出了一批样式模块后，你可能需要一个统一的地方展示和管理这些模块（类似这个[页面](/docs/widgets.html)）。
+当你构建出了一批样式模块后，你可能需要一个统一的地方展示和管理这些模块（类似这个[页面](http://aliceui.org/Alib)）。
 一个维护简单使用方便的样式库对于个人开发者、团队、业务线都有很大的帮助。
 
 Alice 的通用组件样式库是基于支付宝视觉规范的一套模块精选集，数量和质量都会严格控制。
 更好的实践是在各小组各产品线参照通用样式库建立自己的样式精选集。（一定程度可以避免玉龙混杂和无法查找组件的问题。）
 
-Alice 提供了一种简单的方式帮助你搭建自己的样式库。范例：http://aliceui.org/Alib
+Alice 提供了一种简单的方式帮助你在 `github` 上搭建自己的样式库。
 
 ```
 $ curl https://raw.github.com/aliceui/Alib/master/Alib.sh | sh
 ```
 
-支付宝员工请运行：
-
-```
-$ curl https://raw.github.com/aliceui/Alib/master/Alib-alipay.sh | sh
-```
-
 命令运行后会在当前目录建立一个样式库，在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：
 
-```
+```js
 "dependencies": {
   "box": "alice/box/1.0.0/box.css",
   "button": "alice/button/1.0.0/button.css",
@@ -238,26 +233,74 @@ $ curl https://raw.github.com/aliceui/Alib/master/Alib-alipay.sh | sh
 }
 ```
 
-然后就可以将这个库部署到对应的 git 托管环境下，然后运行一个命令就可以将样式库部署到相应位置。
-若是托管在 github 则是部署到对应的 gh-pages 页面，支付宝的前端则可以部署到 site.alipay.im 服务上。
-具体的地址是 `http://css.alipay.im/{{package.json中的name}}` 。
+接下来就可以将这个库部署到对应的 git 托管环境下。
 
-````
+```
+$ git remote add origin {{git地址}}
+$ git push origin master
+```
+
+然后运行下面的命令就可以将样式库部署到对应的 gh-pages 页面。
+具体的地址是 `https://username.github.com/{{package.json中的name}}` 。
+
+```
 $ make publish
-````
-
-样式库会读取 dependencies 中配置的各模块的文档内容到样式库中，读取的文档地址是：
-
-```
-样式库根路径 + 模块名 
 ```
 
-比如你建立的 Alib 是部署到 http://css.alipay.im/apps 的，那么 Alib 页面会用 Ajax 的方式去读取
-css.alipay.im/box、css.alipay.im/button 和 css.alipay.im/nav 这三个页面并取到
+这个样式库页面会读取 dependencies 中配置的各模块的文档内容到样式库中，读取的各文档地址是：
+
+```
+http(s)://样式库根路径/模块名
+```
+
+如果样式库部署到 http://afc163.github.com/Alib 的，那么此页面会读取
+afc163.github.com/box、afc163.github.com/button 和 afc163.github.com/nav 这三个页面。（请确保这三个页面有内容！）
+
+
+### 支付宝前端请按以下步骤操作：
+
+```
+$ curl https://raw.github.com/aliceui/Alib/master/Alib-alipay.sh | sh
+```
+
+命令运行后会在当前目录建立一个样式库，在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：
+
+```js
+"dependencies": {
+  "box": "app/box/1.0.0/box.css",
+  "button": "app/button/1.0.0/button.css",
+  "nav": "app/nav/1.0.0/nav.css"
+}
+```
+
+接下来就可以将这个库部署到对应的 git 托管环境下。
+在支付宝内部，我们使用 gitlab.alibaba-inc.com 来作为样式模块的托管服务。
+请联系 @偏右 在 alipay-css 这个 group 下建库。
+
+```
+$ git remote add origin {{git地址}}
+$ git push origin master
+```
+
+然后运行下面的命令就可以将样式库部署到基础技术组提供的`site.alipay.im`静态站点服务上。
+具体的地址是 `http://style.alipay.im/{{package.json中的name}}` 。比如`http://site.alipay.im/app`。
+
+```
+$ make publish
+```
+
+这个样式库页面会读取 dependencies 中配置的各模块的文档内容到样式库中，读取的各文档地址是：
+
+```
+http://css.alipay.im/模块root/模块名
+```
+
+比如你建立的 Alib 是部署到 http://style.alipay.im/app 的，那么 Alib 页面会用 Ajax 的方式去读取
+css.alipay.im/app/box、css.alipay.im/app/button 和 css.alipay.im/app/nav 这三个页面并取到
 对应的示例展示在 Alib 的页面上。
 
-如果是部署到 http://afc163.github.com/Alib 的，那么 Alib 页面会读取
-afc163.github.com/box、afc163.github.com/button 和 afc163.github.com/nav 这三个页面。
+
+### 注意事项
 
 > 注意1：因为是 Ajax 的方式读取各模块页面，
 所以请保证模块文档地址可访问，并且样式库和模块文档是同域的。

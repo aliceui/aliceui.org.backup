@@ -60,4 +60,4 @@ Alice 是 Arale 的子集，是原有的 Arale 体系中对样式的补充。
 
 若对 Alice 有任何问题或建议，欢迎提 [issue](https://github.com/aliceui/aliceui.github.com/issues/new) 与我们沟通。
 
-感谢 @小鱼 @展新 @欣欣 同学以前的工作成果。
+感谢 @小鱼 @展新 @欣欣 同学过去的工作成果。

@@ -34,6 +34,9 @@ $ spm deploy    // 部署到开发机器上
 
 常用的命令基本就是这四个，更多 spm 的使用方式，请参考前面的开发教程或 Arale 的相关文档。
 
+> 注意：支付宝内部需要将 `~/.spm/config.json` 中的 source 配置为 `modules.alipay.im`，
+其他请配置为 `modules.spmjs.org` 或自己搭建的私有源。
+
 
 ## Nico - 调试&文档
 
@@ -56,7 +59,7 @@ Peaches 是支付宝前端工程师 @蔡伦 同学开发的，是一个 CSS 雪�
 Peaches 通过分析 CSS 样式规则，提取背景图片，自动合并成雪碧图，
 并自动更新背景定位。免去了手动合并图片和定位的麻烦，而且也大大提升后续修改样式的效率。
 
-更多功能请访问 peaches 主页：
+更多功能请访问 Peaches 主页：
 
 [![](https://raw.github.com/slowhost/upload/1362839444253/peaches.png)](http://peaches.io/)
 

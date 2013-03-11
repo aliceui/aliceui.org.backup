@@ -147,11 +147,11 @@ publish:
 	@nico build -v -C $(THEME)/nico.js
 	@rm -f ${tmpfile}
 	@tar --exclude='.git/*' -czf ${tmpfile} ${html}
-	@curl -F name=${name} -F file=@${tmpfile} http://site.alipay.im/repository/upload/${root}
+	@curl -F name=${root}/${name} -F file=@${tmpfile} http://site.alipay.im/repository/upload/arale
 	@rm -f ${tmpfile}
 ```
 
-这样用 `make publish` 就会部署到内部提供的静态站点服务上，访问的路径为 `http://css.alipay.im/alipay-css/box` 。
+这样用 `make publish` 就会部署到内部提供的静态站点服务上，访问的路径为 `http://arale.alipay.im/alipay-css/box` 。
 
 
 ## 开发某页面的样式
@@ -223,7 +223,8 @@ Alice 提供了一种简单的方式帮助你在 `github` 上搭建自己的样�
 $ curl https://raw.github.com/aliceui/Alib/master/Alib.sh | sh
 ```
 
-命令运行后会在当前目录建立一个样式库，在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：
+命令运行后会在当前目录建立一个样式库文件夹 `Alib-template`，
+现在在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：
 
 ```js
 "dependencies": {
@@ -263,7 +264,7 @@ afc163.github.com/box、afc163.github.com/button 和 afc163.github.com/nav 这�
 $ curl https://raw.github.com/aliceui/Alib/master/Alib-alipay.sh | sh
 ```
 
-命令运行后会在当前目录建立一个样式库，在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：
+命令运行后会在当前目录建立一个样式库文件夹 `Alib-template`，在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：
 
 ```js
 "dependencies": {
@@ -292,11 +293,11 @@ $ make publish
 这个样式库页面会读取 dependencies 中配置的各模块的文档内容到样式库中，读取的各文档地址是：
 
 ```
-http://css.alipay.im/模块root/模块名
+http://arale.alipay.im/模块root/模块名
 ```
 
 比如你建立的 Alib 是部署到 http://style.alipay.im/app 的，那么 Alib 页面会用 Ajax 的方式去读取
-css.alipay.im/app/box、css.alipay.im/app/button 和 css.alipay.im/app/nav 这三个页面并取到
+arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav 这三个页面并取到
 对应的示例展示在 Alib 的页面上。
 
 

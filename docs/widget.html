@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">        
+        <title>Alice - 通用组件库</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="nico 0.2.4" />
+        <link type="image/x-icon" href="../static/css/favicon.ico" rel="icon">
+        <link rel="stylesheet" href="../static/css/normalize.css" />
+        <link rel="stylesheet" href="../static/css/site.css" />
+        <link rel="stylesheet" href="../static/css/solarized.css" />    
+        <link rel="stylesheet" href="../static/style.css" />
+        <script src="http://static.alipayobjects.com/seajs/1.3.1/sea.js"></script>
+        <script src="../static/js/arale-helper.js"></script>
+        <script src="../static/js/site.js"></script><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39169474-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://ssl.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script>
+  (function() {
+    var data;
+    seajs._package = data = {"name":"Alice","version":"0.0.1","root":"","description":"写样式的更好方式","homepage":"http://aliceui.org","repository":{"type":"git","url":"https://github.com/aliceui/aliceui.org"},"bugs":{"url":"https://github.com/aliceui/aliceui.org/issues"},"dependencies":{"box":"alice/box/1.0.0/box.css","button":"alice/button/1.0.0/button.css","button-dropdown":"alice/button-dropdown/1.0.0/button-dropdown.css","form":"alice/form/1.0.0/form.css","list":"alice/list/1.0.0/list.css","nav":"alice/nav/1.0.0/nav.css","paging":"alice/paging/1.0.0/paging.css","poptip":"alice/poptip/1.0.0/poptip.css","tab":"alice/tab/1.0.0/tab.css","table":"alice/table/1.0.0/table.css","tipbox":"alice/tipbox/1.0.0/tipbox.css","tiptext":"alice/tiptext/1.0.0/tiptext.css","select":"alice/select/1.0.0/select.css","step":"alice/step/1.0.0/step.css"}}
+    data.dependencies && (delete data.dependencies['$'])
+    data.devDependencies && (delete data.devDependencies['$'])
+
+    seajs.config({ alias: data.dependencies })
+    seajs.config({ alias: data.devDependencies })
+    seajs.config({ alias: {} })
+
+    // for alice
+    for(var dep in data.dependencies) {
+        // 如果依赖的是样式模块
+        if (data.dependencies[dep].indexOf('.css') > 0) {
+            seajs.use(dep);
+        }
+    }
+
+  })();
+</script>
+        <!--[if lt IE 9]>
+        <script src="../static/js/html5shiv.js"></script>
+        <![endif]-->
+        
+        <script>
+        seajs.use(['arale/fixed/1.0.0/fixed'], function(Fixed) {
+            Fixed('.side-area', 20);
+        });
+        </script>
+    </head>
+    <body>
+        <div id="body-wrapper">
+            <div class="head-area">
+                <div class="title-area">            
+                    <h1>
+                        <a href="../">Alice</a>
+                    </h1>
+                    <p class="description">写样式的更好方式</p>
+                </div>
+            </div>
+            <div class="nav-area">
+                <ol class="main-nav">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="../docs/framework.html">基础框架</a></li>
+                    <li><a href="../docs/widget.html">通用组件库</a></li>
+                    <li><a href="../docs/javascript.html">JavaScript</a></li>
+                    <li><a href="../docs/start.html">开始使用</a></li>
+                    <li><a href="../docs/build.html">建设组件和样式库</a></li>
+                    <li><a href="../docs/rule.html">规范和最佳实践</a></li>
+                    <li><a href="../docs/tool.html">工具</a></li>
+                </ol>
+            </div>
+            <div class="main-area">
+                <div class="side-area">
+                    <ul>
+                        <li class="side-loading"><img width="160" alt="加载中..." src="/static/loading.gif"></li>
+                    </ul>
+                </div>
+                <script type="text/template" id="list-template">
+                    <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
+                </script>
+                <div class="content-area">
+                    <h1>通用组件库</h1>
+                    <div class="content"><blockquote>
+<p>Life is like a box of chocolate. 
+<em>「 Forrest Gump 」1994</em></p>
+</blockquote>
+
+<p>这里是一套按照 <a href="/docs/rule.html">Alice 规范</a>和支付宝视觉规范搭建的的通用样式模块库。
+找到你需要的模块，复制代码，然后享受生活去吧。</p>
+
+<p><img src="https://i.alipayobjects.com/e/201303/2MQNiaBkFJ.png" alt=""/></p>
+
+<hr/>
+
+<script type="text/template" id="alice-module">
+    <div class="alice-module">
+        <div class="alice-module-head">
+            <h2 class="alice-module-title">
+                <a href="#"></a>
+            </h2>
+            <span class="alice-module-version">1.0.0</span>
+            <p class="alice-module-description"></p>
+        </div>
+        <img class="alice-loading" src="data:image/gif;base64,R0lGODlhEAALAPQAAP///z2LqeLt8dvp7u7090GNqz2LqV+fuJ/F1IW2ycrf51aatHWswaXJ14i4ys3h6FmctUCMqniuw+vz9eHs8fb5+meku+Tu8vT4+cfd5bbT3tbm7PH2+AAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCwAAACwAAAAAEAALAAAFLSAgjmRpnqSgCuLKAq5AEIM4zDVw03ve27ifDgfkEYe04kDIDC5zrtYKRa2WQgAh+QQJCwAAACwAAAAAEAALAAAFJGBhGAVgnqhpHIeRvsDawqns0qeN5+y967tYLyicBYE7EYkYAgAh+QQJCwAAACwAAAAAEAALAAAFNiAgjothLOOIJAkiGgxjpGKiKMkbz7SN6zIawJcDwIK9W/HISxGBzdHTuBNOmcJVCyoUlk7CEAAh+QQJCwAAACwAAAAAEAALAAAFNSAgjqQIRRFUAo3jNGIkSdHqPI8Tz3V55zuaDacDyIQ+YrBH+hWPzJFzOQQaeavWi7oqnVIhACH5BAkLAAAALAAAAAAQAAsAAAUyICCOZGme1rJY5kRRk7hI0mJSVUXJtF3iOl7tltsBZsNfUegjAY3I5sgFY55KqdX1GgIAIfkECQsAAAAsAAAAABAACwAABTcgII5kaZ4kcV2EqLJipmnZhWGXaOOitm2aXQ4g7P2Ct2ER4AMul00kj5g0Al8tADY2y6C+4FIIACH5BAkLAAAALAAAAAAQAAsAAAUvICCOZGme5ERRk6iy7qpyHCVStA3gNa/7txxwlwv2isSacYUc+l4tADQGQ1mvpBAAIfkECQsAAAAsAAAAABAACwAABS8gII5kaZ7kRFGTqLLuqnIcJVK0DeA1r/u3HHCXC/aKxJpxhRz6Xi0ANAZDWa+kEAA7AAAAAAAAAAAA">
+    </div>
+</script>
+
+<script type="text/template" id="alice-module-demo">
+    <div class="alice-module-demo">
+        <h3 class="alice-module-subtitle"></h3>
+        <a class="alice-module-sourcecode" href="javascript:;">查看源码</a>
+        <div class="alice-module-dom"></div>
+        <pre class="alice-module-code prettyprint"></pre>
+    </div>
+</script>
+
+<style>
+.alice-module {
+    border-bottom: 1px solid #eee;    
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font:12px/1.5 tahoma,arial,Hiragino Sans GB,"Microsoft Yahei",\5b8b\4f53;
+}
+.alice-module-head {
+    overflow: hidden;
+}
+.alice-module-title {
+    margin: 0;
+    font-size: 28px;
+    font-family: Trebuchet MS;
+    display: inline;
+}
+.alice-module-title a {
+    color: #7CAE23;
+    cursor: pointer;
+}
+.alice-module-link {
+    font-size: 14px;
+}
+.alice-module-version {
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 0.5em;
+    color: #888;
+    font-family: Menlo,Monaco,"Courier New",monospace;
+}
+p.alice-module-description {
+    font-size: 14px;
+    color: #888;
+    margin: 10px 0 20px;
+}
+.alice-module-demo {
+    border: 1px solid #eee;
+    border-bottom: none;
+    padding: 20px 130px 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+.alice-module-demo:hover {
+    background: #fdfdfd;
+}
+.alice-module-code {
+    display: none;
+}
+h3.alice-module-subtitle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 3px;
+    margin: 0;
+    color: #777;
+    font-size: 12px;
+    background: #F8F8F8;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    display: block;
+    font-size: 12px;
+    width: 100px;
+    padding: 5px 10px;
+    opacity: 0.8;
+}
+.alice-module-sourcecode {
+    position: absolute;
+    right: 125px;
+    top: 0;
+    font-size: 12px;
+    padding: 5px 10px;
+    background: #EFFFE4;
+    border-radius: 3px;    
+    display: none;
+    z-index: 99;
+    opacity: 0.8;   
+}
+a {
+    color: #08c;
+}
+.alice-loading {
+    margin-bottom: 20px;
+}
+</style>
+
+<div class="alice-modules"></div>
+
+<p><link type="text/css" rel="stylesheet" media="screen" href="../static/tomorrow.css">
+<script src="../static/google-code-prettify/run_prettify.js"></script></p>
+
+<script>
+seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
+
+    $('.alice-modules').on('mouseenter', '.alice-module-demo', function() {
+        $(this).find('.alice-module-sourcecode').fadeIn(200);
+    }).on('mouseleave', '.alice-module-demo', function() {
+        $(this).find('.alice-module-sourcecode').fadeOut(200);         
+    });
+
+    $('.alice-modules').on('click', '.alice-module-sourcecode', function() {
+        var code = $(this).parent().find('.alice-module-code');
+        if (code.is(':hidden')) {
+            code.slideDown(200);
+        } else {
+            code.slideUp(200);
+        }
+    });
+
+    $.getJSON('../package.json', function(data) {
+        var deps = _.pairs(data.dependencies);
+        _.each(deps, function(dep) {
+            var moduleNode = $($('#alice-module').html());
+            moduleNode.find('.alice-module-title a')
+                .attr('href', '/' + dep[0])
+                .attr('id', 'modules-' + dep[0])
+                .html(dep[0]);
+            moduleNode.appendTo('.alice-modules');
+            var list = substractTitle(moduleNode.find('h2'));
+
+            $.ajax({
+                url: '/' + dep[0],
+                dataType: 'html',
+                success: function(data) {
+                    data = $(data);
+                    moduleNode.find('.alice-module-description')
+                        .html(data.find('.entry-content > p:first-child').html());
+                    moduleNode.find('.alice-module-version')
+                        .html(data.find('#sidebar-wrapper .version a').html());
+
+                    data.find('.nico-insert-code').each(function(index, item) {
+                        var demoNode = $($('#alice-module-demo').html());
+                        item = $(item);
+                        var subtitle = item.prev().html();
+                        if (item.prev()[0].tagName !== 'H3' || !subtitle) {
+                            subtitle = '默认';
+                        }
+                        var code = HtmlToCode(item.html());
+                        
+                        demoNode.find('.alice-module-subtitle').html(subtitle);
+                        demoNode.find('.alice-module-dom').html(item.html());
+                        demoNode.find('.alice-module-code').html(code);
+                        moduleNode.find('.alice-loading').remove();
+                        demoNode.appendTo(moduleNode);
+                    });
+
+                    // 中文关键词，一般放在 keywords 数组的第一个
+                    // 在这里写到左边索引栏中
+                    moduleNode.find('.alice-module-version')
+                    var keywords = data.find('#sidebar-wrapper .keywords').html();
+                    if (keywords) {
+                        list.find('i').html(keywords);
+                    }
+                }
+            });
+
+        });
+    });
+    
+    function HtmlToCode(html) {
+        var code = html;
+        code = code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        code = code.replace(/^\s*\n/, '').replace(/\n\s*$/, '');
+        code = PR.prettyPrintOne(code, 'html', false);
+        return code;
+    } 
+
+    function substractTitle(item) {
+        $('.side-loading').remove();
+        item = item.find('a');
+        var list = $($('#list-template').html());
+        list.find('a').html(item.html() + list.find('a').html());
+        list.find('a').attr('href', '#' + item.attr('id'));
+        list.appendTo('.side-area');
+        return list;
+    }
+
+});
+</script>
+</div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-wrapper">
+            <footer>
+            <p class="powered">
+            <script type="text/javascript" charset="utf-8">
+              (function(){
+                var _w = 72 , _h = 16;
+                var param = {
+                  url:location.href,
+                  type:'3',
+                  count:'1', /**是否显示分享数，1显示(可选)*/
+                  appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+                  title:'alice 写css的更好方案', /**分享的文字内容(可选，默认为所在页面的title)*/
+                  pic:'http://aliceui.org/static/alice.png', /**分享图片的路径(可选)*/
+                  ralateUid:'', /**关联用户的UID，分享微博会@该用户(可选)*/
+                  language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+                  rnd:new Date().valueOf()
+                }
+                var temp = [];
+                for( var p in param ){
+                  temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+                }
+                document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+              })()
+            </script><a href="http://aralejs.org">Arale</a> •
+<a href="http://aliceui.org">Alice</a> •
+<a href="http://seajs.org">SeaJS</a> •
+<a href="https://github.com/spmjs/spm">spm</a> •
+<a href="http://lab.lepture.com/nico/">nico</a>
+            </p>
+            </footer>
+        </div>
+    </body>
+</html>

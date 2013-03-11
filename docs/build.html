@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">        
+        <title>Alice - 建设组件和样式库</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="nico 0.2.4" />
+        <link type="image/x-icon" href="../static/css/favicon.ico" rel="icon">
+        <link rel="stylesheet" href="../static/css/normalize.css" />
+        <link rel="stylesheet" href="../static/css/site.css" />
+        <link rel="stylesheet" href="../static/css/solarized.css" />    
+        <link rel="stylesheet" href="../static/style.css" />
+        <script src="http://static.alipayobjects.com/seajs/1.3.1/sea.js"></script>
+        <script src="../static/js/arale-helper.js"></script>
+        <script src="../static/js/site.js"></script><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39169474-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://ssl.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script>
+  (function() {
+    var data;
+    seajs._package = data = {"name":"Alice","version":"0.0.1","root":"","description":"写样式的更好方式","homepage":"http://aliceui.org","repository":{"type":"git","url":"https://github.com/aliceui/aliceui.org"},"bugs":{"url":"https://github.com/aliceui/aliceui.org/issues"},"dependencies":{"box":"alice/box/1.0.0/box.css","button":"alice/button/1.0.0/button.css","button-dropdown":"alice/button-dropdown/1.0.0/button-dropdown.css","form":"alice/form/1.0.0/form.css","list":"alice/list/1.0.0/list.css","nav":"alice/nav/1.0.0/nav.css","paging":"alice/paging/1.0.0/paging.css","poptip":"alice/poptip/1.0.0/poptip.css","tab":"alice/tab/1.0.0/tab.css","table":"alice/table/1.0.0/table.css","tipbox":"alice/tipbox/1.0.0/tipbox.css","tiptext":"alice/tiptext/1.0.0/tiptext.css","select":"alice/select/1.0.0/select.css","step":"alice/step/1.0.0/step.css"}}
+    data.dependencies && (delete data.dependencies['$'])
+    data.devDependencies && (delete data.devDependencies['$'])
+
+    seajs.config({ alias: data.dependencies })
+    seajs.config({ alias: data.devDependencies })
+    seajs.config({ alias: {} })
+
+    // for alice
+    for(var dep in data.dependencies) {
+        // 如果依赖的是样式模块
+        if (data.dependencies[dep].indexOf('.css') > 0) {
+            seajs.use(dep);
+        }
+    }
+
+  })();
+</script>
+        <!--[if lt IE 9]>
+        <script src="../static/js/html5shiv.js"></script>
+        <![endif]-->
+        
+        <script>
+        seajs.use(['arale/fixed/1.0.0/fixed'], function(Fixed) {
+            Fixed('.side-area', 20);
+        });
+        </script>
+    </head>
+    <body>
+        <div id="body-wrapper">
+            <div class="head-area">
+                <div class="title-area">            
+                    <h1>
+                        <a href="../">Alice</a>
+                    </h1>
+                    <p class="description">写样式的更好方式</p>
+                </div>
+            </div>
+            <div class="nav-area">
+                <ol class="main-nav">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="../docs/framework.html">基础框架</a></li>
+                    <li><a href="../docs/widget.html">通用组件库</a></li>
+                    <li><a href="../docs/javascript.html">JavaScript</a></li>
+                    <li><a href="../docs/start.html">开始使用</a></li>
+                    <li><a href="../docs/build.html">建设组件和样式库</a></li>
+                    <li><a href="../docs/rule.html">规范和最佳实践</a></li>
+                    <li><a href="../docs/tool.html">工具</a></li>
+                </ol>
+            </div>
+            <div class="main-area">
+                <div class="side-area"><ul><li><a href="#开发一个样式组件">开发一个样式组件</a><ul><li><a href="#初始化模块">初始化模块</a></li><li><a href="#写文档和设计 Html 结构">写文档和设计 Html 结构</a></li><li><a href="#编码和调试">编码和调试</a></li><li><a href="#构建和发布">构建和发布</a></li><li><a href="#源码托管和文档部署">源码托管和文档部署</a></li></ul></li><li><a href="#开发某页面的样式">开发某页面的样式</a></li><li><a href="#构建团队的样式库">构建团队的样式库</a><ul><li><a href="#支付宝前端请按以下步骤操作：">支付宝前端请按以下步骤操作：</a></li><li><a href="#注意事项">注意事项</a></li></ul></ul></div>
+                
+                <script type="text/template" id="list-template">
+                    <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
+                </script>
+                <div class="content-area">
+                    <h1>建设组件和样式库</h1>
+                    <div class="content"><blockquote>
+<p>More power comes more responsibility. <em>「 Spider Man 」2012</em></p>
+</blockquote>
+
+<p>我相信，只是复制几个 Html 结构一定不是你的追求，Alice 可以让你做得更多。</p>
+
+<p>以下内容默认在 Linux\Unix 环境下运行，
+并确保你已经安装了 <a href="https://github.com/spmjs/spm">spm</a> 的 1.7.2 及以上版本、 <a href="http://lab.lepture.com/nico/">nico</a>、
+以及 Alice 所对应的 nico <a href="https://github.com/aliceui/nico-alice/">主题</a>。
+若对工具这块有疑问，可以先阅读 <a href="/docs/tool.html">工具</a> 。</p>
+
+<p>本页略长，请坐稳。</p>
+
+<hr/>
+<h2 id="开发一个样式组件">开发一个样式组件</h2>
+<p>我们的页面中总是存在的各式各样的模块化的 DOM 结构，
+我们都可以依据复用度来把其中一些组件提炼成样式模块。</p>
+<h3 id="初始化模块">初始化模块</h3>
+<p>现在我们要开发一个 box 组件。首先建立一个文件夹，并使用 <code>spm init</code> 命令进行初始化。</p>
+
+<pre>$ mkdir box
+$ cd box
+$ spm init
+</pre>
+
+<pre>prompt: Please select module type:                                     2
+Downloading: http:&#47;&#47;modules.alipay.im&#47;template&#47;alice&#47;1.0.0&#47;alice.tgz:  
+Downloaded: http:&#47;&#47;modules.alipay.im&#47;template&#47;alice&#47;1.0.0&#47;alice.tgz
+prompt: Define value for property &#39;root&#39;: :  alipay-css
+prompt: Define value for property &#39;name&#39;: :  box
+</pre>
+
+<p>这时程序会让你输入相关的信息，选择 2 (alice) 模板，
+填写 root 为 alice（Alice 通用模块） 或 alipay-css（支付宝通用业务模块）或其他，
+name 为 box 后，就会生成一个 alice 模块的初始目录结构如下。</p>
+
+<pre>src&#47;
+Makefile
+README.md
+package.json
+</pre>
+
+<p>其中 src 目录存放我们的样式源文件，Makefile 用于构建模块的文档，
+README.md 是用来写文档和 DEMO 的地方，package.json 则存放模块的基本信息。
+我们可以在 package.json 中的 dependencies 字段中填写所需的依赖。
+这个 box 模块不需要依赖所以不需要填写。</p>
+<h3 id="写文档和设计 Html 结构">写文档和设计 Html 结构</h3>
+<p>我们先打开 README.md 进行编辑。</p>
+
+<pre># box
+
+---
+
+带边框和标题的标准区块。
+
+---
+
+## 演示文档
+
+&lt;link type=&quot;text&#47;css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;src&#47;box.css&quot;&gt;
+
+### 默认用法
+
+````html
+&lt;div class=&quot;ui-box&quot;&gt;
+    &lt;div class=&quot;ui-box-head&quot;&gt;
+        &lt;div class=&quot;ui-box-head-border&quot;&gt;
+            &lt;h3 class=&quot;ui-box-head-title&quot;&gt;区块标题&lt;&#47;h3&gt;
+        &lt;&#47;div&gt;
+    &lt;&#47;div&gt;
+    &lt;div class=&quot;ui-box-container&quot;&gt;&lt;&#47;div&gt;
+&lt;&#47;div&gt;
+````
+</pre>
+
+<p>可以看到我们在上面写了基本的模块描述，并引入了样式源文件，在最下面设计了 box 模块的 Html 结构。
+这和 JS 模块的开发过程是类似的，先设计文档和接口再进行开发，而对于样式模块来说，Html 结构就是样式的接口。</p>
+
+<p>像上面使用四个 ```` 符号来包裹代码是 <a href="http://lab.lepture.com/nico/">nico</a> 的特性，这样可以把代码片段转换成实际的 DOM 结构，
+非常方便调试和文档生成。</p>
+<h3 id="编码和调试">编码和调试</h3>
+<p>接下来我们打开 src/box.css 进行编辑，现在就是熟悉的样式编码阶段了。
+在这个阶段，我们可以到项目目录运行 <code>make watch</code> 来打开 nico 的调试功能，
+nico 会启动一个 livereload 服务监听生成的文档页面，我们可以用浏览器打开 <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> 访问文档页面并进行调试。
+你会看到类似下图的页面。</p>
+
+<p><img src="https://i.alipayobjects.com/e/201303/2Ml1vh9J08.png" alt=""/></p>
+<h3 id="构建和发布">构建和发布</h3>
+<p>开发测试完毕后，我们就可以通过一下目录构建出标准的 Alice 模块文件了。</p>
+
+<pre>$ spm build
+</pre>
+
+<p>这个命令会生成一个 dist 目录，里面存放我们构建出来的样式文件。它会读取 package.json 中的 output 
+字段来输出用户指定的文件。(<a href="https://github.com/spmjs/spm/wiki/package.json-:-output">output 规则</a>)</p>
+
+<pre>$ spm upload
+</pre>
+
+<p>再通过 upload 命令可以把样式模块上传到源中，这样其他模块就可以依赖这个模块了。还可以通过 <code>spm deploy</code> 来部署到对应的开发服务器中进行进一步调试。</p>
+<h3 id="源码托管和文档部署">源码托管和文档部署</h3>
+<p>最后，建议你将这个目录提交到 github 或 gitlab 中，统一管理你的样式模块。一个版本开发构建完成后，用版本号来打一个 tag 。
+还可以利用 gh-pages 来部署模块的文档页面。</p>
+
+<p>比如要把这个模块托管到 github 上（例如：<a href="https://github.com/afc163/box%EF%BC%89%EF%BC%8C%E5%9C%A8%E9%A1%B9%E7%9B%AE%E7%9A%84">https://github.com/afc163/box），在项目的</a> Makefile 
+文件中加入下面的代码：</p>
+
+<pre>publish: clean build-doc
+    @ghp-import _site
+    @git push origin gh-pages
+</pre>
+
+<p>就可以用<code>make publish</code>来发布文档页面到 github 的 gh-pages 中（需要安装 <a href="https://github.com/davisp/ghp-import">ghp-import</a>）。
+就可以访问 <a href="https://afc163.github.com/box">https://afc163.github.com/box</a> 来访问对应的文档页了。</p>
+
+<p>如果在支付宝，可以在 <a href="http://gitlab.alibaba-inc.com">http://gitlab.alibaba-inc.com</a> 平台建立一个 group 为 alipay-css 的 git 项目（找@偏右）。
+然后在项目的 Makefile 文件中加入下面的代码：</p>
+
+<pre>name = `cat package.json | grep name | awk -F&#39;&quot;&#39; &#39;{print $$4}&#39;`
+root = `cat package.json | grep root | awk -F&#39;&quot;&#39; &#39;{print $$4}&#39;`
+html = _site
+tmpfile = tmp.tar.gz
+publish:
+    @nico build -v -C $(THEME)&#47;nico.js
+    @rm -f ${tmpfile}
+    @tar --exclude=&#39;.git&#47;*&#39; -czf ${tmpfile} ${html}
+    @curl -F name=${root}&#47;${name} -F file=@${tmpfile} http:&#47;&#47;site.alipay.im&#47;repository&#47;upload&#47;arale
+    @rm -f ${tmpfile}
+</pre>
+
+<p>这样用 <code>make publish</code> 就会部署到内部提供的静态站点服务上，访问的路径为 <code>http://arale.alipay.im/alipay-css/box</code> 。</p>
+<h2 id="开发某页面的样式">开发某页面的样式</h2>
+<p>这里你将会知道如何依赖和打包 alice 模块。</p>
+
+<p>假设我们现在收到了一个 <a href="https://my.alipay.com">我的支付宝</a> 页面的开发需求，
+拿到 psd 稿后我们发现这个页面上有很多的 alice 通用组件，也有很多的个性化的样式需求。</p>
+
+<p>这时会需要一个我的支付宝的样式模块，命名为 myalipay ，操作步骤和上面的 box 模块类似。
+在 Alice 中，一切样式皆模块，所以这个 myalipay 其实和上面的 box 没有本质区别，
+只不过它是直接用在页面上的。</p>
+
+<blockquote>
+<p>注意在支付宝内部，root 一般填写对应的系统名称。</p>
+</blockquote>
+
+<p>生成目录后，我们打开 myalipay/package.json 文件，编辑其中的 dependencies 字段。假设我们需要
+用到 alice.box、alice.nav、alice.button 三个组件。</p>
+<div class="highlight"><pre><code class="javascript">{
+  <span class="string">"name"</span>: <span class="string">"myalipay"</span>,
+  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,
+  <span class="string">"root"</span>: <span class="string">"myalipay"</span>,
+  ...
+  <span class="string">"dependencies"</span>: {
+    <span class="string">"box"</span>: <span class="string">"alice/box/1.0.0/box.css"</span>,
+    <span class="string">"button"</span>: <span class="string">"alice/button/1.0.0/button.css"</span>,
+    <span class="string">"nav"</span>: <span class="string">"alice/nav/1.0.0/nav.css"</span>
+  }
+}
+</code></pre></div>
+<p>然后打开 src/myalipay.css ，在文件前面写入</p>
+<div class="highlight"><pre><code class="css"><span class="at_rule">@<span class="keyword">import</span> <span class="function">url(<span class="string">'box'</span>)</span></span>;
+<span class="at_rule">@<span class="keyword">import</span> <span class="function">url(<span class="string">'button'</span>)</span></span>;
+<span class="at_rule">@<span class="keyword">import</span> <span class="function">url(<span class="string">'nav'</span>)</span></span>;
+</code></pre></div>
+<p>通过这种类似于 Arale 中 <code>require(&#39;&#39;)</code> 的方式，引入了这三个模块。
+然后在 src/myalipay.css 的后面继续编写个性化的样式代码。</p>
+
+<p>当然可以引入内部的模块，比如我们在 src 下建一个 user.css 文件，专门用来写和用户有关的样式。
+在 myalipay.css 中可以这样引入：</p>
+<div class="highlight"><pre><code class="css"><span class="at_rule">@<span class="keyword">import</span> <span class="function">url(<span class="string">'box'</span>)</span></span>;
+<span class="at_rule">@<span class="keyword">import</span> <span class="function">url(<span class="string">'button'</span>)</span></span>;
+<span class="at_rule">@<span class="keyword">import</span> <span class="function">url(<span class="string">'nav'</span>)</span></span>;
+
+<span class="at_rule">@<span class="keyword">import</span> <span class="function">url(<span class="string">'./user.css'</span>)</span></span>;  <span class="comment">/* 引入内部文件 */</span>
+</code></pre></div>
+<p>最后，和上面一样，用 <code>spm build</code> 命令打包出文件，再把 dist 下的文件部署到线上对应目录就可以了。</p>
+<h2 id="构建团队的样式库">构建团队的样式库</h2>
+<p>当你构建出了一批样式模块后，你可能需要一个统一的地方展示和管理这些模块（类似这个<a href="http://aliceui.org/Alib">页面</a>）。
+一个维护简单使用方便的样式库对于个人开发者、团队、业务线都有很大的帮助。</p>
+
+<p>Alice 的通用组件样式库是基于支付宝视觉规范的一套模块精选集，数量和质量都会严格控制。
+更好的实践是在各小组各产品线参照通用样式库建立自己的样式精选集。（一定程度可以避免玉龙混杂和无法查找组件的问题。）</p>
+
+<p>Alice 提供了一种简单的方式帮助你在 <code>github</code> 上搭建自己的样式库。</p>
+
+<pre>$ curl https:&#47;&#47;raw.github.com&#47;aliceui&#47;Alib&#47;master&#47;Alib.sh | sh
+</pre>
+
+<p>命令运行后会在当前目录建立一个样式库文件夹 <code>Alib-template</code>，
+现在在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：</p>
+<div class="highlight"><pre><code class="javascript"><span class="string">"dependencies"</span>: {
+  <span class="string">"box"</span>: <span class="string">"alice/box/1.0.0/box.css"</span>,
+  <span class="string">"button"</span>: <span class="string">"alice/button/1.0.0/button.css"</span>,
+  <span class="string">"nav"</span>: <span class="string">"alice/nav/1.0.0/nav.css"</span>
+}
+</code></pre></div>
+<p>接下来就可以将这个库部署到对应的 git 托管环境下。</p>
+
+<pre>$ git remote add origin {{git地址}}
+$ git push origin master
+</pre>
+
+<p>然后运行下面的命令就可以将样式库部署到对应的 gh-pages 页面。
+具体的地址是 <code>https://username.github.com/{{package.json中的name}}</code> 。</p>
+
+<pre>$ make publish
+</pre>
+
+<p>这个样式库页面会读取 dependencies 中配置的各模块的文档内容到样式库中，读取的各文档地址是：</p>
+
+<pre>http(s):&#47;&#47;样式库根路径&#47;模块名
+</pre>
+
+<p>如果样式库部署到 <a href="http://afc163.github.com/Alib">http://afc163.github.com/Alib</a> 的，那么此页面会读取
+afc163.github.com/box、afc163.github.com/button 和 afc163.github.com/nav 这三个页面。（请确保这三个页面有内容！）</p>
+<h3 id="支付宝前端请按以下步骤操作：">支付宝前端请按以下步骤操作：</h3>
+<pre>$ curl https:&#47;&#47;raw.github.com&#47;aliceui&#47;Alib&#47;master&#47;Alib-alipay.sh | sh
+</pre>
+
+<p>命令运行后会在当前目录建立一个样式库文件夹 <code>Alib-template</code>，在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：</p>
+<div class="highlight"><pre><code class="javascript"><span class="string">"dependencies"</span>: {
+  <span class="string">"box"</span>: <span class="string">"app/box/1.0.0/box.css"</span>,
+  <span class="string">"button"</span>: <span class="string">"app/button/1.0.0/button.css"</span>,
+  <span class="string">"nav"</span>: <span class="string">"app/nav/1.0.0/nav.css"</span>
+}
+</code></pre></div>
+<p>接下来就可以将这个库部署到对应的 git 托管环境下。
+在支付宝内部，我们使用 gitlab.alibaba-inc.com 来作为样式模块的托管服务。
+请联系 @偏右 在 alipay-css 这个 group 下建库。</p>
+
+<pre>$ git remote add origin {{git地址}}
+$ git push origin master
+</pre>
+
+<p>然后运行下面的命令就可以将样式库部署到基础技术组提供的<code>site.alipay.im</code>静态站点服务上。
+具体的地址是 <code>http://style.alipay.im/{{package.json中的name}}</code> 。比如<code>http://site.alipay.im/app</code>。</p>
+
+<pre>$ make publish
+</pre>
+
+<p>这个样式库页面会读取 dependencies 中配置的各模块的文档内容到样式库中，读取的各文档地址是：</p>
+
+<pre>http:&#47;&#47;arale.alipay.im&#47;模块root&#47;模块名
+</pre>
+
+<p>比如你建立的 Alib 是部署到 <a href="http://style.alipay.im/app">http://style.alipay.im/app</a> 的，那么 Alib 页面会用 Ajax 的方式去读取
+arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav 这三个页面并取到
+对应的示例展示在 Alib 的页面上。</p>
+<h3 id="注意事项">注意事项</h3>
+<blockquote>
+<p>注意1：因为是 Ajax 的方式读取各模块页面，
+所以请保证模块文档地址可访问，并且样式库和模块文档是同域的。</p>
+
+<p>注意2：Alib 对各子模块的页面的标准有要求，请按照 spm init 后的模板来写你的 Demo。</p>
+</blockquote>
+
+<p>有任何问题，请发 <a href="https://github.com/aliceui/aliceui.github.com/issues/new">issue</a> 给我们。</p>
+</div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-wrapper">
+            <footer>
+            <p class="powered">
+            <script type="text/javascript" charset="utf-8">
+              (function(){
+                var _w = 72 , _h = 16;
+                var param = {
+                  url:location.href,
+                  type:'3',
+                  count:'1', /**是否显示分享数，1显示(可选)*/
+                  appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+                  title:'alice 写css的更好方案', /**分享的文字内容(可选，默认为所在页面的title)*/
+                  pic:'http://aliceui.org/static/alice.png', /**分享图片的路径(可选)*/
+                  ralateUid:'', /**关联用户的UID，分享微博会@该用户(可选)*/
+                  language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+                  rnd:new Date().valueOf()
+                }
+                var temp = [];
+                for( var p in param ){
+                  temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+                }
+                document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+              })()
+            </script><a href="http://aralejs.org">Arale</a> •
+<a href="http://aliceui.org">Alice</a> •
+<a href="http://seajs.org">SeaJS</a> •
+<a href="https://github.com/spmjs/spm">spm</a> •
+<a href="http://lab.lepture.com/nico/">nico</a>
+            </p>
+            </footer>
+        </div>
+    </body>
+</html>

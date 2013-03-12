@@ -29,7 +29,7 @@ Alice 推荐采用上述的层次来组织你的样式文件，在基础框架�
 ## 模块化命名规范
 
 本文主要内容来自原 [http://aliceui.com/alice-css-guide/](http://106.187.45.234/alice-css-guide/) 一文。
-Alice 的命名规范是 @小鱼 提出来的用于书写模块化样式的一套类命名规范，目前已经广泛应用在支付宝各页面，更多信息可以查看 [http://www.slideshare.net/sofish/css-8943211](http://www.slideshare.net/sofish/css-8943211) （需翻墙）。
+Alice 的命名规范是 [@小鱼](http://sofish.de/) 提出的用于书写模块化样式的一套类命名规范，目前已经广泛应用在支付宝各页面，更多信息可以查看 [http://www.slideshare.net/sofish/css-8943211](http://www.slideshare.net/sofish/css-8943211) （需翻墙）。
 
 ### 什么是模块化的样式
 

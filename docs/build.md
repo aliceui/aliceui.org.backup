@@ -151,8 +151,9 @@ publish:
 	@rm -f ${tmpfile}
 ```
 
-这样用 `make publish` 就会部署到内部提供的静态站点服务上，访问的路径为 `http://arale.alipay.im/alipay-css/box` 。
+完成后在模块根目录使用 `make publish` 命令就能部署到内部提供的静态站点服务上，访问的路径为 `http://arale.alipay.im/alipay-css/box` 。
 
+> 注意，Makefile 文件的缩进一律用 Tab，否则会报错。
 
 ## 开发某页面的样式
 

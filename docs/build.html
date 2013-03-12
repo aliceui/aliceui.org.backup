@@ -4,7 +4,7 @@
         <meta charset="UTF-8">        
         <title>Alice - 建设组件和样式库</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="generator" content="nico 0.2.4" />
+        <meta name="generator" content="nico 0.2.3" />
         <link type="image/x-icon" href="../static/css/favicon.ico" rel="icon">
         <link rel="stylesheet" href="../static/css/normalize.css" />
         <link rel="stylesheet" href="../static/css/site.css" />
@@ -77,7 +77,7 @@
                 </ol>
             </div>
             <div class="main-area">
-                <div class="side-area"><ul><li><a href="#开发一个样式组件">开发一个样式组件</a><ul><li><a href="#初始化模块">初始化模块</a></li><li><a href="#写文档和设计 Html 结构">写文档和设计 Html 结构</a></li><li><a href="#编码和调试">编码和调试</a></li><li><a href="#构建和发布">构建和发布</a></li><li><a href="#源码托管和文档部署">源码托管和文档部署</a></li></ul></li><li><a href="#开发某页面的样式">开发某页面的样式</a></li><li><a href="#构建团队的样式库">构建团队的样式库</a><ul><li><a href="#支付宝前端请按以下步骤操作：">支付宝前端请按以下步骤操作：</a></li><li><a href="#注意事项">注意事项</a></li></ul></ul></div>
+                <div class="side-area"><ul><li><a href="#%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E6%A0%B7%E5%BC%8F%E7%BB%84%E4%BB%B6">开发一个样式组件</a><ul><li><a href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%A8%A1%E5%9D%97">初始化模块</a></li><li><a href="#%E5%86%99%E6%96%87%E6%A1%A3%E5%92%8C%E8%AE%BE%E8%AE%A1-html-%E7%BB%93%E6%9E%84">写文档和设计 Html 结构</a></li><li><a href="#%E7%BC%96%E7%A0%81%E5%92%8C%E8%B0%83%E8%AF%95">编码和调试</a></li><li><a href="#%E6%9E%84%E5%BB%BA%E5%92%8C%E5%8F%91%E5%B8%83">构建和发布</a></li><li><a href="#%E6%BA%90%E7%A0%81%E6%89%98%E7%AE%A1%E5%92%8C%E6%96%87%E6%A1%A3%E9%83%A8%E7%BD%B2">源码托管和文档部署</a></li></ul></li><li><a href="#%E5%BC%80%E5%8F%91%E6%9F%90%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%A0%B7%E5%BC%8F">开发某页面的样式</a></li><li><a href="#%E6%9E%84%E5%BB%BA%E5%9B%A2%E9%98%9F%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%BA%93">构建团队的样式库</a><ul><li><a href="#%E6%94%AF%E4%BB%98%E5%AE%9D%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%8C%89%E4%BB%A5%E4%B8%8B%E6%AD%A5%E9%AA%A4%E6%93%8D%E4%BD%9C%EF%BC%9A">支付宝前端请按以下步骤操作：</a></li><li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项</a></li></ul></ul></div>
                 
                 <script type="text/template" id="list-template">
                     <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
@@ -98,10 +98,10 @@
 <p>本页略长，请坐稳。</p>
 
 <hr/>
-<h2 id="开发一个样式组件">开发一个样式组件</h2>
+<h2 id="%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E6%A0%B7%E5%BC%8F%E7%BB%84%E4%BB%B6">开发一个样式组件</h2>
 <p>我们的页面中总是存在的各式各样的模块化的 DOM 结构，
 我们都可以依据复用度来把其中一些组件提炼成样式模块。</p>
-<h3 id="初始化模块">初始化模块</h3>
+<h3 id="%E5%88%9D%E5%A7%8B%E5%8C%96%E6%A8%A1%E5%9D%97">初始化模块</h3>
 <p>现在我们要开发一个 box 组件。首先建立一个文件夹，并使用 <code>spm init</code> 命令进行初始化。</p>
 
 <pre>$ mkdir box
@@ -130,7 +130,7 @@ package.json
 README.md 是用来写文档和 DEMO 的地方，package.json 则存放模块的基本信息。
 我们可以在 package.json 中的 dependencies 字段中填写所需的依赖。
 这个 box 模块不需要依赖所以不需要填写。</p>
-<h3 id="写文档和设计 Html 结构">写文档和设计 Html 结构</h3>
+<h3 id="%E5%86%99%E6%96%87%E6%A1%A3%E5%92%8C%E8%AE%BE%E8%AE%A1-html-%E7%BB%93%E6%9E%84">写文档和设计 Html 结构</h3>
 <p>我们先打开 README.md 进行编辑。</p>
 
 <pre># box
@@ -164,14 +164,14 @@ README.md 是用来写文档和 DEMO 的地方，package.json 则存放模块的
 
 <p>像上面使用四个 ```` 符号来包裹代码是 <a href="http://lab.lepture.com/nico/">nico</a> 的特性，这样可以把代码片段转换成实际的 DOM 结构，
 非常方便调试和文档生成。</p>
-<h3 id="编码和调试">编码和调试</h3>
+<h3 id="%E7%BC%96%E7%A0%81%E5%92%8C%E8%B0%83%E8%AF%95">编码和调试</h3>
 <p>接下来我们打开 src/box.css 进行编辑，现在就是熟悉的样式编码阶段了。
 在这个阶段，我们可以到项目目录运行 <code>make watch</code> 来打开 nico 的调试功能，
 nico 会启动一个 livereload 服务监听生成的文档页面，我们可以用浏览器打开 <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> 访问文档页面并进行调试。
 你会看到类似下图的页面。</p>
 
 <p><img src="https://i.alipayobjects.com/e/201303/2Ml1vh9J08.png" alt=""/></p>
-<h3 id="构建和发布">构建和发布</h3>
+<h3 id="%E6%9E%84%E5%BB%BA%E5%92%8C%E5%8F%91%E5%B8%83">构建和发布</h3>
 <p>开发测试完毕后，我们就可以通过一下目录构建出标准的 Alice 模块文件了。</p>
 
 <pre>$ spm build
@@ -184,7 +184,7 @@ nico 会启动一个 livereload 服务监听生成的文档页面，我们可以
 </pre>
 
 <p>再通过 upload 命令可以把样式模块上传到源中，这样其他模块就可以依赖这个模块了。还可以通过 <code>spm deploy</code> 来部署到对应的开发服务器中进行进一步调试。</p>
-<h3 id="源码托管和文档部署">源码托管和文档部署</h3>
+<h3 id="%E6%BA%90%E7%A0%81%E6%89%98%E7%AE%A1%E5%92%8C%E6%96%87%E6%A1%A3%E9%83%A8%E7%BD%B2">源码托管和文档部署</h3>
 <p>最后，建议你将这个目录提交到 github 或 gitlab 中，统一管理你的样式模块。一个版本开发构建完成后，用版本号来打一个 tag 。
 还可以利用 gh-pages 来部署模块的文档页面。</p>
 
@@ -215,7 +215,7 @@ publish:
 </pre>
 
 <p>这样用 <code>make publish</code> 就会部署到内部提供的静态站点服务上，访问的路径为 <code>http://arale.alipay.im/alipay-css/box</code> 。</p>
-<h2 id="开发某页面的样式">开发某页面的样式</h2>
+<h2 id="%E5%BC%80%E5%8F%91%E6%9F%90%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%A0%B7%E5%BC%8F">开发某页面的样式</h2>
 <p>这里你将会知道如何依赖和打包 alice 模块。</p>
 
 <p>假设我们现在收到了一个 <a href="https://my.alipay.com">我的支付宝</a> 页面的开发需求，
@@ -260,7 +260,7 @@ publish:
 <span class="at_rule">@<span class="keyword">import</span> <span class="function">url(<span class="string">'./user.css'</span>)</span></span>;  <span class="comment">/* 引入内部文件 */</span>
 </code></pre></div>
 <p>最后，和上面一样，用 <code>spm build</code> 命令打包出文件，再把 dist 下的文件部署到线上对应目录就可以了。</p>
-<h2 id="构建团队的样式库">构建团队的样式库</h2>
+<h2 id="%E6%9E%84%E5%BB%BA%E5%9B%A2%E9%98%9F%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%BA%93">构建团队的样式库</h2>
 <p>当你构建出了一批样式模块后，你可能需要一个统一的地方展示和管理这些模块（类似这个<a href="http://aliceui.org/Alib">页面</a>）。
 一个维护简单使用方便的样式库对于个人开发者、团队、业务线都有很大的帮助。</p>
 
@@ -299,7 +299,7 @@ $ git push origin master
 
 <p>如果样式库部署到 <a href="http://afc163.github.com/Alib">http://afc163.github.com/Alib</a> 的，那么此页面会读取
 afc163.github.com/box、afc163.github.com/button 和 afc163.github.com/nav 这三个页面。（请确保这三个页面有内容！）</p>
-<h3 id="支付宝前端请按以下步骤操作：">支付宝前端请按以下步骤操作：</h3>
+<h3 id="%E6%94%AF%E4%BB%98%E5%AE%9D%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%8C%89%E4%BB%A5%E4%B8%8B%E6%AD%A5%E9%AA%A4%E6%93%8D%E4%BD%9C%EF%BC%9A">支付宝前端请按以下步骤操作：</h3>
 <pre>$ curl https:&#47;&#47;raw.github.com&#47;aliceui&#47;Alib&#47;master&#47;Alib-alipay.sh | sh
 </pre>
 
@@ -332,7 +332,7 @@ $ git push origin master
 <p>比如你建立的 Alib 是部署到 <a href="http://style.alipay.im/app">http://style.alipay.im/app</a> 的，那么 Alib 页面会用 Ajax 的方式去读取
 arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav 这三个页面并取到
 对应的示例展示在 Alib 的页面上。</p>
-<h3 id="注意事项">注意事项</h3>
+<h3 id="%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项</h3>
 <blockquote>
 <p>注意1：因为是 Ajax 的方式读取各模块页面，
 所以请保证模块文档地址可访问，并且样式库和模块文档是同域的。</p>

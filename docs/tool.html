@@ -4,7 +4,7 @@
         <meta charset="UTF-8">        
         <title>Alice - 工具</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="generator" content="nico 0.2.4" />
+        <meta name="generator" content="nico 0.2.3" />
         <link type="image/x-icon" href="../static/css/favicon.ico" rel="icon">
         <link rel="stylesheet" href="../static/css/normalize.css" />
         <link rel="stylesheet" href="../static/css/site.css" />
@@ -77,7 +77,7 @@
                 </ol>
             </div>
             <div class="main-area">
-                <div class="side-area"><ul><li><a href="#Spm - 包管理">Spm - 包管理</a></li><li><a href="#Nico - 调试&amp;文档">Nico - 调试&amp;文档</a></li><li><a href="#Peaches - 雪碧图">Peaches - 雪碧图</a></li><li><a href="#Alib - 样式库搭建工具">Alib - 样式库搭建工具</a></li></ul></div>
+                <div class="side-area"><ul><li><a href="#spm-%E5%8C%85%E7%AE%A1%E7%90%86">Spm - 包管理</a></li><li><a href="#nico-%E8%B0%83%E8%AF%95-amp-%E6%96%87%E6%A1%A3">Nico - 调试&amp;文档</a></li><li><a href="#peaches-%E9%9B%AA%E7%A2%A7%E5%9B%BE">Peaches - 雪碧图</a></li><li><a href="#stylus-%E9%A2%84%E7%BC%96%E8%AF%91">Stylus - 预编译</a></li><li><a href="#alib-%E6%A0%B7%E5%BC%8F%E5%BA%93%E6%90%AD%E5%BB%BA%E5%B7%A5%E5%85%B7">Alib - 样式库搭建工具</a></li></ul></div>
                 
                 <script type="text/template" id="list-template">
                     <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
@@ -91,12 +91,12 @@
 <p>Alice 作为 Arale 的一部分，离不开 Arale 体系下的 spm 和 nico 两大工具，
 使用方式也大同小异。另外 Alice 还产出了一些其他工具来帮助开发。</p>
 
-<p>Alice 目前源文件大多是纯 css 代码，但我们不排斥二次编译的 css 语言（比如stylus、less、scss等），
+<p>Alice 目前源文件大多是纯 css 代码，但我们不排斥二次编译的 css 语言（比如stylus、less、sass等），
 目前 <a href="http://aliceui.org/select">alice.select</a> 和 <a href="http://aliceui.org/nav">alice.nav</a> 这两个组件的源码就是用 stylus 写的。
 我们希望有更多业界优秀的工具和语言参与到 Alice 的样式世界中来。</p>
 
 <hr/>
-<h2 id="Spm - 包管理">Spm - 包管理</h2>
+<h2 id="spm-%E5%8C%85%E7%AE%A1%E7%90%86">Spm - 包管理</h2>
 <p>Spm 是 CMD 社区的构建和包管理工具，在 1.6 及以前的版本都是为 JavaScript 服务的。
 我们针对样式模块的特点研究出了一套在 CMD 生态圈中如何管理和使用样式的方案，
 并在 spm@1.7+ 中实现了很多重要功能。相关 issue 可以看下 <a href="https://github.com/spmjs/spm/issues/645">#645</a>。
@@ -116,7 +116,7 @@ $ spm deploy    &#47;&#47; 部署到开发机器上
 <p>注意：支付宝内部需要将 <code>~/.spm/config.json</code> 中的 source 配置为 <code>modules.alipay.im</code>，
 其他请配置为 <code>modules.spmjs.org</code> 或自己搭建的私有源。</p>
 </blockquote>
-<h2 id="Nico - 调试&amp;文档">Nico - 调试&amp;文档</h2>
+<h2 id="nico-%E8%B0%83%E8%AF%95-amp-%E6%96%87%E6%A1%A3">Nico - 调试&amp;文档</h2>
 <p>Nico 是一个 JavaScript 的静态文档生成工具，在 CMD 生态圈中被用于文档构建和 Demo 调试。它在 Alice 中的使用方式和 JS 下如出一辙。
 你如果对 Arale 那套东西熟悉的话很容易就能上手。</p>
 
@@ -125,7 +125,7 @@ $ spm deploy    &#47;&#47; 部署到开发机器上
 <p>这是目前前端文档和调试界最出色且简单的工具，没有之一。用了它，你会爱上写文档。</p>
 
 <p><a href="http://lab.lepture.com/nico/">nico 主页</a></p>
-<h2 id="Peaches - 雪碧图">Peaches - 雪碧图</h2>
+<h2 id="peaches-%E9%9B%AA%E7%A2%A7%E5%9B%BE">Peaches - 雪碧图</h2>
 <p>虽然 Alice 中不推荐在通用组件中使用图片背景，但是在业务线的开发中不能避免的会碰到需要图片才能实现的需求。
 痛苦的合成雪碧图技术就成了前端必不可少的技能之一，所以我们有了 Peaches 这样的工具来帮助我们。</p>
 
@@ -139,7 +139,18 @@ $ spm deploy    &#47;&#47; 部署到开发机器上
 <p><a href="http://peaches.io/"><img src="https://raw.github.com/slowhost/upload/1362839444253/peaches.png" alt=""/></a></p>
 
 <p>在 spm2 中将会集成 Peaches 工具，尽请期待。</p>
-<h2 id="Alib - 样式库搭建工具">Alib - 样式库搭建工具</h2>
+<h2 id="stylus-%E9%A2%84%E7%BC%96%E8%AF%91">Stylus - 预编译</h2>
+<p>Stylus 是样式的预编译工具，Alice 使用它也是出于个人喜好，但并不排斥使用 less 或 sass。Stylus 还有类似 <a href="https://github.com/visionmedia/nib">nib</a> 这种强大的 mixin 库，你可以少写几行代码多干些别的。</p>
+
+<p>使用之前要先安装</p>
+
+<pre>npm install stylus nib -g
+</pre>
+
+<p>编译的时候执行 <code>stylus -u nib src/*.styl src/</code>，就这么简单</p>
+
+<p><a href="http://learnboost.github.com/stylus/">访问主页</a></p>
+<h2 id="alib-%E6%A0%B7%E5%BC%8F%E5%BA%93%E6%90%AD%E5%BB%BA%E5%B7%A5%E5%85%B7">Alib - 样式库搭建工具</h2>
 <p>Alib 是快速构建 <a href="http://aliceui.org/Alib">这样</a> 的样式库的工具，
 在 <a href="/docs/build.html#%E6%9E%84%E5%BB%BA%E5%9B%A2%E9%98%9F%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%BA%93">&lt;构建团队的样式库&gt;</a> 一文中提到过，具体使用方式参见此文就好</p>
 

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">        
         <title>Alice - 基础框架</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="generator" content="nico 0.2.4" />
+        <meta name="generator" content="nico 0.2.3" />
         <link type="image/x-icon" href="../static/css/favicon.ico" rel="icon">
         <link rel="stylesheet" href="../static/css/normalize.css" />
         <link rel="stylesheet" href="../static/css/site.css" />
@@ -77,7 +77,7 @@
                 </ol>
             </div>
             <div class="main-area">
-                <div class="side-area"><ul><li><a href="#Base 重设">Base 重设</a><ul><li><a href="#字体">字体</a></li><li><a href="#常用功能类">常用功能类</a></li></ul></li><li><a href="#Rei - iconfont">Rei - iconfont</a></li><li><a href="#Grid 栅格">Grid 栅格</a></li><li><a href="#CSS3 Animate">CSS3 Animate</a></li></ul></div>
+                <div class="side-area"><ul><li><a href="#base-%E9%87%8D%E8%AE%BE">Base 重设</a><ul><li><a href="#%E5%AD%97%E4%BD%93">字体</a></li><li><a href="#%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E7%B1%BB">常用功能类</a></li></ul></li><li><a href="#rei-iconfont">Rei - iconfont</a></li><li><a href="#grid-%E6%A0%85%E6%A0%BC">Grid 栅格</a></li><li><a href="#css3-animate">CSS3 Animate</a></li></ul></div>
                 
                 <script type="text/template" id="list-template">
                     <li><a href="#"><i class="iconfont" title="单箭头右">&#x00E5;</i></a></li>
@@ -93,17 +93,17 @@
 
 <p><link rel="stylesheet" href="http://modules.spmjs.org/alice/grid/1.0.0/grid.css" />
 <link rel="stylesheet" href="http://modules.spmjs.org/alice/animate/1.0.0/animate.css" /></p>
-<h2 id="Base 重设">Base 重设</h2>
+<h2 id="base-%E9%87%8D%E8%AE%BE">Base 重设</h2>
 <p>base.css 是 Alice 的浏览器重设样式。（<a href="http://meyerweb.com/eric/tools/css/reset/">关于 reset.css</a>）</p>
 
 <p>它扫除了浏览器默认样式的基本兼容性问题，像建筑的地基一样，让开发者在平地上放心的建造大楼。
 Alice 的 base.css 是结合支付宝开发经验，借鉴 <a href="http://necolas.github.com/normalize.css/">normalize.css</a> 等业界优秀模块，并加上一些常用 className 而产出的一套重设样式。</p>
-<h3 id="字体">字体</h3>
+<h3 id="%E5%AD%97%E4%BD%93">字体</h3>
 <p><code>alice.base</code> 采用了 12 像素，1.5 的行高，并且兼容 Mac 和 Window 的字体配置，非常适合国内的网站样式。</p>
 <div class="highlight"><pre><code class="css"><span class="tag">body</span> <span class="rules">{
     <span class="rule"><span class="attribute">font</span>:<span class="value"><span class="number">12</span>px/<span class="number">1.5</span> tahoma,arial,Hiragino Sans GB,<span class="string">"Microsoft Yahei"</span>,\<span class="number">5</span>b8b\<span class="number">4</span>f53;</span></span>
 <span class="rule">}</span></span>
-</code></pre></div><h3 id="常用功能类">常用功能类</h3>
+</code></pre></div><h3 id="%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E7%B1%BB">常用功能类</h3>
 <ul>
 <li><p><code>fn-clear</code> 清除浮动</p></li>
 <li><p><code>fn-hide</code> 隐藏元素</p></li>
@@ -118,7 +118,7 @@ Alice 的 base.css 是结合支付宝开发经验，借鉴 <a href="http://necol
 </ul>
 
 <p>灵活使用这些类会大大提高样式开发效率，请点击 <a href="http://aliceui.org/base">演示页面</a> 和 <a href="https://github.com/aliceui/base/blob/master/src/base.css">代码</a> 查看详情。</p>
-<h2 id="Rei - iconfont">Rei - iconfont</h2>
+<h2 id="rei-iconfont">Rei - iconfont</h2>
 <p>Rei（读音为“丽”）是支付宝的 iconfont 集，是一种把图标放入自定义字体中，然后使用字体图标来替代普通图标的技术。同时，Rei也是动漫女神。</p>
 
 <p>字体图标具有良好的兼容性，矢量，规范，减少图片请求，适应性强等特点，大量先进的网站（包括 github 等）正在使用这种技术。
@@ -249,12 +249,12 @@ console.log(html);
 </div>
 
 <p>支付宝员工请直接访问 <a href="http://site.alipay.im/rei/">site.alipay.im/rei/</a> 来获取字体代码。</p>
-<h2 id="Grid 栅格">Grid 栅格</h2>
+<h2 id="grid-%E6%A0%85%E6%A0%BC">Grid 栅格</h2>
 <p>Alice 的布局是 990px 定宽 25 栅格，这是依托于支付宝实际需求的栅格系统，
 在 <a href="https://my.alipay.com/">我的支付宝</a> 有应用。具体使用方式请见文档：<a href="http://aliceui.org/grid">aliceui.org/grid</a> 。</p>
 
 <p><img src="https://i.alipayobjects.com/e/201303/2KLao4hPu8.png" alt=""/></p>
-<h2 id="CSS3 Animate">CSS3 Animate</h2>
+<h2 id="css3-animate">CSS3 Animate</h2>
 <p>Alice 引入了一个优秀的 CSS3 <a href="http://aliceui.org/animate">动画库</a> 。</p>
 
 <p>你可以通过简单的增减类名的方式在你的项目中实现 <a href="http://daneden.me/animate/">数十种动画效果</a>。比如：</p>

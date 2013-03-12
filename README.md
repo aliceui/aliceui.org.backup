@@ -63,3 +63,9 @@ Alice 的前身是 [http://github.com/sofish/alice](http://github.com/sofish/ali
 这是一个开放的体系，非常欢迎大家在 Alice 的规范下产出自己的模块和样式库。
 
 若对 Alice 有任何问题或建议，欢迎提 [issue](https://github.com/aliceui/aliceui.github.com/issues/new) 与我们沟通。
+
+[Github 仓库](https://github.com/aliceui/aliceui.github.com)
+
+[Github 组织](https://github.com/aliceui/)
+
+[Arale 官网](http://aralejs.org)

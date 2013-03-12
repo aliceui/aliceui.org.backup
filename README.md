@@ -56,8 +56,9 @@ Alice 是 Arale 的子集，是原有的 Arale 体系中对样式的补充。
 
 ## 加入我们
 
+新 Alice 的前身是 [http://github.com/alipay/alice](http://github.com/alipay/alice) ，首先感谢 @小鱼 @展新 @欣欣 同学过去的工作成果。
+新 Alice 是在此基础上结合了 cmd 生态圈的特性和这一年来对实际需求的总结而产出的方案。
+
 这是一个开放的体系，非常欢迎大家在 Alice 的规范下产出自己的模块和样式库。
 
 若对 Alice 有任何问题或建议，欢迎提 [issue](https://github.com/aliceui/aliceui.github.com/issues/new) 与我们沟通。
-
-感谢 @小鱼 @展新 @欣欣 同学过去的工作成果。

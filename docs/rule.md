@@ -28,7 +28,8 @@ Alice 推荐采用上述的层次来组织你的样式文件，在基础框架�
 
 ## 模块化命名规范
 
-本文主要内容来自原 http://aliceui.com/alice-css-guide/ 一文。
+本文主要内容来自原 http://106.187.45.234/alice-css-guide/ 一文。
+Alice 的命名规范是 @小鱼 提出来的用于书写模块化样式的一套类命名规范，目前已经广泛应用在支付宝各页面，更多信息可以查看 [http://www.slideshare.net/sofish/css-8943211](http://www.slideshare.net/sofish/css-8943211) （需翻墙）。
 
 ### 什么是模块化的样式
 
@@ -143,8 +144,10 @@ ui-box 组件能够嵌到页面上任何一个位置，box 内部也能够嵌入
 
 说了这么多，其实简单就是一句话，用 `-` 来做命名空间上的区隔，最小化两个组件之间的命名冲突。
 
-在 Alice 中，第一个 `ui-` 是作为通用组件的标识。你可以选取其他前缀来分类你的模块。
+这种模块化的命名方式会很好地避免样式之间的冲突，特别推荐在团队中使用，
+可以参考 [box](https://github.com/aliceui/box/blob/master/src/box.css)、[nav](https://github.com/aliceui/nav/blob/master/src/nav.css) 这些按照 Alice 命名规范实现的组件源码。
 
+在 Alice 中，第一个 `ui-` 是作为通用组件的标识。你可以选取其他前缀来分类你的模块。
 
 ## CSS 编码规范
 

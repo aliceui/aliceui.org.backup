@@ -105,7 +105,8 @@
 <p>Alice 推荐采用上述的层次来组织你的样式文件，在基础框架的基础上开发一定数量的通用模块，
 在页面样式模块中继承基础框架和通用模块，并进一步开发。</p>
 <h2 id="模块化命名规范">模块化命名规范</h2>
-<p>本文主要内容来自原 <a href="http://aliceui.com/alice-css-guide/">http://aliceui.com/alice-css-guide/</a> 一文。</p>
+<p>本文主要内容来自原 <a href="http://106.187.45.234/alice-css-guide/">http://106.187.45.234/alice-css-guide/</a> 一文。
+Alice 的命名规范是 @小鱼 提出来的用于书写模块化样式的一套类命名规范，目前已经广泛应用在支付宝各页面，更多信息可以查看 <a href="http://www.slideshare.net/sofish/css-8943211">http://www.slideshare.net/sofish/css-8943211</a> （需翻墙）。</p>
 <h3 id="什么是模块化的样式">什么是模块化的样式</h3>
 <p>Alice 对于模块话样式的理解是组件应该像一个盒模型，不和页面的其他元素互相影响。
 完美的 Alice 模块应该是一个“口”字型结构。比如 box 组件：</p>
@@ -200,6 +201,9 @@ HTML ENTRY 请参考这个文档：<a href="https://docs.google.com/Doc?docid=0A
 </ul>
 <h3 id="命名规范的最后">命名规范的最后</h3>
 <p>说了这么多，其实简单就是一句话，用 <code>-</code> 来做命名空间上的区隔，最小化两个组件之间的命名冲突。</p>
+
+<p>这种模块化的命名方式会很好地避免样式之间的冲突，特别推荐在团队中使用，
+可以参考 <a href="https://github.com/aliceui/box/blob/master/src/box.css">box</a>、<a href="https://github.com/aliceui/nav/blob/master/src/nav.css">nav</a> 这些按照 Alice 命名规范实现的组件源码。</p>
 
 <p>在 Alice 中，第一个 <code>ui-</code> 是作为通用组件的标识。你可以选取其他前缀来分类你的模块。</p>
 <h2 id="CSS 编码规范">CSS 编码规范</h2>

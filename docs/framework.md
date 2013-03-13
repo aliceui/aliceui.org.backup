@@ -15,10 +15,15 @@
 
 ## Base 重设
 
-base.css 是 Alice 的浏览器重设样式。（[关于 reset.css](http://meyerweb.com/eric/tools/css/reset/)）
+base.css 是 Alice 的浏览器重设样式。
 
 它扫除了浏览器默认样式的基本兼容性问题，像建筑的地基一样，让开发者在平地上放心的建造大楼。
 Alice 的 base.css 是结合支付宝开发经验，借鉴 [normalize.css](http://necolas.github.com/normalize.css/) 等业界优秀模块，并加上一些常用 className 而产出的一套重设样式。
+
+> [砸场子：No CSS Reset](http://snook.ca/archives/html_and_css/no_css_reset/)
+
+> 实际上，Alice 也是 No CSS Reset 的拥趸，所有的通用模块都不依赖于 base.css 进行开发，它们会有自己的 reset 代码，这样它们在任何页面的表现都会 OK。
+> 在 Alice 中，base.css 的更大作用是让第一线的页面开发者轻松些。
 
 ### 字体
 

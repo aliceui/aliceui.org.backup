@@ -10,8 +10,8 @@
 Alice 作为 Arale 的一部分，离不开 Arale 体系下的 spm 和 nico 两大工具，
 使用方式也大同小异。另外 Alice 还产出和使用了一些工具来帮助开发。
 
-Alice 目前源文件大多是纯 css 代码，但我们不排斥二次编译的 css 语言（比如stylus、less、sass等），
-目前 [alice.select](http://aliceui.org/select) 和 [alice.nav](http://aliceui.org/nav) 这两个组件的源码就是用 stylus 写的。
+Alice 目前源文件大多是纯 CSS 代码，但我们不排斥二次编译的 CSS 语言（比如 stylus、less、sass 等），
+目前 [alice.select](http://aliceui.org/select) 和 [alice.nav](http://aliceui.org/nav) 这两个模块的源码就是用 stylus 写的。
 我们希望有更多业界优秀的工具和语言参与到 Alice 的样式世界中来。
 
 ---
@@ -20,7 +20,7 @@ Alice 目前源文件大多是纯 css 代码，但我们不排斥二次编译的
 
 Spm 是 CMD 社区的构建和包管理工具，在 1.6 及以前的版本都是为 JavaScript 服务的。
 我们针对样式模块的特点研究出了一套在 CMD 生态圈中如何管理和使用样式的方案，
-并在 spm@1.7+ 中实现了很多重要功能。相关 issue 可以看下 [#645](https://github.com/spmjs/spm/issues/645)。
+并在版本 1.7+ 中实现了很多重要功能。相关 issue 可以看下 [#645](https://github.com/spmjs/spm/issues/645)。
 您会对 spm 对样式的支持有更多的了解。
 
 spm2 之后的版本会对前面的版本做支持，基本使用方式和目前的版本保持一致。
@@ -51,7 +51,7 @@ Nico 是一个 JavaScript 的静态文档生成工具，在 CMD 生态圈中被�
 
 ## Peaches - 雪碧图
 
-虽然 Alice 中不推荐在通用组件中使用图片背景，但是在业务线的开发中不能避免的会碰到需要图片才能实现的需求。
+虽然 Alice 中不推荐在通用模块中使用图片背景，但是在业务线的开发中不能避免的会碰到需要图片才能实现的需求。
 痛苦的合成雪碧图技术就成了前端必不可少的技能之一，所以我们有了 Peaches 这样的工具来帮助我们。
 
 Peaches 是支付宝前端工程师 @蔡伦 同学开发的，是一个 CSS 雪碧图编译工具。

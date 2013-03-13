@@ -18,7 +18,7 @@
 
 ## 在 Arale 中使用样式
 
-Alice 是 Arale 整个前端解决方案的子集，有些简单页面使用 Alice 组件就可以搭建出来了，有些则需要配合 JavaScript 才能实现。那么如何在 AraleJS 中使用 Alice 呢？
+Alice 是 Arale 整个前端解决方案的子集，有些简单页面使用 Alice 通用模块就可以搭建出来了，有些则需要配合 JavaScript 才能实现。那么如何在 AraleJS 中使用 Alice 呢？
 
 在 Arale 的解决方案中，使用样式主要有两种方式。
 
@@ -30,7 +30,7 @@ Alice 是 Arale 整个前端解决方案的子集，有些简单页面使用 Ali
     <link href="alice-modules.css" rel="stylesheet">
     ```
 
-    在 Alice 中，一般可以建一个模块，通过依赖打包标准的组件，从而产出一个 CSS 文件，link 到相应的位置就可以了。
+    在 Alice 中，一般可以新建一个模块，打包出一个 CSS 文件再 link 到相应的位置就可以了。
 
 2. 使用 JavaScript 实现的 [importStyle](https://github.com/spmjs/spm/issues/641) 功能在页面中动态插入 style 标签。
 
@@ -141,7 +141,7 @@ seajs.use(['$', 'arale/autocomplete/1.2.0/autocomplete'], function($, AutoComple
 
 ## Tip
 
-[Tip](http://aralejs.org/tip) 组件是典型的应用型组件，样式可以使用 JS 来进行载入。
+[Tip](http://aralejs.org/tip) 是典型的应用型组件，样式可以使用 JS 来进行载入。
 
 在 arale/tip/1.0.0/atip 的代码中有这样的调用：
 

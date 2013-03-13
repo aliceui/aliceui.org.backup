@@ -116,13 +116,13 @@
 
 把上述代码复制到一个新的 html 文件中，然后用浏览器打开。
 
-你会看到一个使用了 grid、box、nav 和 tipbox 四个组件的页面。
+你会看到一个使用了 grid、box、nav 和 tipbox 四个模块的页面。
 
 这里我们引用了一个 [one-full.css](http://modules.spmjs.org/alice/one/1.0.0/one-full.css) 文件，
 这是一个打包了所有 alice 模块的集合文件。
 
 使用 alice 非常简单，只需要引入样式，复制对应的 HTML 结构，就能构建需要的页面了。
-相关的文档和 HTML 结构可以访问菜单上的 [基础框架](/docs/framework.html)、[通用组件库](/docs/widget.html)、[JavaScript](/docs/javascript.html) 这三个链接。
+相关的文档和 HTML 结构可以访问菜单上的 [基础框架](/docs/framework.html)、[通用样式库](/docs/widget.html)、[JavaScript](/docs/javascript.html) 这三个链接。
 
 
 ## 下载

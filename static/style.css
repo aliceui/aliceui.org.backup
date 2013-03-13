@@ -164,8 +164,14 @@ hr {
 .content-area {
     background: #fff;
     border: 1px solid #ddd;
-    padding: 0 29px;
+    padding: 0 29px 20px;
     width: 840px;
+    margin-left: 240px;
+}
+
+.comment-area {
+    width: 900px;
+    margin-top: 20px;
     margin-left: 240px;
 }
 

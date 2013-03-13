@@ -67,6 +67,24 @@
                     <h1>{{post.title}}</h1>
                     <div class="content">{{post.html}}</div>
                 </div>
+                {%- if post.filename == 'index' %}
+                <div class="comment-area">
+                    <!-- Duoshuo Comment BEGIN -->
+                    <div class="ds-thread"></div>
+                    <script type="text/javascript">
+                    var duoshuoQuery = {short_name:"aliceui"};
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';ds.async = true;
+                        ds.src = 'http://static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] 
+                        || document.getElementsByTagName('body')[0]).appendChild(ds);
+                        })();
+                    </script>
+                    <!-- Duoshuo Comment END -->
+                </div>
+                {%- endif %}
             </div>
         </div>
         <div id="footer-wrapper">

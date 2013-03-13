@@ -127,6 +127,7 @@ hr {
     background: #FBFFD7;
     border-top: 4px solid #9ACD4B;
     text-align: center;
+    border-bottom: 1px solid #FFF0B5;
 }
 
 .main-nav {

@@ -9,7 +9,7 @@ define(function(require, exports, module) {
             return;
         }
 
-        doc.scroll(function() {
+        $(window).scroll(function() {
             var top = doc.scrollTop(), i;
             if (top >= doc.height()- $(window).height() - 20) {
                 i = titles.length - 1;

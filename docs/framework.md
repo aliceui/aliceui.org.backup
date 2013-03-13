@@ -50,7 +50,7 @@ body {
 
 - `fn-webkit-adjust` 用于修复 webkit 下小于 10px 的中文字体
 
-灵活使用这些类会大大提高样式开发效率，请点击 [演示页面](http://aliceui.org/base) 和 [代码](https://github.com/aliceui/base/blob/master/src/base.css) 查看详情。
+我们使用 `fn-` 前缀表示一些常用的工具类名，灵活使用这些类会大大提高样式开发效率，请点击 [演示页面](http://aliceui.org/base) 和 [代码](https://github.com/aliceui/base/blob/master/src/base.css) 查看详情。
 
 
 ## Rei - iconfont
@@ -201,7 +201,7 @@ Alice 的布局是 990px 定宽 25 栅格，这是依托于支付宝实际需求
 
 Alice 引入了一个优秀的 CSS3 [动画库](http://aliceui.org/animate) 。
 
-你可以通过简单的增减类名的方式在你的项目中实现 [数十种动画效果](http://daneden.me/animate/)。比如：
+你可以通过简单的增减类名的方式在你的项目中实现数十种动画效果。比如：
 
 > 以下动画效果在支持css3 animate的高级浏览器中有效。
 

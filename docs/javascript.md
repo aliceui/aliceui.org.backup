@@ -97,6 +97,7 @@ seajs.use('arale/switchable/0.9.12/tabs', function(Tabs) {
     new Tabs({
         triggers: '.ui-tab-item',
         panels: '.panel',
+        triggerType: 'click',
         activeTriggerClass: 'ui-tab-item-current'
     }).render();
 });

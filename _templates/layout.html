@@ -27,8 +27,9 @@
         <![endif]-->
         {%- endblock %}
         <script>
-        seajs.use(['arale/fixed/1.0.0/fixed'], function(Fixed) {
+        seajs.use(['arale/fixed/1.0.0/fixed', '/static/side'], function(Fixed, side) {
             Fixed('.side-area', 20);
+            side.init();
         });
         </script>
     </head>

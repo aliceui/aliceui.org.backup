@@ -28,7 +28,6 @@ Alice 推荐采用上述的层次来组织你的样式文件，在基础框架�
 
 ## 模块化命名规范
 
-本文主要内容来自原 [http://aliceui.com/alice-css-guide/](http://106.187.45.234/alice-css-guide/) 一文。
 Alice 的命名规范是 [@小鱼](http://sofish.de/) 提出的用于书写模块化样式的一套类命名规范，目前已经广泛应用在支付宝各页面，更多信息可以查看 [http://www.slideshare.net/sofish/css-8943211](http://www.slideshare.net/sofish/css-8943211) （需翻墙）。
 
 ### 什么是模块化的样式
@@ -36,7 +35,7 @@ Alice 的命名规范是 [@小鱼](http://sofish.de/) 提出的用于书写模�
 Alice 对于模块话样式的理解是组件应该像一个盒模型，不和页面的其他元素互相影响。
 完美的 Alice 模块应该是一个“口”字型结构。比如 box 组件：
 
-![](https://raw.github.com/slowhost/upload/1362842084975/box.png)
+![](https://i.alipayobjects.com/e/201303/2OcipsuaOK.png)
 
 ui-box 组件能够嵌到页面上任何一个位置，box 内部也能够嵌入别的模块（比如 list 组件），它们之间不会互相影响。
 
@@ -45,7 +44,7 @@ ui-box 组件能够嵌到页面上任何一个位置，box 内部也能够嵌入
 一种简单的方式是使用 Alice 的类命名规范，当团队中都能采用这种方式书写样式，就能很好地避免样式冲突。
 在模块化和命名上，以一个Tab组件为例，分解如下：
 
-![](https://raw.github.com/slowhost/upload/1362844273297/222.jpg)
+![](https://i.alipayobjects.com/e/201303/2OclGkyShZ.jpg)
 
 值得注意的是：
 
@@ -86,7 +85,7 @@ ui-box 组件能够嵌到页面上任何一个位置，box 内部也能够嵌入
 
 ### Alice 类命名规范
 
-![](http://aliceui.com/images/alice-css-guide/dcbzbj8j_35c92sj7fs_b.png)
+![](https://i.alipayobjects.com/e/201303/2OchzepKA0.png)
 
 - 组件名
 

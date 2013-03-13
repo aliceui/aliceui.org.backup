@@ -8,7 +8,7 @@
 > 城里的女人就是白啊! *「 让子弹飞 」2010*
 
 Alice 作为 Arale 的一部分，离不开 Arale 体系下的 spm 和 nico 两大工具，
-使用方式也大同小异。另外 Alice 还产出了一些其他工具来帮助开发。
+使用方式也大同小异。另外 Alice 还产出和使用了一些工具来帮助开发。
 
 Alice 目前源文件大多是纯 css 代码，但我们不排斥二次编译的 css 语言（比如stylus、less、sass等），
 目前 [alice.select](http://aliceui.org/select) 和 [alice.nav](http://aliceui.org/nav) 这两个组件的源码就是用 stylus 写的。
@@ -69,13 +69,13 @@ Peaches 通过分析 CSS 样式规则，提取背景图片，自动合并成雪�
 
 Stylus 是样式的预编译工具，Alice 使用它也是出于个人喜好，但并不排斥使用 less 或 sass。Stylus 还有类似 [nib](https://github.com/visionmedia/nib) 这种强大的 mixin 库，你可以少写几行代码多干些别的。
 
-使用之前要先安装
+使用之前要先安装：
 
 ```
 npm install stylus nib -g
 ```
 
-编译的时候执行 `stylus -u nib src/*.styl src/ `，就这么简单
+编译的时候执行 `stylus -u nib src/*.styl src/ `，就这么简单。
 
 
 [访问主页](http://learnboost.github.com/stylus/)

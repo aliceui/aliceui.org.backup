@@ -133,9 +133,8 @@ hr {
 .main-nav {
     list-style-position: inside;
     line-height: 36px;
-    margin: 0 auto;
+    margin: 12px auto 0;
     padding: 0;
-    margin-top: 10px;
     width: 850px;
 }
 

@@ -11,7 +11,7 @@ Alice 是漫游仙境的迪斯尼女孩，是 Arale 的子集，是支付宝的�
 
 她包括了一套通用样式模块库，一个模块化的样式构建规范，一组帮助书写和组织样式的工具，以及产出更多 Alice 模块和样式库的完善方案。
 
-![](../static/css-icon.png)
+![](http://aliceui.org/static/css-icon.png)
 
 ## Alice 的特点
 

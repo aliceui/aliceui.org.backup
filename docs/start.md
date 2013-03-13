@@ -122,7 +122,7 @@
 这是一个打包了所有 alice 模块的集合文件。
 
 使用 alice 非常简单，只需要引入样式，复制对应的 HTML 结构，就能构建需要的页面了。
-相关的文档和 HTML 结构可以访问菜单上的 [基础框架](/docs/framework.html)、[通用组件库](/docs/widges.html)、[JavaScript](/docs/javascript.html) 这三个链接。
+相关的文档和 HTML 结构可以访问菜单上的 [基础框架](/docs/framework.html)、[通用组件库](/docs/widget.html)、[JavaScript](/docs/javascript.html) 这三个链接。
 
 
 ## 下载

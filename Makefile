@@ -15,6 +15,7 @@ watch:
 publish: clean build-doc
 	@git checkout master
 	@git pull origin master
+	@git checkout content
 	@ghp-import -b master -p _site
 
 clean:

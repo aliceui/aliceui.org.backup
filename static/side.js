@@ -15,12 +15,12 @@ define(function(require, exports, module) {
                 i = titles.length - 1;
             } else {
                 for (i=0; i<titles.length; i++) {
-                    if (top < titles.eq(i).offset().top - 20) {
-                        i--;
-                        i = (i<0) ? 0 : i;
+                    if (top < titles.eq(i).offset().top - 20) {  
                         break;
                     }
                 }
+                i--;
+                i = (i<0) ? 0 : i;
             }
             $('.side-area .side-highlight').removeClass('side-highlight');
             $('.side-area > ul > li').eq(i).addClass('side-highlight');

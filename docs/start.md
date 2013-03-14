@@ -9,6 +9,8 @@
 
 准备要使用 Alice 了吗，天，太激动太正能量了！请随我来。
 
+![](https://i.alipayobjects.com/e/201303/2P3fLYiHrA.jpg)
+
 ---
 
 ## 一个简单的例子

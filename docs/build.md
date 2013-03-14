@@ -128,8 +128,9 @@ $ spm upload
 
 ```
 publish: clean build-doc
-	@ghp-import _site
-	@git push origin gh-pages
+	@git checkout master
+	@git pull origin master
+	@ghp-import _site -p
 ```
 
 就可以用`make publish`来发布文档页面到 github 的 gh-pages 中（需要安装 [ghp-import](https://github.com/davisp/ghp-import)）。

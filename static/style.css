@@ -37,9 +37,13 @@ hr {
     margin-left: 1em;
 }
 
-.content > img {
+.content > p > img {
     max-width: 100%;
     border-radius: 8px;
+}
+
+.content > p {
+    margin: 20px 0;
 }
 
 .content code {

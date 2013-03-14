@@ -128,8 +128,6 @@ $ spm upload
 
 ```
 publish: clean build-doc
-	@git checkout master
-	@git pull origin master
 	@ghp-import _site -p
 ```
 

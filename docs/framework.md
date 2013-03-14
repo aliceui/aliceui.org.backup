@@ -30,7 +30,7 @@ Alice 的 base.css 是结合支付宝开发经验，借鉴 [normalize.css](http:
 `alice.base` 采用了 12 像素，1.5 的行高，并且兼容 Mac 和 Window 的字体配置，非常适合国内的网站样式。
 
 ```css
-body {
+body,button,input,select,textarea {
     font:12px/1.5 tahoma,arial,"Hiragino Sans GB","Microsoft Yahei",\5b8b\4f53;
 }
 ```

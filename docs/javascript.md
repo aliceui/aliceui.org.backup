@@ -10,7 +10,7 @@
 
 只有样式模块是无法开发页面的，现在我们需要一些 JavaScript 的功能。
 
-万幸，我们有 [Arale](http://aralejs.org/) 。本页面将用几个常用的范例介绍如何搭配使用 Alice 和 Arale。(这里的 Arale 特指 JS 解决方案)
+万幸，我们有 [Arale](http://aralejs.org/) 。本页面将用几个常用的范例介绍如何搭配使用 Alice 模块和 Arale 的 JS 模块。
 
 ![](https://i.alipayobjects.com/e/201303/2MPpg2ju9k.jpg)
 
@@ -18,7 +18,7 @@
 
 ## 在 Arale 中使用样式
 
-Alice 是 Arale 整个前端解决方案的子集，有些简单页面使用 Alice 通用模块就可以搭建出来了，有些则需要配合 JavaScript 才能实现。那么如何在 AraleJS 中使用 Alice 呢？
+Alice 是 Arale 整个前端解决方案的子集，有些简单页面使用 Alice 通用模块就可以搭建出来了，有些则需要配合 JavaScript 才能实现。那么如何在 Arale 中使用 Alice 呢？
 
 在 Arale 的解决方案中，使用样式主要有两种方式。
 

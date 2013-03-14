@@ -72,7 +72,7 @@ Stylus 是样式的预编译工具，Alice 使用它也是出于个人喜好，�
 使用之前要先安装：
 
 ```
-npm install stylus nib -g
+$ npm install stylus nib -g
 ```
 
 编译的时候执行 `stylus -u nib src/*.styl src/ `，就这么简单。

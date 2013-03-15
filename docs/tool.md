@@ -34,7 +34,7 @@ $ spm deploy    // 部署到开发机器上
 
 常用的命令基本就是这四个，更多 spm 的使用方式，请参考前面的开发教程或 Arale 的相关文档。
 
-> 注意：支付宝内部需要将 `~/.spm/config.json` 中的 source 配置为 `modules.alipay.im`，
+> 注意：支付宝内部需要将 `~/.spm/config.json` 中的 sources 配置为 `modules.alipay.im`，
 其他请配置为 `modules.spmjs.org` 或自己搭建的私有源。
 
 

@@ -27,13 +27,13 @@ hr {
 
  .content blockquote {
     border-left: 0.4em solid #DDDDDD;
-    color: #888;
+    color: #999;
     margin: 15px 0;
     padding: 0 15px;
 }
 
 .content blockquote em {
-    color: #AB4141;
+    color: #BB6E6E;
     margin-left: 1em;
 }
 

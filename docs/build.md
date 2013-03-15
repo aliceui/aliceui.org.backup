@@ -287,7 +287,7 @@ $ git push origin master
 ```
 
 然后运行下面的命令就可以将样式库部署到基础技术组提供的`site.alipay.im`静态站点服务上。
-具体的地址是 `http://style.alipay.im/{{package.json中的name}}` 。比如`http://site.alipay.im/app`。
+具体的地址是 `http://style.alipay.im/{{package.json中的name}}` 。比如`http://style.alipay.im/app`。
 
 ```
 $ make publish

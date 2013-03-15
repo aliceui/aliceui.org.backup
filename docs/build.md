@@ -138,8 +138,8 @@ publish: clean build-doc
 然后在项目的 Makefile 文件中加入下面的代码：
 
 ```
-name = `cat package.json | grep name | awk -F'"' '{print $$4}'`
-root = `cat package.json | grep root | awk -F'"' '{print $$4}'`
+name = `cat package.json | grep \"name\" | awk -F'"' '{print $$4}'`
+root = `cat package.json | grep \"root\" | awk -F'"' '{print $$4}'`
 html = _site
 tmpfile = tmp.tar.gz
 publish:

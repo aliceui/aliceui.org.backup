@@ -123,7 +123,7 @@ $ spm upload
 最后，建议你将这个目录提交到 github 或 gitlab 中，统一管理你的样式模块。一个版本开发构建完成后，用版本号来打一个 tag 。
 还可以利用 gh-pages 来部署模块的文档页面。
 
-比如要把这个模块托管到 github 上（例如：https://github.com/afc163/box），在项目的 Makefile 
+比如要把这个模块托管到 github 上（例如：https://github.com/afc163/box ），在项目的 Makefile 
 文件中加入下面的代码：
 
 ```

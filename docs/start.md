@@ -135,7 +135,7 @@
 
     这个文件来自于 [aliceui/one](https://github.com/aliceui/one)，可以自行 clone 到本地并构建之。
 
-2. 或者通过 [spm](https://github.com/spmjs/spm/) 工具进行下载。（这个工具在后面会大量使用）
+2. 或者通过 [spm](https://github.com/spmjs/spm2/) 工具进行下载。（这个工具在后面会大量使用）
 
     ```
     $ spm install alice

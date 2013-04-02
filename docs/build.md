@@ -10,7 +10,7 @@
 我相信，只是复制几个 Html 结构一定不是你的追求，Alice 可以让你做得更多。
 
 以下内容默认在 Linux\Unix 环境下运行，
-并确保你已经安装了 [spm](https://github.com/spmjs/spm) 的 1.7.2 及以上版本、 [nico](http://lab.lepture.com/nico/)、
+并确保你已经安装了 [spm](https://github.com/spmjs/spm2) 的 2.0 及以上版本、 [nico](http://lab.lepture.com/nico/)、
 以及 Alice 所对应的 nico [主题](https://github.com/aliceui/nico-alice/)。
 若对工具这块有疑问，可以先阅读 [工具](/docs/tool.html) 。
 
@@ -27,21 +27,32 @@
 
 现在我们要开发一个 box 区块模块。首先建立一个文件夹，并使用 `spm init` 命令进行初始化。
 
+> 可能需要先安装一下 alice 的模板。
+
+```
+$ git clone git://github.com/aralejs/template-arale.git --branch spm2 ~/.spm/init/arale
+```
+
 ```
 $ mkdir box
 $ cd box
-$ spm init
+$ spm init alice
 ```
 
 ```
-prompt: Please select module type:                                     2
-Downloading: http://modules.alipay.im/template/alice/1.0.0/alice.tgz:  
-Downloaded: http://modules.alipay.im/template/alice/1.0.0/alice.tgz
-prompt: Define value for property 'root': :  alipay-css
-prompt: Define value for property 'name': :  box
+Please answer the following:
+[?] Project name (box)   
+[?] your CMD family (alice) 
+[?] Version (1.0.0) 
+[?] Description (The best jQuery plugin ever.) The box module.            
+[?] Project git repository (git://github.com/afc163/box.git) 
+[?] Project homepage (https://github.com/afc163/box) 
+[?] Project issues tracker (https://github.com/afc163/box/issues) 
+[?] Licenses (MIT) 
+[?] Do you need to make any changes to the above before continuing? (y/N) 
 ```
 
-这时程序会让你输入相关的信息，选择 2 (alice) 模板，
+这时程序会让你输入相关的信息，
 填写 root 为 alice（Alice 通用模块） 或 alipay-css（支付宝通用业务模块）或其他，
 name 为 box 后，就会生成一个 alice 模块的初始目录结构如下。
 
@@ -54,7 +65,7 @@ package.json
 
 其中 src 目录存放我们的样式源文件，Makefile 用于构建模块的文档，
 README.md 是用来写文档和 DEMO 的地方，package.json 则存放模块的基本信息。
-我们可以在 package.json 中的 dependencies 字段中填写所需的依赖。
+我们可以在 package.json 中的 spm 字段中的 alias 填写所需的依赖的别名。
 这个 box 模块不需要依赖所以不需要填写。
 
 ### 写文档和设计 Html 结构
@@ -109,11 +120,11 @@ nico 会启动一个 livereload 服务监听生成的文档页面，我们可以
 $ spm build
 ```
 
-这个命令会生成一个 dist 目录，里面存放我们构建出来的样式文件。它会读取 package.json 中的 output 
-字段来输出用户指定的文件。([output 规则](https://github.com/spmjs/spm/wiki/package.json-:-output))
+这个命令会生成一个 dist 目录，里面存放我们构建出来的样式文件。它会读取 package.json 中 spm 字段下的 output 
+字段来输出用户指定的文件。([output 规则](http://docs.spmjs.org/en/package#spm-output))
 
 ```
-$ spm upload
+$ spm publish
 ```
 
 再通过 upload 命令可以把样式模块上传到源中，这样其他模块就可以依赖这个模块了。还可以通过 `spm deploy` 来部署到对应的开发服务器中进行进一步调试。
@@ -135,19 +146,13 @@ publish: clean build-doc
 就可以访问 https://afc163.github.com/box 来访问对应的文档页了。
 
 如果在支付宝，可以在 http://gitlab.alibaba-inc.com 平台建立一个 group 为 alipay-css 的 git 项目（找@偏右）。
-然后在项目的 Makefile 文件中加入下面的代码：
+然后在项目的 Makefile 文件的 publish 部分改为下面的代码：
 
 ```
-name = `cat package.json | grep \"name\" | awk -F'"' '{print $$4}'`
-root = `cat package.json | grep \"root\" | awk -F'"' '{print $$4}'`
-html = _site
-tmpfile = tmp.tar.gz
-publish:
-	@nico build -v -C $(THEME)/nico.js
-	@rm -f ${tmpfile}
-	@tar --exclude='.git/*' -czf ${tmpfile} ${html}
-	@curl -F name=${name} -F file=@${tmpfile} http://arale.alipay.im/repository/upload/${root}
-	@rm -f ${tmpfile}
+publish: clean build-doc
+	@spm config source:arale.url http://arale.alipay.im
+	@spm config source:arale.auth arale
+	@spm publish --source=arale --doc=_site
 ```
 
 完成后在模块根目录使用 `make publish` 命令就能部署到内部提供的静态站点服务上，访问的路径为 `http://arale.alipay.im/alipay-css/box` 。
@@ -167,23 +172,27 @@ publish:
 
 > 注意在支付宝内部，root 一般填写对应的系统名称。
 
-生成目录后，我们打开 myalipay/package.json 文件，编辑其中的 dependencies 字段。假设我们需要
+生成目录后，我们打开 myalipay/package.json 文件，编辑其中的 spm.alias 字段。假设我们需要
 用到 alice.box、alice.nav、alice.button 三个模块。
 
 ```js
 {
   "name": "myalipay",
   "version": "1.0.0",
-  "root": "myalipay",
+  "family": "myalipay",
   ...
-  "dependencies": {
-    "box": "alice/box/1.0.0/box.css",
-    "button": "alice/button/1.0.0/button.css",
-    "nav": "alice/nav/1.0.0/nav.css"
+  "spm": {
+    "alias": {
+      "box": "alice/box/1.0.0/box.css",
+      "button": "alice/button/1.0.0/button.css",
+      "nav": "alice/nav/1.0.0/nav.css"
+    },
+    output: ["myalipay.css"]
   }
 }
 ```
 
+其中 alias 字段指明了依赖的模块的别名，output 字段指明了需要 src 目录下打包的目标文件，
 然后打开 src/myalipay.css ，在文件前面写入
 
 ```css
@@ -206,7 +215,9 @@ publish:
 @import url('./user.css');  /* 引入内部文件 */
 ```
 
-最后，和上面一样，用 `spm build` 命令打包出文件，再把 dist 下的文件部署到线上对应目录就可以了。
+最后，和上面一样，用 `spm build` 命令打包出文件，你会发现在 dist 目录下多了
+两个文件 myalipay.css 和 myalipay-debug.css ，包含了 box、button、nav、user.css 和 myalipay.css 自身的所有代码。
+最后把 dist 下的文件部署到线上对应目录就可以了。
 
 
 ## 构建团队的样式库
@@ -227,13 +238,15 @@ $ curl https://raw.github.com/aliceui/Alib/master/Alib.sh | sh
 ```
 
 命令运行后会在当前目录建立一个样式库文件夹 `Alib-template`，
-现在在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：
+现在在 package.json 的 spm.alias 字段中写上你要在样式库显示的样式模块。比如：
 
 ```js
-"dependencies": {
-  "box": "alice/box/1.0.0/box.css",
-  "button": "alice/button/1.0.0/button.css",
-  "nav": "alice/nav/1.0.0/nav.css"
+"spm": {
+  alias: {
+    "box": "alice/box/1.0.0/box.css",
+    "button": "alice/button/1.0.0/button.css",
+    "nav": "alice/nav/1.0.0/nav.css"
+  }
 }
 ```
 
@@ -267,13 +280,15 @@ afc163.github.com/box、afc163.github.com/button 和 afc163.github.com/nav 这�
 $ curl https://raw.github.com/aliceui/Alib/master/Alib-alipay.sh | sh
 ```
 
-命令运行后会在当前目录建立一个样式库文件夹 `Alib-template`，在 package.json 的 dependencies 字段中写上你要在样式库显示的样式模块。比如：
+命令运行后会在当前目录建立一个样式库文件夹 `Alib-template`，在 package.json 的 spm.alias 字段中写上你要在样式库显示的样式模块。比如：
 
 ```js
-"dependencies": {
-  "box": "app/box/1.0.0/box.css",
-  "button": "app/button/1.0.0/button.css",
-  "nav": "app/nav/1.0.0/nav.css"
+"spm": {
+  "alias": {
+    "box": "app/box/1.0.0/box.css",
+    "button": "app/button/1.0.0/button.css",
+    "nav": "app/nav/1.0.0/nav.css"
+  }
 }
 ```
 
@@ -312,3 +327,4 @@ arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav
 > 注意2：Alib 对各子模块的页面的标准有要求，请按照 spm init 后的模板来写你的 Demo。
 
 有任何问题，请发 [issue](https://github.com/aliceui/aliceui.github.com/issues/new) 给我们。
+然后在项目的 Makefile 文件中加入下面的代码：

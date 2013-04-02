@@ -23,19 +23,19 @@ Spm 是 CMD 社区的构建和包管理工具，在 1.6 及以前的版本都是
 并在版本 1.7+ 中实现了很多重要功能。相关 issue 可以看下 [#645](https://github.com/spmjs/spm/issues/645)。
 您会对 spm 对样式的支持有更多的了解。
 
-spm2 之后的版本会对前面的版本做支持，基本使用方式和目前的版本保持一致。
+目前 [spm2](http://github.com/spmjs/spm2) 已经发布，Alice 已经全面建构在 spm 2.0 版本之上，相关信息请阅读 spm2 的[文档](http://docs.spmjs.org/)。
 
 ```
 $ spm init      // 初始化模块
+$ spm install   // 安装一个已有模块到本地
 $ spm build     // 完成开发，构建模块
-$ spm upload    // 将模块上传到源中
+$ spm publish   // 将模块发布到源上
 $ spm deploy    // 部署到开发机器上
 ```
 
-常用的命令基本就是这四个，更多 spm 的使用方式，请参考前面的开发教程或 Arale 的相关文档。
+常用的命令基本就是这四个，其中 [spm init](https://github.com/spmjs/spm-init) 和 [spm deploy](https://github.com/spmjs/spm-deploy) 作为 spm 的插件需要额外安装。更多 spm 的使用方式，请参考前面的开发教程或 Arale 的相关文档。
 
-> 注意：支付宝内部需要将 `~/.spm/config.json` 中的 sources 配置为 `['modules.alipay.im','modules.spmjs.org']`，
-其他请配置为 `'modules.spmjs.org'` 或自己搭建的私有源。
+> 注意：支付宝内部请安装 [支付宝 spm 套装](https://github.com/spmjs/spm-alipay-suite)，会对开发有更大的定制性帮助。
 
 
 ## Nico - 调试&文档

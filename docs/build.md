@@ -7,16 +7,44 @@
 
 > More power comes more responsibility. *「 Spider Man 」2012*
 
-我相信，只是复制几个 Html 结构一定不是你的追求，Alice 可以让你做得更多。
-
-以下内容默认在 Linux\Unix 环境下运行，
-并确保你已经安装了 [spm](https://github.com/spmjs/spm2) 的 2.0 及以上版本、 [nico](http://lab.lepture.com/nico/)、
-以及 Alice 所对应的 nico [主题](https://github.com/aliceui/nico-alice/)。
-若对工具这块有疑问，可以先阅读 [工具](/docs/tool.html) 。
-
-本页略长，请坐稳。
+我相信，只是复制几个 Html 结构一定不是你的追求，Alice 可以让你做得更多。本页略长，请坐稳。
 
 ---
+
+## 工具准备
+
+本文重要内容默认在 Linux\Unix 环境下运行，在开始之前，我们先需要安装几个重要的工具。
+若对这些工具的作用不了解，可以先阅读 [工具](/docs/tool.html) 。
+
+### 安装 [spm](https://github.com/spmjs/spm2)
+
+```
+$ npm install spm -g
+```
+
+确保你已经安装了 spm 2.0 及以上版本，并安装 spm-init 和 spm-deploy 两个插件。
+
+```
+$ npm install spm-init -g
+$ npm install spm-deploy -g
+```
+
+支付宝前端请运行 `npm install spm-alipay-suite` 安装一个套件集合来获取所有功能。
+
+并安装 spm-init 的 alice 模板：
+
+```
+$ git clone git://github.com/aralejs/template-alice.git --branch spm2 ~/.spm/init/alice
+```
+
+### 安装 [nico](http://lab.lepture.com/nico/)
+
+```
+$ npm install nico -g
+```
+
+以及 Alice 所对应的 nico [主题](https://github.com/aliceui/nico-alice/)。
+
 
 ## 开发一个样式模块
 
@@ -26,12 +54,6 @@
 ### 初始化模块
 
 现在我们要开发一个 box 区块模块。首先建立一个文件夹，并使用 `spm init` 命令进行初始化。
-
-> 可能需要先安装一下 alice 的模板。
-
-```
-$ git clone git://github.com/aralejs/template-arale.git --branch spm2 ~/.spm/init/arale
-```
 
 ```
 $ mkdir box
@@ -151,7 +173,6 @@ publish: clean build-doc
 ```
 publish: clean build-doc
 	@spm config source:arale.url http://arale.alipay.im
-	@spm config source:arale.auth arale
 	@spm publish --source=arale --doc=_site
 ```
 

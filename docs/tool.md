@@ -75,7 +75,7 @@ Stylus 是样式的预编译工具，Alice 使用它也是出于个人喜好，�
 $ npm install stylus nib -g
 ```
 
-编译的时候执行 `stylus -u nib src/*.styl src/ `，就这么简单。
+编译的时候只需执行 `spm build`，就这么简单。
 
 
 [访问主页](http://learnboost.github.com/stylus/)

@@ -19,7 +19,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Alice 的简单例子</title>
-<link media="all" href="http://modules.spmjs.org/alice/one/1.0.0/one-full.css" rel="stylesheet">
+<link media="all" href="http://assets.spmjs.org/alice/one/1.0.0/one.css" rel="stylesheet">
 <style>
     .wrapper {
         width: 990px;
@@ -120,7 +120,7 @@
 
 你会看到一个使用了 grid、box、nav 和 tipbox 四个模块的页面。
 
-这里我们引用了一个 [one-full.css](http://modules.spmjs.org/alice/one/1.0.0/one-full.css) 文件，
+这里我们引用了一个 [one.css](http://assets.spmjs.org/alice/one/1.0.0/one.css) 文件，
 这是一个打包了所有 alice 模块的集合文件。
 
 使用 alice 非常简单，只需要引入样式，复制对应的 HTML 结构，就能构建需要的页面了。
@@ -131,7 +131,7 @@
 
 1. 可以直接下载上面的 css 文件，这里提供一个未压缩的版本。
 
-    [http://modules.spmjs.org/alice/one/1.0.0/one-full-debug.css](http://modules.spmjs.org/alice/one/1.0.0/one-full-debug.css)
+    [http://assets.spmjs.org/alice/one/1.0.0/one.css](http://assets.spmjs.org/alice/one/1.0.0/one.css)
 
     这个文件来自于 [aliceui/one](https://github.com/aliceui/one)，可以自行 clone 到本地并构建之。
 

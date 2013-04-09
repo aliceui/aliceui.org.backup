@@ -139,6 +139,43 @@ seajs.use(['$', 'arale/autocomplete/1.2.0/autocomplete'], function($, AutoComple
 });
 ````
 
+## Popup
+
+[Popup](http://aralejs.org/popup) 的职责是有触发元素的浮层交互，可以和 `alice.button-dropdown` 配合使用。
+
+````html
+<div class="ui-button-dropdown">
+    <a class="ui-button ui-button-lorange ui-dbutton ui-dbutton-orange" id="popup-trigger">
+        <span class="ui-dbutton-self">下拉菜单</span>
+        <i class="ui-dbutton-arrow iconfont" title="下三角形">&#xF03C;</i>
+    </a>
+    <ul class="ui-button-dropdown-large" id="popup-element">
+        <li class="ui-button-dropdown-item">
+            <a href="#">设置代扣</a>
+        </li>
+        <li class="ui-button-dropdown-item">
+            <a href="#">标为已缴</a>
+        </li>   
+    </ul>
+</div>
+
+<style>
+.ui-button-dropdown-large {
+    display: none;
+}
+</style>
+````
+
+````js
+seajs.use(['arale/popup/1.0.0/popup'], function(Popup) {
+    console.log(111);
+    new Popup({
+        trigger: '#popup-trigger',
+        element: '#popup-element'
+    });
+});
+````
+
 ## Tip
 
 [Tip](http://aralejs.org/tip) 是典型的应用型组件，样式可以使用 JS 来进行载入。

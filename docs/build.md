@@ -75,7 +75,7 @@ Please answer the following:
 ```
 
 这时程序会让你输入相关的信息，
-填写 root 为 alice（Alice 通用模块） 或 alipay-css（支付宝通用业务模块）或其他，
+填写 family 为 alice（Alice 通用模块） 或 alipay-css（支付宝通用业务模块）或其他，
 name 为 box 后，就会生成一个 alice 模块的初始目录结构如下。
 
 ```
@@ -161,11 +161,11 @@ $ spm publish
 
 ```
 publish: clean build-doc
-	@ghp-import _site -p
+	@spm publish --doc _site
 ```
 
-就可以用`make publish`来发布文档页面到 github 的 gh-pages 中（需要安装 [ghp-import](https://github.com/davisp/ghp-import)）。
-就可以访问 https://afc163.github.com/box 来访问对应的文档页了。
+就可以用`make publish`来发布文档页面到 spmjs.org 的文档托管服务中，默认的地址为 http://{{family}}.spmjs.org/{{name}}。
+就可以访问 http://alice.spmjs.org.com/box 来访问对应的文档页了。
 
 如果在支付宝，可以在 http://gitlab.alibaba-inc.com 平台建立一个 group 为 alipay-css 的 git 项目（找@偏右）。
 然后在项目的 Makefile 文件的 publish 部分改为下面的代码：
@@ -191,7 +191,7 @@ publish: clean build-doc
 在 Alice 中，一切样式皆模块，所以这个 myalipay 其实和上面的 box 没有本质区别，
 只不过它是直接用在页面上的。
 
-> 注意在支付宝内部，root 一般填写对应的系统名称。
+> 注意在支付宝内部，family 一般填写对应的系统名称。
 
 生成目录后，我们打开 myalipay/package.json 文件，编辑其中的 spm.alias 字段。假设我们需要
 用到 alice.box、alice.nav、alice.button 三个模块。
@@ -285,7 +285,7 @@ $ git push origin master
 $ make publish
 ```
 
-这个样式库页面会读取 dependencies 中配置的各模块的文档内容到样式库中，读取的各文档地址是：
+这个样式库页面会读取 alias 中配置的各模块的文档内容到样式库中，读取的各文档地址是：
 
 ```
 http(s)://样式库根路径/模块名
@@ -329,10 +329,10 @@ $ git push origin master
 $ make publish
 ```
 
-这个样式库页面会读取 dependencies 中配置的各模块的文档内容到样式库中，读取的各文档地址是：
+这个样式库页面会读取 alias 中配置的各模块的文档内容到样式库中，读取的各文档地址是：
 
 ```
-http://arale.alipay.im/模块root/模块名
+http://arale.alipay.im/模块family/模块名
 ```
 
 比如你建立的 Alib 是部署到 http://style.alipay.im/app 的，那么 Alib 页面会用 Ajax 的方式去读取

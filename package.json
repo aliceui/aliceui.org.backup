@@ -1,7 +1,7 @@
 {
-  "name": "Alice",
+  "name": "alice.spmjs.org",
   "version": "0.0.1",
-  "root": "",
+  "family": "alice",
   "description": "写样式的更好方式",
   "homepage": "http://aliceui.org",
   "repository": {

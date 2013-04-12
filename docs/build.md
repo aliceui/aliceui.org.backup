@@ -347,4 +347,4 @@ arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav
 
 > 注意2：Alib 对各子模块的页面的标准有要求，请按照 spm init 后的模板来写你的 Demo。
 
-有任何问题，请发 [issue](https://github.com/aliceui/aliceui.github.com/issues/new) 给我们。
+有任何问题，请发 [issue](https://github.com/aliceui/aliceui.org/issues/new) 给我们。

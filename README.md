@@ -62,15 +62,15 @@ Alice 是 Arale 的子集，是原有的 Arale 体系中对样式的补充。
 
 ## 加入我们
 
-Alice 的前身是 [http://github.com/sofish/alice](http://github.com/sofish/alice)，
+Alice 的前身是 [http://github.com/alipay/alice](http://github.com/alipay/alice)，
 新方案是在此基础上结合了 cmd 生态圈的特性和这一年来对实际需求的总结而产出的。
 感谢 [@小鱼](http://sofish.de/) [@展新](http://pizn.net/) @欣欣 同学过去的工作成果，也感谢社区对我们的关注和贡献。
 
 这是一个开放的体系，非常欢迎大家在 Alice 的规范下产出自己的模块和样式库。
 
-若对 Alice 有任何问题或建议，欢迎提 [issue](https://github.com/aliceui/aliceui.github.com/issues/new) 与我们沟通。
+若对 Alice 有任何问题或建议，欢迎提 [issue](https://github.com/aliceui/aliceui.org/issues/new) 与我们沟通。
 
-[Github 仓库](https://github.com/aliceui/aliceui.github.com)
+[Github 仓库](https://github.com/aliceui/aliceui.org)
 
 [Github 组织](https://github.com/aliceui/)
 

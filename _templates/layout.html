@@ -46,7 +46,7 @@
             <div class="nav-area">
                 <ol class="main-nav">
                     <li><a href="/">首页</a></li>
-                    {%- for item in resource.pages|find_all('alice') %}
+                    {%- for item in resource.pages|find_category('alice') %}
                     <li><a href="{{permalink_url(item)}}">{{item.title}}</a></li>
                     {%- endfor %}
                 </ol>

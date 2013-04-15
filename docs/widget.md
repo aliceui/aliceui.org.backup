@@ -15,6 +15,7 @@
 
 ---
 
+`````html
 <script type="text/template" id="alice-module">
     <div class="alice-module">
         <div class="alice-module-head">
@@ -110,10 +111,10 @@ h3.alice-module-subtitle {
     font-size: 12px;
     padding: 5px 10px;
     background: #EFFFE4;
-    border-radius: 3px;    
+    border-radius: 3px;
     display: none;
     z-index: 99;
-    opacity: 0.8;   
+    opacity: 0.8;
 }
 a {
     color: #08c;
@@ -128,8 +129,8 @@ a {
 <link type="text/css" rel="stylesheet" media="screen" href="../static/tomorrow.css">
 <script src="../static/google-code-prettify/run_prettify.js"></script>
 
-<script>
-seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
+<script type="text/javascript">
+seajs.use(['$', 'gallery/underscore/1.4.4/underscore'], function($, _) {
 
     $('.alice-modules').on('mouseenter', '.alice-module-demo', function() {
         $(this).find('.alice-module-sourcecode').fadeIn(200);
@@ -224,3 +225,4 @@ seajs.use(['$', 'gallery/underscore/1.4.3/underscore'], function($, _) {
 
 });
 </script>
+`````

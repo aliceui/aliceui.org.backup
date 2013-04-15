@@ -238,7 +238,7 @@ publish: clean build-doc
 
 最后，和上面一样，用 `spm build` 命令打包出文件，你会发现在 dist 目录下多了
 两个文件 myalipay.css 和 myalipay-debug.css ，包含了 box、button、nav、user.css 和 myalipay.css 自身的所有代码。
-最后把 dist 下的文件部署到线上对应目录就可以了。在支付宝，我们是部署到 https://a.alipayobjects.com/{{family}}/{{name}}/{{version}}/{{file}}.css 这样的路径上的。
+最后把 dist 下的文件部署到线上对应目录就可以了。在支付宝，我们是部署到 `https://a.alipayobjects.com/{{family}}/{{name}}/{{version}}/{{file}}.css` 这样的路径上的。
 
 
 ## 构建团队的样式库

@@ -19,3 +19,4 @@ Thumbs.db
 build
 _site
 sea-modules
+.cache

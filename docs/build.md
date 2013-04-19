@@ -45,7 +45,7 @@ $ npm install nico -g
 
 > 确保 nico 的版本高于 `0.3.0`。
 
-以及 Alice 所对应的 nico [主题](https://github.com/aliceui/nico-alice/)。
+然后安装 Alice 所对应的 nico [主题](https://github.com/aliceui/nico-alice/)。
 
 ## 开发一个样式模块
 

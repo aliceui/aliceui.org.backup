@@ -16,7 +16,7 @@
 本文重要内容默认在 Linux\Unix 环境下运行，在开始之前，我们先需要安装几个重要的工具。
 若对这些工具的作用不了解，可以先阅读 [工具](/docs/tool.html) 。
 
-### 安装 [spm](https://github.com/spmjs/spm2)
+### 安装 spm
 
 ```
 $ npm install spm -g
@@ -29,22 +29,23 @@ $ npm install spm-init -g
 $ npm install spm-deploy -g
 ```
 
-支付宝前端请运行 `npm install spm-alipay-suite` 安装一个套件集合来获取所有功能。
+支付宝前端请运行 `npm install spm-alipay-suite -g` 安装一个套件集合来获取所有功能。
 
 并安装 spm-init 的 alice 模板：
 
 ```
-$ git clone git://github.com/aralejs/template-alice.git --branch spm2 ~/.spm/init/alice
+$ git clone git://github.com/aralejs/template-alice.git --branch spm2  ~/.spm/init/alice
 ```
 
-### 安装 [nico](http://lab.lepture.com/nico/)
+### 安装 nico
 
 ```
 $ npm install nico -g
 ```
 
-以及 Alice 所对应的 nico [主题](https://github.com/aliceui/nico-alice/)。
+> 确保 nico 的版本高于 `0.3.0`。
 
+以及 Alice 所对应的 nico [主题](https://github.com/aliceui/nico-alice/)。
 
 ## 开发一个样式模块
 

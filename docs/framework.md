@@ -188,6 +188,8 @@ console.log(html);
 <div class="icon"><i class="iconfont" title="申请还款">&#xF053;</i> 申请还款</div>
 <div class="icon"><i class="iconfont" title="信用卡管理">&#xF054;</i> 信用卡管理</div>
 <div class="icon"><i class="iconfont" title="记录">&#xF055;</i> 记录</div>
+<div class="icon"><i class="iconfont" title="优惠劵">&#xF013;</i> 优惠劵</div>
+<div class="icon"><i class="iconfont" title="购物袋">&#xF018;</i> 购物袋</div>
 </div>
 
 支付宝员工请直接访问 [site.alipay.im/rei/](http://site.alipay.im/rei/) 来获取字体代码。

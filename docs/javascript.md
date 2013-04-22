@@ -167,8 +167,7 @@ seajs.use(['$', 'arale/autocomplete/1.2.0/autocomplete'], function($, AutoComple
 ````
 
 ````js
-seajs.use(['arale/popup/1.0.0/popup'], function(Popup) {
-    console.log(111);
+seajs.use(['arale/popup/1.0.2/popup'], function(Popup) {
     new Popup({
         trigger: '#popup-trigger',
         element: '#popup-element'
@@ -201,7 +200,7 @@ require('alice/poptip/1.0.0/poptip.css');
 </style>
 
 ````js
-seajs.use(['arale/tip/1.0.0/atip'], function(Atip) {
+seajs.use(['arale/tip/1.1.1/atip'], function(Atip) {
     new Atip({
         trigger: '#atip',
         content: '我是 Tip 的内容'
@@ -222,7 +221,7 @@ seajs.use(['arale/tip/1.0.0/atip'], function(Atip) {
 ````
 
 ````js
-seajs.use(['arale/dialog/1.0.0/confirmbox'], function(ConfirmBox) {
+seajs.use(['arale/dialog/1.0.1/confirmbox'], function(ConfirmBox) {
     new ConfirmBox({
         trigger: '#confirmbox',
         title: '您好~',

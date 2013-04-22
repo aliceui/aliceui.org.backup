@@ -34,7 +34,7 @@ $ npm install spm-deploy -g
 并安装 spm-init 的 alice 模板：
 
 ```
-$ git clone git://github.com/aralejs/template-alice.git --branch spm2  ~/.spm/init/alice
+$ git clone git://github.com/aralejs/template-alice.git ~/.spm/init/alice
 ```
 
 ### 安装 nico

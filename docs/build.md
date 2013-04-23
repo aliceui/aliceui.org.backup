@@ -22,14 +22,15 @@
 $ npm install spm -g
 ```
 
-确保你已经安装了 spm 2.0 及以上版本，并安装 spm-init 和 spm-deploy 两个插件。
+确保你已经安装了 spm 2.0 及以上版本，并安装 spm-build、spm-init、spm-deploy 三个插件。
 
 ```
+$ npm install spm-build -g
 $ npm install spm-init -g
 $ npm install spm-deploy -g
 ```
 
-支付宝前端请运行 `npm install spm-alipay-suite -g` 安装一个套件集合来获取所有功能。
+支付宝前端请运行 `npm install spm-alipay-suite -g` 安装一个套件集合来获取以上插件和其他定制功能。
 
 并安装 spm-init 的 alice 模板：
 

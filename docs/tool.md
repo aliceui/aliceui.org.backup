@@ -33,7 +33,8 @@ $ spm publish   // 将模块发布到源上
 $ spm deploy    // 部署到开发机器上
 ```
 
-常用的命令基本就是这五个，其中 [spm init](https://github.com/spmjs/spm-init) 和 [spm deploy](https://github.com/spmjs/spm-deploy) 作为 spm 的插件需要额外安装。更多 spm 的使用方式，请参考前面的开发教程或 Arale 的相关文档。
+常用的命令基本就是这五个，其中[spm build](https://github.com/spmjs/spm-build)、 [spm init](https://github.com/spmjs/spm-init) 和 [spm deploy](https://github.com/spmjs/spm-deploy) 作为 spm 的插件需要额外安装。
+更多 spm 的使用方式，请参考前面的开发教程或 Arale 的相关文档。
 
 > 注意：支付宝前端请安装 [支付宝 spm 套装](https://github.com/spmjs/spm-alipay-suite)，会对开发有更大的定制性帮助。
 

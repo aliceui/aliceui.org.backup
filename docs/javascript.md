@@ -221,7 +221,7 @@ seajs.use(['arale/tip/1.1.1/atip'], function(Atip) {
 ````
 
 ````js
-seajs.use(['arale/dialog/1.0.1/confirmbox'], function(ConfirmBox) {
+seajs.use(['arale/dialog/1.0.2/confirmbox'], function(ConfirmBox) {
     new ConfirmBox({
         trigger: '#confirmbox',
         title: '您好~',

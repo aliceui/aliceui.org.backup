@@ -58,7 +58,7 @@ Alice 中的 tab 模块就非常适合和 Switchable 进行配合。
 
 
 ````html
-<link href="http://aralejs.org/source/alice/tab/1.0.0/tab.css" rel="stylesheet">
+<link href="http://assets.spmjs.org/alice/tab/1.0.0/tab.css" rel="stylesheet">
 <style>
 .panel {
     display: none;
@@ -109,7 +109,7 @@ seajs.use('arale/switchable/0.9.12/tabs', function(Tabs) {
 可以和 alice.select 进行配合。
 
 ````html
-<link href="http://aralejs.org/source/alice/select/1.0.0/select.css" rel="stylesheet">
+<link href="http://assets.spmjs.org/alice/select/1.0.0/select.css" rel="stylesheet">
 <input type="text" id="input" placeholder="请输入 a">
 
 <script id="template" type="text/x-handlebars-template">

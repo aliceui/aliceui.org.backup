@@ -253,15 +253,15 @@ publish-doc: clean build-doc
 Alice 的通用样式库是基于支付宝视觉规范的一套模块精选集，数量和质量都会严格控制。
 更好的实践是在各小组各产品线参照通用样式库建立自己的样式精选集。（可以避免制造出鱼龙混杂的模块池而导致的无法查找模块的问题。）
 
-Alice 提供了一种简单的方式帮助你在 `github` 或 `支付宝内网` 上搭建自己的样式库。在搭建你的样式库前，请先按照上面的做法构建好一批样式库中需要的 Alice 模块。
+Alice 提供了一种简单的方式帮助你在 `spmjs.org` 或 `支付宝内网` 上搭建自己的样式库。在搭建你的样式库前，请先按照上面的做法构建好一批样式库中需要的 Alice 模块。
 接下来搭建的样式库会帮助你集成这些模块。
 
 ```
 $ curl https://raw.github.com/aliceui/Alib/master/Alib.sh | sh
 ```
 
-命令运行后会在当前目录建立一个样式库文件夹 `Alib-template`，
-现在在 package.json 的 spm.alias 字段中写上你要在样式库显示的样式模块。比如：
+命令运行后会在当前目录建立一个样式库文件夹 `Alib-template`，先修改 package.json 中的 family 为你自己的。（否则你将没有权限部署文档）
+然后在 package.json 的 spm.alias 字段中写上你要在样式库显示的样式模块。比如：
 
 ```js
 "spm": {
@@ -280,8 +280,8 @@ $ git remote add origin {{git地址}}
 $ git push origin master
 ```
 
-然后运行下面的命令就可以将样式库部署到对应的 gh-pages 页面。
-具体的地址是 `https://username.github.com/{{package.json中的name}}` 。
+然后运行下面的命令就可以将样式库部署到 spmjs.org 提供静态文档托管服务上。
+具体的地址是 `https://spmjs.org/docs/{{package.json中的family}}/{{package.json中的name}}` 。
 
 ```
 $ make publish-doc
@@ -293,17 +293,19 @@ $ make publish-doc
 http(s)://样式库根路径/模块名
 ```
 
-如果样式库部署到 http://afc163.github.com/Alib 的，那么此页面会读取
-afc163.github.com/box、afc163.github.com/button 和 afc163.github.com/nav 这三个页面。（请确保这三个页面有内容！）
+如果样式库部署到 http://spmjs.org/alice/Alib 的，那么此页面会读取
+spmjs.org/alice/box、spmjs.org/alice/button 和 spmjs.org/alice/nav 这三个页面。（请确保这三个页面有内容！）
 
 
 ### 支付宝前端请按以下步骤操作：
 
 ```
-$ curl https://raw.github.com/aliceui/Alib/master/Alib-alipay.sh | sh
+$ curl https://raw.github.com/aliceui/Alib/alipay/Alib.sh | sh
 ```
 
-命令运行后会在当前目录建立一个样式库文件夹 `Alib-template`，在 package.json 的 spm.alias 字段中写上你要在样式库显示的样式模块。比如：
+命令运行后会在当前目录建立一个样式库文件夹 `Alib-template`，首先你需要修改 package.json 里面的 name 为自己的项目名称（比如 app），保持 family 依然为 style。
+
+在 package.json 的 spm.alias 字段中写上你要在样式库显示的样式模块。比如：
 
 ```js
 "spm": {
@@ -324,7 +326,7 @@ $ git remote add origin {{git地址}}
 $ git push origin master
 ```
 
-然后运行下面的命令就可以将样式库部署到基础技术组提供的`site.alipay.im`静态站点服务上。
+然后运行下面的命令就可以将样式库部署到基础技术组提供的 `yuan.alipay.im` 静态站点服务上。
 具体的地址是 `http://arale.alipay.im/style/{{package.json中的name}}` 。比如`http://arale.alipay.im/style/app`。
 
 ```
@@ -341,6 +343,8 @@ http://arale.alipay.im/模块family/模块名
 arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav 这三个页面并取到
 对应的示例展示在 Alib 的页面上。
 
+这样你就拥有了一个样式库地址为 [arale.alipay.im/style/app](http://arale.alipay.im/style/app) 的业务线样式库。
+你可以进一步修改这个仓库中的样式和文档来，然后运行 `make publish-doc` 就能不断优化更新它。
 
 ### 注意事项
 

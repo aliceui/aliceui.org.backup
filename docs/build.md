@@ -48,6 +48,10 @@ $ npm install nico -g
 
 然后安装 Alice 所对应的 nico [主题](https://github.com/aliceui/nico-alice/)。
 
+```
+$ curl https://raw.github.com/aliceui/nico-alice/master/bootstrap.sh | sh
+```
+
 ## 开发一个样式模块
 
 我们的页面中总是存在的各式各样的模块化的 DOM 结构，

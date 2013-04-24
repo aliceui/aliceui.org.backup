@@ -91,9 +91,9 @@ README.md
 package.json
 ```
 
-其中 src 目录存放我们的样式源文件，Makefile 用于构建模块的文档，
-README.md 是用来写文档和 DEMO 的地方，package.json 则存放模块的基本信息。
-我们可以在 package.json 中的 spm 字段中的 alias 填写所需的依赖的别名。
+其中 `src` 目录存放我们的样式源文件，`Makefile` 用于构建模块的文档，
+`README.md` 是用来写文档和 DEMO 的地方，`package.json` 则存放模块的基本信息。
+我们可以在 `package.json` 中的 spm 字段中的 alias 填写所需的依赖的别名。
 这个 box 模块不需要依赖所以不需要填写。
 
 ### 写文档和设计 Html 结构

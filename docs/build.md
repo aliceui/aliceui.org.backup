@@ -46,7 +46,7 @@ $ npm install nico -g
 
 > 确保 nico 的版本高于 `0.3.0`。
 
-然后安装 Alice 所对应的 nico [主题](https://github.com/aliceui/nico-alice/)。
+并安装 Alice 所对应的 nico [主题](https://github.com/aliceui/nico-alice/)。
 
 ```
 $ curl https://raw.github.com/aliceui/nico-alice/master/bootstrap.sh | sh

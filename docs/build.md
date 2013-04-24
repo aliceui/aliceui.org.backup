@@ -158,27 +158,27 @@ $ spm publish
 最后，建议你将这个目录提交到 github 或 gitlab 中，统一管理你的样式模块。一个版本开发构建完成后，用版本号来打一个 tag 。
 还可以利用 gh-pages 来部署模块的文档页面。
 
-比如要把这个模块托管到 github 上（例如：https://github.com/afc163/box ），在项目的 Makefile 
+比如要把这个模块托管到线上（例如：https://github.com/afc163/box ），在项目的 Makefile 
 文件中加入下面的代码：
 
 ```
-publish: clean build-doc
+publish-doc: clean build-doc
 	@spm publish --doc _site
 ```
 
-就可以用`make publish`来发布文档页面到 spmjs.org 的文档托管服务中，默认的地址为 http://{{family}}.spmjs.org/{{name}}。
+就可以用`make publish-doc`来发布文档页面到 spmjs.org 的文档托管服务中，默认的地址为 http://{{family}}.spmjs.org/{{name}}。
 就可以访问 http://alice.spmjs.org.com/box 来访问对应的文档页了。
 
 如果在支付宝，可以在 http://gitlab.alibaba-inc.com 平台建立一个 group 为 alipay-css 的 git 项目（找@偏右）。
-然后在项目的 Makefile 文件的 publish 部分改为下面的代码：
+然后在项目的 Makefile 文件的 publish-doc 部分改为下面的代码：
 
 ```
-publish: clean build-doc
-	@spm config source:arale.url http://arale.alipay.im
-	@spm publish --source=arale --doc=_site
+publish-doc: clean build-doc
+	@spm config source.alipay.url http://yuan.alipay.im
+	@spm publish --doc _site -s alipay
 ```
 
-完成后在模块根目录使用 `make publish` 命令就能部署到内部提供的静态站点服务上，访问的路径为 `http://arale.alipay.im/alipay-css/box` 。
+完成后在模块根目录使用 `make publish-doc` 命令就能部署到内部提供的静态站点服务上，访问的路径为 `http://arale.alipay.im/alipay-css/box` 。
 
 > 注意，Makefile 文件的缩进一律用 Tab，否则会报错。
 
@@ -284,7 +284,7 @@ $ git push origin master
 具体的地址是 `https://username.github.com/{{package.json中的name}}` 。
 
 ```
-$ make publish
+$ make publish-doc
 ```
 
 这个样式库页面会读取 alias 中配置的各模块的文档内容到样式库中，读取的各文档地址是：
@@ -325,10 +325,10 @@ $ git push origin master
 ```
 
 然后运行下面的命令就可以将样式库部署到基础技术组提供的`site.alipay.im`静态站点服务上。
-具体的地址是 `http://style.alipay.im/{{package.json中的name}}` 。比如`http://style.alipay.im/app`。
+具体的地址是 `http://arale.alipay.im/style/{{package.json中的name}}` 。比如`http://arale.alipay.im/style/app`。
 
 ```
-$ make publish
+$ make publish-doc
 ```
 
 这个样式库页面会读取 alias 中配置的各模块的文档内容到样式库中，读取的各文档地址是：
@@ -337,7 +337,7 @@ $ make publish
 http://arale.alipay.im/模块family/模块名
 ```
 
-比如你建立的 Alib 是部署到 http://style.alipay.im/app 的，那么 Alib 页面会用 Ajax 的方式去读取
+比如你建立的 Alib 是部署到 http://arale.alipay.im/style/app 的，那么 Alib 页面会用 Ajax 的方式去读取
 arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav 这三个页面并取到
 对应的示例展示在 Alib 的页面上。
 

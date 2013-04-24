@@ -12,7 +12,7 @@ server:
 watch:
 	@nico server -C $(THEME)/nico.js --watch
 
-publish: clean build-doc
+publish-doc: clean build-doc
 	@spm publish --doc _site
 
 clean:
@@ -25,5 +25,5 @@ test:
 	@mocha-phantomjs --reporter=${reporter} http://127.0.0.1:8000/${url}
 
 
-.PHONY: build-doc debug server publish clean test
+.PHONY: build-doc debug server publish-doc clean test
 

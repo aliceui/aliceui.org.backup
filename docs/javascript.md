@@ -95,6 +95,7 @@ Alice 中的 tab 模块就非常适合和 Switchable 进行配合。
 ````js
 seajs.use('arale/switchable/0.9.12/tabs', function(Tabs) {
     new Tabs({
+        element: '.ui-tab',
         triggers: '.ui-tab-item',
         panels: '.panel',
         triggerType: 'click',
@@ -133,7 +134,7 @@ seajs.use(['$', 'arale/autocomplete/1.2.0/autocomplete'], function($, AutoComple
         trigger: '#input',
         template: $('#template').html(),
         dataSource: ['abc', 'abd', 'abe', 'acd'],
-        width: 179,
+        width: 150,
         classPrefix: 'ui-select'
     }).render();
 });

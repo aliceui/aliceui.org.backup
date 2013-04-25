@@ -19,7 +19,7 @@
 注意，支付宝的前端们可以跳过[工具准备]这部分，只须安装一个套件集合就能获取以下所有工具。
 
 ```
-npm install spm-alipay-suite -g
+$ npm install spm-alipay-suite -g
 ```
 
 ### 安装 spm

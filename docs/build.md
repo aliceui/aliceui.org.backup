@@ -16,6 +16,12 @@
 本文重要内容默认在 Linux\Unix 环境下运行，在开始之前，我们先需要安装几个重要的工具。
 若对这些工具的作用不了解，可以先阅读 [工具](/docs/tool.html) 。
 
+注意，支付宝的前端们可以跳过[工具准备]这部分，只须安装一个套件集合就能获取以下所有工具。
+
+```
+npm install spm-alipay-suite -g
+```
+
 ### 安装 spm
 
 ```
@@ -29,8 +35,6 @@ $ npm install spm-build -g
 $ npm install spm-init -g
 $ npm install spm-deploy -g
 ```
-
-支付宝前端请运行 `npm install spm-alipay-suite -g` 安装一个套件集合来获取以上插件和其他定制功能。
 
 并安装 spm-init 的 alice 模板：
 

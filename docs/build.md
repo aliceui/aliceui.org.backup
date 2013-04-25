@@ -162,8 +162,8 @@ $ spm publish
 最后，建议你将这个目录提交到 github 或 gitlab 中，统一管理你的样式模块。一个版本开发构建完成后，用版本号来打一个 tag 。
 还可以利用 gh-pages 来部署模块的文档页面。
 
-比如要把这个模块托管到线上（例如：https://github.com/afc163/box ），在项目的 Makefile 
-文件中加入下面的代码：
+比如要把这个模块的静态文档托管到 spmjs.org 上，在项目的 Makefile 
+文件中把 publish-doc 部分替换为下面的代码：
 
 ```
 publish-doc: clean build-doc
@@ -173,7 +173,7 @@ publish-doc: clean build-doc
 就可以用`make publish-doc`来发布文档页面到 spmjs.org 的文档托管服务中，默认的地址为 http://{{family}}.spmjs.org/{{name}}。
 就可以访问 http://alice.spmjs.org.com/box 来访问对应的文档页了。
 
-如果在支付宝，可以在 http://gitlab.alibaba-inc.com 平台建立一个 group 为 alipay-css 的 git 项目（找@偏右）。
+如果你在`支付宝`，可以在 http://gitlab.alibaba-inc.com 平台建立一个 group 为 alipay-css 的 git 项目（找@偏右）。
 然后在项目的 Makefile 文件的 publish-doc 部分改为下面的代码：
 
 ```

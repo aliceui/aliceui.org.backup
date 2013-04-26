@@ -385,3 +385,34 @@ body .fn-hide {
     line-height: 1;
 }
 
+/* responsive */
+@media (max-width: 980px) {
+    .main-area,
+    #footer-wrapper {
+        width: auto;
+    }
+    .nav-area {
+        height: auto;
+        font-size: 16px;
+    }
+    .main-nav {
+        width: auto;
+        margin: 0;
+        line-height: 40px;
+    }
+    .main-nav li {
+        display: block;
+        margin: 0;
+    }
+    .side-area {
+        position: relative!important;
+        top: 0!important;
+        margin-bottom: 20px;
+        width: auto;
+    }
+    .content-area,
+    .comment-area {
+        margin-left: 0;
+        width: auto;
+    }
+}

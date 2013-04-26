@@ -107,7 +107,7 @@ seajs.use('arale/switchable/0.9.12/tabs', function(Tabs) {
 ## AutoComplete
 
 [AutoComplete](http://aralejs.org/autocomplete) 是自动完成组件，
-可以和 alice.select 进行配合。
+可以和 [alice.select](http://aliceui.org/select/) 进行配合。
 
 ````html
 <link href="http://assets.spmjs.org/alice/select/1.0.0/select.css" rel="stylesheet">

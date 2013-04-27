@@ -117,14 +117,14 @@
 </html>
 ```
 
-把上述代码复制到一个新的 html 文件中，然后用浏览器打开。或者你可以直接访问线上的 demo 地址：[http://jsfiddle.net/Ltye2/](http://jsfiddle.net/Ltye2/)
+把上述代码复制到一个新的 html 文件中，然后用浏览器打开；或者可以直接访问 [jsfiddle 演示](http://jsfiddle.net/Ltye2/)。
 
 你会看到一个使用了 grid、box、nav 和 tipbox 四个模块的页面。
 
 这里我们引用了一个 [one.css](http://assets.spmjs.org/alice/one/1.0.0/one.css) 文件，
 这是一个打包了所有 alice 模块的集合文件。
 
-使用 alice 非常简单，只需要引入样式，复制对应的 HTML 结构，就能构建需要的页面了。
+使用 alice 的通用样式模块非常简单，只需要引入样式，复制对应的 HTML 结构，就能构建需要的页面了。
 相关的文档和 HTML 结构可以访问菜单上的 [基础框架](/docs/framework.html)、[通用样式库](/docs/widget.html)、[JavaScript](/docs/javascript.html) 这三个链接。
 
 
@@ -145,3 +145,10 @@
     和 Arale 模块一样，这行命令会把所有的 Alice 模块安装到 sea-modules 目录中，您可以自由合并和调用。
 
 3. 当然也可以到我们的 [github 仓库](https://github.com/aliceui/) 中 clone 对应的模块。
+
+
+## 就这些？！
+
+你也看到了，Alice 的通用模块就那么几个，也不怎么好看，你兴许不怎么想用。
+
+但是 Alice 本身不是一个只提供这些组件的解决方案，你可以使用这一套模块开发体系[搭建出自己的模块和样式库]((/docs/build.htm)。

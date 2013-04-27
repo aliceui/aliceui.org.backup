@@ -177,7 +177,9 @@ publish-doc: clean build-doc
 就可以用`make publish-doc`来发布文档页面到 spmjs.org 的文档托管服务中，默认的地址为 http://{{family}}.spmjs.org/{{name}}。
 就可以访问 http://alice.spmjs.org.com/box 来访问对应的文档页了。
 
-如果你在`支付宝`，可以在 http://gitlab.alibaba-inc.com 平台建立一个 group 为 alipay-css 的 git 项目（找@偏右）。
+> 注意：要使用 spmjs.org 的文档服务，你需要到网站上注册你自己的用户名作为项目的 `family`。
+
+如果你是`支付宝`的前端，可以在 http://gitlab.alibaba-inc.com 平台建立一个 group 为 alipay-css 的 git 项目（找@偏右）。
 然后在项目的 Makefile 文件的 publish-doc 部分改为下面的代码：
 
 ```

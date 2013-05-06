@@ -81,9 +81,9 @@ $ npm install stylus nib -g
 
 [访问主页](http://learnboost.github.com/stylus/)
 
-## Alib - 样式库搭建工具
+## Stylib - 样式库搭建工具
 
-Alib 是快速构建 [这样](http://aliceui.org/Alib) 的样式库的工具，
+Stylib 是快速构建 [这样](http://aliceui.org/stylib) 的样式库的工具，
 在 [<构建团队的样式库>](/docs/build.html#构建团队的样式库) 一文中提到过，具体使用方式参见此文就好。
 
 支付宝的各业务线有搭建自己的样式库需求的，欢迎使用本工具和提出建议。

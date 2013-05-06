@@ -258,7 +258,7 @@ publish-doc: clean build-doc
 当你构建出了一批样式模块后，你可能需要一个统一的地方展示和管理这些模块（类似这个[页面](http://aliceui.org/stylib/)）。
 一个维护简单使用方便的样式库对于个人开发者、团队、业务线都有很大的帮助。
 
-![](https://i.alipayobjects.com/e/201303/2P2L6fcMCD.png)
+![](https://i.alipayobjects.com/e/201305/GiRFVE0pJ.png)
 
 Alice 的通用样式库是基于支付宝视觉规范的一套模块精选集，数量和质量都会严格控制。
 更好的实践是在各小组各产品线参照通用样式库建立自己的样式精选集。（可以避免制造出鱼龙混杂的模块池而导致的无法查找模块的问题。）

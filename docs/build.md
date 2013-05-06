@@ -283,12 +283,6 @@ $ curl https://raw.github.com/aliceui/stylib/master/bootstrap.sh | sh
 }
 ```
 
-接下来就可以将这个库部署到对应的 git 托管环境下。
-
-```
-$ git remote add origin {{git地址}}
-$ git push origin master
-```
 
 然后运行下面的命令就可以将样式库部署到 spmjs.org 提供静态文档托管服务上。
 具体的地址是 `https://{{package.json中的family}}/spmjs.org/docs//{{package.json中的name}}` 。
@@ -305,6 +299,8 @@ http(s)://样式库根路径/模块名
 
 如果样式库部署到 http://alice.spmjs.org/Alib 的，那么此页面会读取
 alice.spmjs.org/box、alice.spmjs.org/button 和 alice.spmjs.org/nav 这三个页面。（请确保这三个页面有内容！）
+
+最后建议将这个库部署到对应的 git 托管环境下，以便后续管理修改。
 
 
 ### 支付宝前端请按以下步骤操作：
@@ -327,15 +323,6 @@ $ curl https://raw.github.com/aliceui/stylib/alipay/bootstrap.sh | sh
 }
 ```
 
-接下来就可以将这个库部署到对应的 git 托管环境下。
-在支付宝内部，我们使用 gitlab.alibaba-inc.com 来作为样式模块的托管服务。
-请联系 @偏右 在 alipay-css 这个 group 下建库。
-
-```
-$ git remote add origin {{git地址}}
-$ git push origin master
-```
-
 然后运行下面的命令就可以将样式库部署到基础技术组提供的 `yuan.alipay.im` 静态站点服务上。
 具体的地址是 `http://arale.alipay.im/{{family}}/stylib` 。比如`http://arale.alipay.im/app/stylib`。
 
@@ -355,6 +342,12 @@ arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav
 
 这样你就拥有了一个样式库地址为 [arale.alipay.im/app/stylib](http://arale.alipay.im/app/stylib) 的业务线样式库。
 你可以进一步修改这个仓库中的样式和文档来，然后运行 `make publish-doc` 就能不断优化更新它。
+
+最后建议将这个库部署到对应的 git 托管环境下，以便后续管理修改。
+
+在支付宝内部，我们使用 gitlab.alibaba-inc.com 来作为样式模块的托管服务。
+请联系 @偏右 在 alipay-css 这个 group 下建库，当然你可以自己建一个仓库来管理。
+
 
 ### 注意事项
 

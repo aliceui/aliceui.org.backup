@@ -18,12 +18,4 @@ publish-doc: clean build-doc
 clean:
 	@rm -fr _site
 
-
-reporter = spec
-url = tests/runner.html
-test:
-	@mocha-phantomjs --reporter=${reporter} http://127.0.0.1:8000/${url}
-
-
-.PHONY: build-doc debug server publish-doc clean test
-
+.PHONY: build-doc debug server publish-doc clean

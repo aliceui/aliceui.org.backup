@@ -184,13 +184,14 @@ publish-doc: clean build-doc
 
 ```
 publish-doc: clean build-doc
-	@spm config source.alipay.url http://yuan.alipay.im
 	@spm publish --doc _site -s alipay
 ```
 
 完成后在模块根目录使用 `make publish-doc` 命令就能部署到内部提供的静态站点服务上，访问的路径为 `http://arale.alipay.im/alipay-css/box` 。
 
 > 注意，Makefile 文件的缩进一律用 Tab，否则会报错。
+
+> 注意2，若无法上传，试试配置下内部的 spm 源地址。`spm config source.alipay.url http://yuan.alipay.im`
 
 ## 开发某页面的样式
 
@@ -357,3 +358,5 @@ arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav
 > 注意2：Alib 对各子模块的页面的标准有要求，请严格按照 spm init 后的模板来写你每个样式模块的 Readme.md。
 
 有任何问题，请发 [issue](https://github.com/aliceui/aliceui.org/issues/new) 给我们。
+
+> 注意3，若无法上传文档，试试配置下内部的 spm 源地址。`spm config source.alipay.url http://yuan.alipay.im`

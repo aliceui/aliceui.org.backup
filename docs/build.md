@@ -357,6 +357,6 @@ arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav
 
 > 注意2：Alib 对各子模块的页面的标准有要求，请严格按照 spm init 后的模板来写你每个样式模块的 Readme.md。
 
-有任何问题，请发 [issue](https://github.com/aliceui/aliceui.org/issues/new) 给我们。
-
 > 注意3，若无法上传文档，试试配置下内部的 spm 源地址。`spm config source.alipay.url http://yuan.alipay.im`
+
+有任何问题，请发 [issue](https://github.com/aliceui/aliceui.org/issues/new) 给我们。

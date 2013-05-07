@@ -159,7 +159,11 @@ $ spm build
 $ spm publish
 ```
 
-再通过 upload 命令可以把样式模块上传到源中，这样其他模块就可以依赖这个模块了。还可以通过 `spm deploy` 来部署到对应的开发服务器中进行进一步调试。
+```
+$ spm publish -s alipay // 指定发布到内部源 http://yuan.alipay.im
+```
+
+再通过 publish 命令可以把样式模块上传到源中，这样其他模块就可以依赖这个模块了。还可以通过 `spm deploy` 来部署到对应的开发服务器中进行进一步调试。
 
 ### 源码托管和文档部署
 
@@ -271,7 +275,7 @@ Alice 提供了一种简单的方式帮助你在 `spmjs.org` 或 `支付宝内�
 $ curl https://raw.github.com/aliceui/stylib/master/bootstrap.sh | sh
 ```
 
-命令运行后会在当前目录建立一个样式库文件夹 `stylib`，先修改 package.json 中的 family 为你自己的。（比如 alice、tong、app 等，否则你将没有权限部署文档）
+命令运行后会在当前目录建立一个样式库文件夹 `stylib`，先修改 package.json 中的 family 为你注册维护的。（比如 alice、tong、app 等，否则你将没有权限部署文档）
 然后在 package.json 的 spm.alias 字段中写上你要在样式库显示的样式模块。比如：
 
 ```js

@@ -132,7 +132,7 @@
 
 1. 可以直接下载上面的 css 文件，这里提供一个未压缩的版本。
 
-    [http://assets.spmjs.org/alice/one/1.0.0/one.css](http://assets.spmjs.org/alice/one/1.0.0/one.css)
+    [http://assets.spmjs.org/alice/one/1.0.0/one-debug.css](http://assets.spmjs.org/alice/one/1.0.0/one-debug.css)
 
     这个文件来自于 [aliceui/one](https://github.com/aliceui/one)，可以自行 clone 到本地并构建之。
 

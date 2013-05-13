@@ -75,3 +75,5 @@ Alice 的前身是 [http://github.com/alipay/alice](http://github.com/alipay/ali
 [Github 组织](https://github.com/aliceui/)
 
 [Arale 官网](http://aralejs.org)
+
+[支付宝样式集(内网)](http://site.alipay.im/styles)

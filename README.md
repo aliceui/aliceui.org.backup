@@ -11,7 +11,7 @@ Alice 是漫游仙境的童话女神，是支付宝的样式解决方案，是�
 
 她包括了一套通用样式模块库，一个模块化样式构建规范，一组帮助书写和组织样式的工具，以及产出更多 Alice 模块和样式库的完善方案。
 
-![](http://aliceui.org/static/css-icon.png)
+![](/static/alice_by_meago.png)
 
 ## Alice 的特点
 

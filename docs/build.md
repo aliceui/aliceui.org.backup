@@ -22,7 +22,7 @@
 $ npm install spm-alipay-suite -g
 ```
 
-> 确保你已经安装了 `spm 2.0` 及以上版本。否则请重新安装`spm`。
+> 确保你已经安装了 `spm 2.0.0` 及以上版本。否则请重新安装`spm`。
 
 ### 安装 spm
 

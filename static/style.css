@@ -100,7 +100,7 @@ hr {
     padding-top: 15px;
     width: 250px;
     height: 120px;
-    background: #fff url(alice.png) 130px 0 no-repeat;    
+    position: relative;
 }
 
 .title-area h1 {
@@ -122,6 +122,13 @@ hr {
     margin: 0;
     color: #999;
     font-size: 12px;
+}
+
+.title-area img {
+    height: 120px;
+    position: absolute;
+    right: 38px;
+    top: -4px;
 }
 
 .nav-area {

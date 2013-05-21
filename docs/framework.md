@@ -10,8 +10,8 @@
 
 ---
 
-<link rel="stylesheet" href="http://modules.spmjs.org/alice/grid/1.0.0/grid.css" />
-<link rel="stylesheet" href="http://modules.spmjs.org/alice/animate/1.0.0/animate.css" />
+<link rel="stylesheet" href="http://assets.spmjs.org/alice/grid/1.0.0/grid.css" />
+<link rel="stylesheet" href="http://assets.spmjs.org/alice/animate/1.0.0/animate.css" />
 
 ## Base 重设
 

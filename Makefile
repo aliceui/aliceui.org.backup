@@ -13,7 +13,7 @@ watch:
 	@nico server -C $(THEME)/nico.js --watch
 
 publish-doc: clean build-doc
-	@spm publish --doc _site
+	@spm publish --doc _site -s spmjs
 
 clean:
 	@rm -fr _site

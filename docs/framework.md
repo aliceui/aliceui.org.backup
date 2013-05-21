@@ -108,7 +108,7 @@ Rei 目前涵盖了网站常用各类图标约 70 多个，兼容包括 `ie6/7/8
 <script>
 var array = [],
     html = '';
-array = array.concat(iconData['产品/功能ICON']);
+array = array.concat(iconData['产品/品牌ICON']);
 array = array.concat(iconData['通用ICON']);
 array.forEach(function(item) {
     html += '<div class="icon"><i class="iconfont" title="' + item[0] +
@@ -116,6 +116,10 @@ array.forEach(function(item) {
 });
 console.log(html);
 </script>
+
+或者直接访问：
+
+http://jsfiddle.net/FdE3c/show
 -->
 
 <div class="iconset fn-clear">
@@ -133,6 +137,12 @@ console.log(html);
 <div class="icon"><i class="iconfont" title="常见问题">&#xF00E;</i> 常见问题</div>
 <div class="icon"><i class="iconfont" title="自助服务">&#xF010;</i> 自助服务</div>
 <div class="icon"><i class="iconfont" title="回收站">&#xF011;</i> 回收站</div>
+<div class="icon"><i class="iconfont" title="玩转支付宝">&#xF012;</i> 玩转支付宝</div>
+<div class="icon"><i class="iconfont" title="优惠劵">&#xF013;</i> 优惠劵</div>
+<div class="icon"><i class="iconfont" title="购物袋">&#xF018;</i> 购物袋</div>
+<div class="icon"><i class="iconfont" title="支付宝卡">&#xF019;</i> 支付宝卡</div>
+<div class="icon"><i class="iconfont" title="天猫">&#xF01A;</i> 天猫</div>
+<div class="icon"><i class="iconfont" title="支小宝">&#xF01B;</i> 支小宝</div>
 <div class="icon"><i class="iconfont" title="日历/日期">&#xF01C;</i> 日历/日期</div>
 <div class="icon"><i class="iconfont" title="喜欢">&#xF01D;</i> 喜欢</div>
 <div class="icon"><i class="iconfont" title="收藏">&#xF01E;</i> 收藏</div>
@@ -188,8 +198,6 @@ console.log(html);
 <div class="icon"><i class="iconfont" title="申请还款">&#xF053;</i> 申请还款</div>
 <div class="icon"><i class="iconfont" title="信用卡管理">&#xF054;</i> 信用卡管理</div>
 <div class="icon"><i class="iconfont" title="记录">&#xF055;</i> 记录</div>
-<div class="icon"><i class="iconfont" title="优惠劵">&#xF013;</i> 优惠劵</div>
-<div class="icon"><i class="iconfont" title="购物袋">&#xF018;</i> 购物袋</div>
 </div>
 
 支付宝员工请直接访问 [site.alipay.im/rei/](http://site.alipay.im/rei/) 来获取字体代码。

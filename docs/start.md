@@ -128,15 +128,15 @@
 相关的文档和 HTML 结构可以访问菜单上的 [基础框架](/docs/framework.html)、[通用样式库](/docs/widget.html)、[JavaScript](/docs/javascript.html) 这三个链接。
 
 
-## 下载
+## 引用和下载
 
-1. 可以直接下载上面的 css 文件，这里提供一个未压缩的版本。
+1. 可以直接使用上面的 css 文件，这里提供一个未压缩的版本。
 
     [http://assets.spmjs.org/alice/one/1.0.0/one-debug.css](http://assets.spmjs.org/alice/one/1.0.0/one-debug.css)
 
     这个文件来自于 [aliceui/one](https://github.com/aliceui/one)，可以自行 clone 到本地并构建之。
 
-2. 或者通过 [spm](https://github.com/spmjs/spm2/) 工具进行下载。（这个工具在后面会大量使用）
+2. 或者通过 [spm](https://github.com/spmjs/spm2/) 工具下载到本地。（这个工具在后面会大量使用）
 
     ```
     $ spm install alice
@@ -144,7 +144,13 @@
 
     和 Arale 模块一样，这行命令会把所有的 Alice 模块安装到 sea-modules 目录中，您可以自由合并和调用。
 
-3. 当然也可以到我们的 [github 仓库](https://github.com/aliceui/) 中 clone 对应的模块。
+3. 当然也可以到我们的 [github 仓库](https://github.com/aliceui/) 中 clone 对应的模块自行构建。
+
+4. 利用支付宝的 cdn 和 combo 服务。
+
+```
+<link media="all" href="https://a.alipayobjects.com/??alice/base/1.0.0/base.css&alice/button/1.0.0/button.css&alice/grid/1.0.0/grid.css" rel="stylesheet">
+```
 
 
 ## 就这些？！

@@ -148,7 +148,7 @@
 
 4. 利用支付宝的 cdn 和 combo 服务。
 
-    ```
+    ```html
     <link media="all" href="https://a.alipayobjects.com/??alice/base/1.0.0/base.css&alice/button/1.0.0/button.css&alice/grid/1.0.0/grid.css" rel="stylesheet">
     ```
 

@@ -21,7 +21,7 @@
     <head>
     <meta charset="UTF-8">
     <title>Alice 的简单例子</title>
-    <link media="all" href="http://assets.spmjs.org/alice/one/1.0.0/one.css" rel="stylesheet">
+    <link media="all" href="http://assets.spmjs.org/alice/one/1.1.0/one.css" rel="stylesheet">
     <style>
         .wrapper {
             width: 990px;

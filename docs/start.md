@@ -139,10 +139,10 @@
 2. 或者通过 [spm](https://github.com/spmjs/spm2/) 工具下载到本地。（这个工具在后面会大量使用）
 
     ```
-    $ spm install alice
+    $ spm install alice/one
     ```
 
-    和 Arale 模块一样，这行命令会把所有的 Alice 模块安装到 sea-modules 目录中，您可以自由合并和调用。
+    这行命令会把所有的 Alice 模块安装到 sea-modules 目录中，您可以自由合并和调用。
 
 3. 当然也可以到我们的 [github 仓库](https://github.com/aliceui/) 中 clone 对应的模块自行构建。
 

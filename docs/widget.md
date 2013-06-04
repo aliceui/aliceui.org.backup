@@ -22,7 +22,7 @@
             <h2 class="alice-module-title">
                 <a href="#"></a>
             </h2>
-            <span class="alice-module-version">1.0.0</span>
+            <span class="alice-module-version"></span>
             <p class="alice-module-description"></p>
         </div>
         <img class="alice-loading" src="data:image/gif;base64,R0lGODlhEAALAPQAAP///z2LqeLt8dvp7u7090GNqz2LqV+fuJ/F1IW2ycrf51aatHWswaXJ14i4ys3h6FmctUCMqniuw+vz9eHs8fb5+meku+Tu8vT4+cfd5bbT3tbm7PH2+AAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCwAAACwAAAAAEAALAAAFLSAgjmRpnqSgCuLKAq5AEIM4zDVw03ve27ifDgfkEYe04kDIDC5zrtYKRa2WQgAh+QQJCwAAACwAAAAAEAALAAAFJGBhGAVgnqhpHIeRvsDawqns0qeN5+y967tYLyicBYE7EYkYAgAh+QQJCwAAACwAAAAAEAALAAAFNiAgjothLOOIJAkiGgxjpGKiKMkbz7SN6zIawJcDwIK9W/HISxGBzdHTuBNOmcJVCyoUlk7CEAAh+QQJCwAAACwAAAAAEAALAAAFNSAgjqQIRRFUAo3jNGIkSdHqPI8Tz3V55zuaDacDyIQ+YrBH+hWPzJFzOQQaeavWi7oqnVIhACH5BAkLAAAALAAAAAAQAAsAAAUyICCOZGme1rJY5kRRk7hI0mJSVUXJtF3iOl7tltsBZsNfUegjAY3I5sgFY55KqdX1GgIAIfkECQsAAAAsAAAAABAACwAABTcgII5kaZ4kcV2EqLJipmnZhWGXaOOitm2aXQ4g7P2Ct2ER4AMul00kj5g0Al8tADY2y6C+4FIIACH5BAkLAAAALAAAAAAQAAsAAAUvICCOZGme5ERRk6iy7qpyHCVStA3gNa/7txxwlwv2isSacYUc+l4tADQGQ1mvpBAAIfkECQsAAAAsAAAAABAACwAABS8gII5kaZ7kRFGTqLLuqnIcJVK0DeA1r/u3HHCXC/aKxJpxhRz6Xi0ANAZDWa+kEAA7AAAAAAAAAAAA">
@@ -159,11 +159,20 @@ seajs.use(['$', 'gallery/underscore/1.4.4/underscore'], function($, _) {
         }
         var deps = _.pairs(alias);
         _.each(deps, function(dep) {
+            var reg = /(.*)\/(.*)\/(.*)\/(.*)\.css/i;
+            var match = dep[1].match(reg);
+
+            // 解析 name 和 family
+            var family = match[1];            
+            var name = match[2];
+            var version = match[3];
+
             var moduleNode = $($('#alice-module').html());
             moduleNode.find('.alice-module-title a')
                 .attr('href', '/' + dep[0])
                 .attr('id', 'modules-' + dep[0])
                 .html(dep[0]);
+            moduleNode.find('.alice-module-version').html(version);                
             moduleNode.appendTo('.alice-modules');
             var list = substractTitle(moduleNode.find('h2'));
 
@@ -174,8 +183,6 @@ seajs.use(['$', 'gallery/underscore/1.4.4/underscore'], function($, _) {
                     data = $(data);
                     moduleNode.find('.alice-module-description')
                         .html(data.find('.entry-content > p:first-child').html());
-                    moduleNode.find('.alice-module-version')
-                        .html(data.find('#sidebar-wrapper .version a').html());
 
                     data.find('.nico-insert-code').each(function(index, item) {
                         var demoNode = $($('#alice-module-demo').html());

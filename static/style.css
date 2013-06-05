@@ -104,7 +104,7 @@ hr {
 }
 
 .title-area h1 {
-    font-size: 48px;
+    font-size: 54px;
     margin: 0;
     line-height: 60px;
 }
@@ -132,7 +132,7 @@ hr {
 }
 
 .nav-area {
-    font-size: 14px;
+    font-size: 16px;
     height: 60px;
     color: #888;
     margin-bottom: 15px;
@@ -147,11 +147,11 @@ hr {
     line-height: 36px;
     margin: 12px auto 0;
     padding: 0;
-    width: 850px;
+    width: 1000px;
 }
 
 .main-nav li {
-    margin: 0 15px;
+    margin: 0 18px;
     display: inline-block;
     *display: inline;
     *zoom: 1;

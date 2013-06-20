@@ -60,7 +60,7 @@ Peaches 是支付宝前端工程师 @蔡伦 同学开发的，是一个 CSS 雪�
 Peaches 通过分析 CSS 样式规则，提取背景图片，自动合并成雪碧图，
 并自动更新背景定位。免去了手动合并图片和定位的麻烦，而且也大大提升后续修改样式的效率。
 
-更多功能请访问 Peaches 主页：
+更多功能请访问 [Peaches](http://peaches.io/) 主页：
 
 [![](https://raw.github.com/slowhost/upload/1362839444253/peaches.png)](http://peaches.io/)
 

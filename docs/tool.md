@@ -64,7 +64,15 @@ Peaches 通过分析 CSS 样式规则，提取背景图片，自动合并成雪�
 
 [![](https://raw.github.com/slowhost/upload/1362839444253/peaches.png)](http://peaches.io/)
 
-在 spm2 中将会集成 Peaches 工具，尽请期待。
+安装 `spm-alipay-suite` 后，spm build 将支持自动合并雪碧图，只需在 package.json 中标明即可。
+
+```js
+  "spm": {
+    "peaches": true
+  }
+```
+
+使用范例：[afc163/peaches-example](https://github.com/afc163/peaches-example)
 
 ## Stylus - 预编译
 

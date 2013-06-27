@@ -16,12 +16,14 @@
 本文重要内容默认在 Linux\Unix 环境下运行，在开始之前，我们先需要安装几个重要的工具。
 若对这些工具的作用不了解，可以先阅读 [工具](/docs/tool.html) 。
 
-注意，支付宝的前端们可以跳过`[工具准备]`这部分，只须多安装一个套件集合就能获取以下所有工具。
+注意，支付宝的前端们可以跳过`[工具准备]`这部分，只须安装一个套件集合就能获取所有工具。
+（其实外网的同学也可以安装，只不过我们有一些自定义的需求你或许用不到。）
 
 ```
-$ npm install spm -g
-$ npm install spm-alipay-suite -g
+$ npm install apm -g
 ```
+
+安装问题参考 apm 的 [文档](https://github.com/spmjs/apm/)。
 
 ### 安装 spm
 
@@ -29,29 +31,22 @@ $ npm install spm-alipay-suite -g
 $ npm install spm -g
 ```
 
-安装 spm-build、spm-init、spm-deploy 三个插件。
+安装 spm-build、spm-init、spm-deploy、spm-doc 等插件。
 
 ```
 $ npm install spm-build -g
 $ npm install spm-init -g
 $ npm install spm-deploy -g
+$ npm install spm-doc -g
 ```
 
-并安装 spm-init 的 alice 模板：
+安装 spm-init 的 alice 模板：
 
 ```
 $ git clone git://github.com/aralejs/template-alice.git ~/.spm/init/alice
 ```
 
-### 安装 nico
-
-```
-$ npm install nico -g
-```
-
-> 确保 nico 的版本高于 `0.3.0`。
-
-并安装 Alice 所对应的 nico [主题](https://github.com/aliceui/nico-alice/)。
+安装 Alice 所对应的 nico [主题](https://github.com/aliceui/nico-alice/)。
 
 ```
 $ curl https://raw.github.com/aliceui/nico-alice/master/bootstrap.sh | sh
@@ -91,12 +86,12 @@ name 为 box 后，就会生成一个 alice 模块的初始目录结构如下。
 
 ```
 src/
-Makefile
 README.md
+HISTORY.md
 package.json
 ```
 
-其中 `src` 目录存放我们的样式源文件，`Makefile` 用于构建模块的文档，
+其中 `src` 目录存放我们的样式源文件，`HISTORY.md` 用于版本的升级记录，
 `README.md` 是用来写文档和 DEMO 的地方，`package.json` 则存放模块的基本信息。
 我们可以在 `package.json` 中的 spm 字段中的 alias 填写所需的依赖的别名。
 这个 box 模块不需要依赖所以不需要填写。
@@ -139,8 +134,8 @@ package.json
 ### 编码和调试
 
 接下来我们打开 src/box.css 进行编辑，现在就是熟悉的样式编码阶段了。
-在这个阶段，我们可以到项目目录运行 `make watch` 来打开 nico 的调试功能，
-nico 会启动一个 livereload 服务监听生成的文档页面，我们可以用浏览器打开 http://127.0.0.1:8000 访问文档页面并进行调试。
+在这个阶段，我们可以到项目目录运行 `spm doc watch` 来打开 spm doc 的调试功能，
+程序启动一个 livereload 服务监听生成的文档页面，我们可以用浏览器打开 http://127.0.0.1:8000 访问文档页面并进行调试。
 你会看到类似下图的页面。
 
 ![](https://i.alipayobjects.com/e/201303/2Ml1vh9J08.png)
@@ -164,39 +159,45 @@ $ spm publish
 $ spm publish -s alipay // 指定发布到内部源 http://yuan.alipay.im
 ```
 
-再通过 publish 命令可以把样式模块上传到源中，这样其他模块就可以依赖这个模块了。还可以通过 `spm deploy` 来部署到对应的开发服务器中进行进一步调试。
+再通过 publish 命令可以把样式模块上传到源中，这样其他模块就可以依赖这个模块了。
+还可以通过 `spm deploy` 来部署到对应的开发服务器中进行进一步调试。
 
 ### 源码托管和文档部署
 
 最后，建议你将这个目录提交到 github 或 gitlab 中，统一管理你的样式模块。一个版本开发构建完成后，用版本号来打一个 tag 。
-还可以利用 gh-pages 来部署模块的文档页面。
+还可以利用 [源服务器](https://spmjs.org) 来部署模块的文档页面。
 
-比如要把这个模块的静态文档托管到 spmjs.org 上，在项目的 Makefile 
-文件中把 publish-doc 部分替换为下面的代码：
+比如要把这个模块的静态文档托管到 spmjs.org 上，开发完毕后然后在模块根目录运行：
 
 ```
-publish-doc: clean build-doc
-	@spm publish --doc _site
+$ spm doc publish
 ```
 
-就可以用`make publish-doc`来发布文档页面到 spmjs.org 的文档托管服务中，默认的地址为 http://{{family}}.spmjs.org/{{name}}。
+可能需要指定下源服务器：
+
+```
+$ spm doc publish -s alipay
+```
+
+若没有指定源服务器，则表示将会发布到默认的地址中去，
+你可以在 `~/.spm/spmrc` 文件中查看配置的默认源是什么。
+
+当然可以通过命令来配置源服务器的别名：
+
+```
+$ spm config source.default.url https://spmjs.org
+$ spm config source.alipay.url http://yuan.alipay.im
+```
+
+这样可以发布页面到对应的源服务中，默认的地址为 http://{{family}}.spmjs.org/{{name}}。
 就可以访问 http://alice.spmjs.org.com/box 来访问对应的文档页了。
 
 > 注意：要使用 spmjs.org 的文档服务，你需要到网站上注册你自己的用户名作为项目的 `family`。
 
 如果你是`支付宝`的前端，可以在 http://gitlab.alibaba-inc.com 平台建立一个 group 为 alipay-css 的 git 项目（找@偏右）。
-然后在项目的 Makefile 文件的 publish-doc 部分改为下面的代码：
 
-```
-publish-doc: clean build-doc
-	@spm publish --doc _site -s alipay
-```
+支付宝的源服务为 `http://yuan.alipay.im/`，你一般不需要配置，所对应的默认的文档访问地址是 `http://arale.alipay.im/alipay-css/box` 。
 
-完成后在模块根目录使用 `make publish-doc` 命令就能部署到内部提供的静态站点服务上，访问的路径为 `http://arale.alipay.im/alipay-css/box` 。
-
-> 注意，Makefile 文件的缩进一律用 Tab，否则会报错。
-
-> 注意2，若无法上传，试试配置下内部的 spm 源地址。`spm config source.alipay.url http://yuan.alipay.im`
 
 ## 开发某页面的样式
 
@@ -294,7 +295,7 @@ $ curl https://raw.github.com/aliceui/stylib/master/bootstrap.sh | sh
 具体的地址是 `https://{{package.json中的family}}/spmjs.org/docs//{{package.json中的name}}` 。
 
 ```
-$ make publish-doc
+$ spm doc publish
 ```
 
 这个样式库页面会读取 alias 中配置的各模块的文档内容到样式库中，读取的各文档地址是：
@@ -333,7 +334,7 @@ $ curl https://raw.github.com/aliceui/stylib/alipay/bootstrap.sh | sh
 具体的地址是 `http://arale.alipay.im/{{family}}/stylib` 。比如`http://arale.alipay.im/app/stylib`。
 
 ```
-$ make publish-doc
+$ spm doc publish
 ```
 
 这个样式库页面会读取 alias 中配置的各模块的文档内容到样式库中，读取的各文档地址是：
@@ -347,7 +348,7 @@ arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav
 对应的示例展示在 Stylib 的页面上。
 
 这样你就拥有了一个样式库地址为 [arale.alipay.im/app/stylib](http://arale.alipay.im/app/stylib) 的业务线样式库。
-你可以进一步修改这个仓库中的样式和文档来，然后运行 `make publish-doc` 就能不断优化更新它。
+你可以进一步修改这个仓库中的样式和文档来，然后运行 `spm doc publish` 就能不断优化更新它。
 
 最后建议将这个库部署到对应的 git 托管环境下，以便后续管理修改。
 

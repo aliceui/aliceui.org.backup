@@ -164,7 +164,7 @@ $ spm publish -s alipay // 指定发布到内部源 http://yuan.alipay.im
 
 ### 源码托管和文档部署
 
-最后，建议你将这个目录提交到 github 或 gitlab 中，统一管理你的样式模块。一个版本开发构建完成后，用版本号来打一个 tag 。
+最后，建议你将这个目录提交到 github 或 gitlab 中，统一管理你的样式模块。一个版本开发构建完成后，用版本号来打一个 [tag](https://github.com/aliceui/button/tree/1.1.0) 。
 还可以利用 [源服务器](https://spmjs.org) 来部署模块的文档页面。
 
 比如要把这个模块的静态文档托管到 spmjs.org 上，开发完毕后然后在模块根目录运行：
@@ -242,7 +242,15 @@ $ spm config source.alipay.url http://yuan.alipay.im
 ```
 
 通过这种类似于 Arale 中 `require('')` 的方式，引入了这三个模块。
-然后在 src/myalipay.css 的后面继续编写个性化的样式代码。
+在调试页面，文档生成工具会自动把所需依赖的外部样式模块引入，比如 https://assets.spmjs.org/alice/button/1.0.0/button.css，
+默认的静态文件地址是 `https://assets.spmjs.org`，而在支付宝内部，需要引用的是内网的静态文件源地址：`https://yuan.alipay.im/assets/`，
+此时你需要在 package.json 中表明:
+
+```
+"keywords": ["alipay"]
+```
+
+接下来可以在 src/myalipay.css 的后面继续编写个性化的样式代码。
 
 当然可以引入内部的模块，比如我们在 src 下建一个 user.css 文件，专门用来写和用户有关的样式。
 在 myalipay.css 中可以这样引入：

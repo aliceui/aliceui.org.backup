@@ -26,17 +26,19 @@ Spm 是 CMD 社区的构建和包管理工具，在 1.6 及以前的版本都是
 目前 [spm2](http://github.com/spmjs/spm2) 已经发布，Alice 已经全面建构在 spm 2.0 版本之上，相关信息请阅读 spm2 的[文档](http://docs.spmjs.org/)。
 
 ```
-$ spm init      // 初始化模块
-$ spm install   // 安装一个已有模块到本地
-$ spm build     // 完成开发，构建模块
-$ spm publish   // 将模块发布到源上
-$ spm deploy    // 部署到开发机器上
+$ spm init        // 初始化模块
+$ spm install     // 安装一个已有模块到本地
+$ spm doc watch   // 启动本地服务调试文档
+$ spm doc publish // 发布文档到源中
+$ spm build       // 完成开发，构建模块
+$ spm publish     // 将模块发布到源上
+$ spm deploy      // 部署到开发机器上
 ```
 
-常用的命令基本就是这五个，其中[spm build](https://github.com/spmjs/spm-build)、 [spm init](https://github.com/spmjs/spm-init) 和 [spm deploy](https://github.com/spmjs/spm-deploy) 作为 spm 的插件需要额外安装。
+常用的命令基本就是这几个，其中[spm build](https://github.com/spmjs/spm-build)、 [spm init](https://github.com/spmjs/spm-init) 和 [spm deploy](https://github.com/spmjs/spm-deploy) 作为 spm 的插件需要额外安装。
 更多 spm 的使用方式，请参考前面的开发教程或 Arale 的相关文档。
 
-> 注意：支付宝前端请安装 [支付宝 spm 套装](https://github.com/spmjs/spm-alipay-suite)，会对开发有更大的定制性帮助。
+> 注意：支付宝前端请安装支付宝 spm 套装 [apm](https://github.com/spmjs/apm)，会对开发有更大的定制性帮助。
 
 
 ## Nico - 调试&文档
@@ -49,6 +51,8 @@ Nico 是一个 JavaScript 的静态文档生成工具，在 CMD 生态圈中被�
 这是目前前端文档和调试界最出色且简单的工具，没有之一。用了它，你会爱上写文档。
 
 [nico 主页](http://lab.lepture.com/nico/)
+
+在 Alice 中我们封装了 nico 成为一个 spm 的插件，安装 [spm-doc](https://github.com/spmjs/spm-doc) 就后可以调用各种文档调试命令了。
 
 ## Peaches - 雪碧图
 
@@ -64,7 +68,7 @@ Peaches 通过分析 CSS 样式规则，提取背景图片，自动合并成雪�
 
 [![](https://raw.github.com/slowhost/upload/1362839444253/peaches.png)](http://peaches.io/)
 
-安装 `spm-alipay-suite` 后，spm build 将支持自动合并雪碧图，只需在 package.json 中标明即可。
+安装 [apm](https://github.com/spmjs/apm) 后，`spm build` 将支持自动合并雪碧图，只需在 `package.json` 中标明即可。
 
 ```js
   "spm": {

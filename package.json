@@ -28,7 +28,7 @@
         "tiptext": "alice/tiptext/1.1.0/tiptext.css",
         "select": "alice/select/1.0.0/select.css",
         "loading": "alice/loading/1.0.0/loading.css",
-        "step": "alice/step/1.0.1/step.css"
+        "step": "alice/step/1.0.2/step.css"
       }
   }
 }

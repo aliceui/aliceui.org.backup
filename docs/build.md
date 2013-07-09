@@ -24,7 +24,6 @@ $ npm install apm -g
 ```
 
 安装问题参考 apm 的 [文档](https://github.com/spmjs/apm/)。
-
 遇到 `sudo` 的问题请参考[这里](http://aralejs.org/docs/installation.html#%E5%8E%BB%E9%99%A4-sudo)。
 
 ### 安装 spm

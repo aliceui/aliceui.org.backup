@@ -13,10 +13,10 @@
 
 ## 工具准备
 
-本文重要内容默认在 Linux\Unix 环境下运行，在开始之前，我们先需要安装几个重要的工具。
+本文默认在 Linux\Unix 环境下运行，在开始之前，我们先需要安装几个重要的工具。
 若对这些工具的作用不了解，可以先阅读 [工具](/docs/tool.html) 。
 
-注意，支付宝的前端们可以跳过`[工具准备]`这部分，只须安装一个套件集合就能获取所有工具。
+支付宝的前端们可以跳过`[工具准备]`这部分，只须安装一个套件集合就能获取所有工具。
 （其实外网的同学也可以安装，只不过我们有一些自定义的需求你或许用不到。）
 
 ```
@@ -156,12 +156,8 @@ $ spm build
 $ spm publish
 ```
 
-```
-$ spm publish -s alipay // 指定发布到内部源 http://yuan.alipay.im
-```
-
 再通过 publish 命令可以把样式模块上传到源中，这样其他模块就可以依赖这个模块了。
-还可以通过 `spm deploy` 来部署到对应的开发服务器中进行进一步调试。
+
 
 ### 源码托管和文档部署
 
@@ -174,30 +170,16 @@ $ spm publish -s alipay // 指定发布到内部源 http://yuan.alipay.im
 $ spm doc publish
 ```
 
-可能需要指定下源服务器：
-
-```
-$ spm doc publish -s alipay
-```
-
-若没有指定源服务器，则表示将会发布到默认的地址中去，
-你可以在 `~/.spm/spmrc` 文件中查看配置的默认源是什么。
-
-当然可以通过命令来配置源服务器的别名：
-
-```
-$ spm config source.default.url https://spmjs.org
-$ spm config source.alipay.url http://yuan.alipay.im
-```
-
 这样可以发布页面到对应的源服务中，默认的地址为 http://{{family}}.spmjs.org/{{name}}。
 就可以访问 http://alice.spmjs.org.com/box 来访问对应的文档页了。
 
 > 注意：要使用 spmjs.org 的文档服务，你需要到网站上注册你自己的用户名作为项目的 `family`。
 
-如果你是`支付宝`的前端，可以在 http://gitlab.alibaba-inc.com 平台建立一个 group 为 alipay-css 的 git 项目（找@偏右）。
+如果你是`支付宝`的前端，建议在 http://gitlab.alibaba-inc.com 平台建立一个 git 项目用来管理源码。
 
-支付宝的源服务为 `http://yuan.alipay.im/`，你一般不需要配置，所对应的默认的文档访问地址是 `http://arale.alipay.im/alipay-css/box` 。
+支付宝的默认源服务为 `http://yuan.alipay.im/`，你一般不需要配置。默认的文档访问地址是 `http://arale.alipay.im/{{family}}/{{name}}` 。
+
+> 注意：spm publish 和 spm doc publish 命令将会发布模块和文档到默认的源，你可以在 `~/.spm/spmrc` 文件中查看配置的默认源是什么。
 
 
 ## 开发某页面的样式
@@ -279,7 +261,7 @@ $ spm config source.alipay.url http://yuan.alipay.im
 Alice 的通用样式库是基于支付宝视觉规范的一套模块精选集，数量和质量都会严格控制。
 更好的实践是在各小组各产品线参照通用样式库建立自己的样式精选集。（可以避免制造出鱼龙混杂的模块池而导致的无法查找模块的问题。）
 
-Alice 提供了一种简单的方式帮助你在 `spmjs.org` 或 `支付宝内网` 上搭建自己的样式库。在搭建你的样式库前，请先按照上面的做法构建好一批样式库中需要的 Alice 模块。
+Alice 提供了一种简单的方式帮助你在 `spmjs.org` 或 `支付宝内部源` 上搭建自己的样式库。在搭建你的样式库前，请先按照上面的做法构建好一批样式库中需要的 Alice 模块。
 接下来搭建的样式库会帮助你集成这些模块。
 
 > 注意，下面还有个支付宝前端专用的搭建教程。
@@ -361,11 +343,7 @@ arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav
 这样你就拥有了一个样式库地址为 [arale.alipay.im/app/stylib](http://arale.alipay.im/app/stylib) 的业务线样式库。
 你可以进一步修改这个仓库中的样式和文档来，然后运行 `spm doc publish` 就能不断优化更新它。
 
-最后建议将这个库部署到对应的 git 托管环境下，以便后续管理修改。
-
-在支付宝内部，我们使用 gitlab.alibaba-inc.com 来作为样式模块的托管服务。
-请联系 @偏右 在 alipay-css 这个 group 下建库，当然你可以自己建一个仓库来管理。
-
+最后建议将这个库部署到对应的 git 托管环境（如 [gitlab](http://gitlab.alibaba-inc.com)）下，以便后续管理修改。
 
 ### 注意事项
 

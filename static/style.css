@@ -1,7 +1,7 @@
 body {
     color: #666;
     background: #fdfdfd;
-    font-family: "Actor","Lucida Grande",Georgia,sans-serif;
+    font-family: "Marmelad","Lucida Grande",Georgia,sans-serif;
     line-height: 1.5;
 }
 
@@ -127,8 +127,14 @@ hr {
 .title-area img {
     height: 120px;
     position: absolute;
-    right: 34px;
+    right: 28px;
     top: -4px;
+}
+
+.head-area iframe {
+    position: absolute;
+    top: 68px;
+    right: 50px;
 }
 
 .nav-area {

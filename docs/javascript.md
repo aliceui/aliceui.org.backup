@@ -93,7 +93,7 @@ Alice 中的 tab 模块就非常适合和 Switchable 进行配合。
 上面是 DOM 结构和样式文件。然后加上 Switchable 的代码。更多使用方式请访问 [文档](http://aralejs.org/switchable) 。
 
 ````js
-seajs.use('arale/switchable/0.9.14/tabs', function(Tabs) {
+seajs.use('arale/switchable/0.9.15/tabs', function(Tabs) {
     new Tabs({
         element: '.ui-tab',
         triggers: '.ui-tab-item',
@@ -129,12 +129,12 @@ seajs.use('arale/switchable/0.9.14/tabs', function(Tabs) {
 ````
 
 ````js
-seajs.use(['$', 'arale/autocomplete/1.2.1/autocomplete'], function($, AutoComplete) {
+seajs.use(['$', 'arale/autocomplete/1.2.2/autocomplete'], function($, AutoComplete) {
     new AutoComplete({
         trigger: '#input',
         template: $('#template').html(),
         dataSource: ['abc', 'abd', 'abe', 'acd'],
-        width: 150,
+        width: 182,
         classPrefix: 'ui-select'
     }).render();
 });
@@ -168,7 +168,7 @@ seajs.use(['$', 'arale/autocomplete/1.2.1/autocomplete'], function($, AutoComple
 ````
 
 ````js
-seajs.use(['arale/popup/1.1.0/popup'], function(Popup) {
+seajs.use(['arale/popup/1.1.2/popup'], function(Popup) {
     new Popup({
         trigger: '#popup-trigger',
         element: '#popup-element'
@@ -180,10 +180,10 @@ seajs.use(['arale/popup/1.1.0/popup'], function(Popup) {
 
 [Tip](http://aralejs.org/tip) 是典型的应用型组件，样式可以使用 JS 来进行载入。
 
-在 arale/tip/1.1.0/atip 的代码中有这样的调用：
+在 [arale/tip/1.1.4/atip](https://github.com/aralejs/tip/blob/master/dist/atip-debug.js#L5) 的代码中有这样的调用：
 
 ```js
-require('alice/poptip/1.0.0/poptip.css');
+require('alice/poptip/1.1.0/poptip.css');
 ```
 
 使得 atip 不用再单独引用相关的样式，使用起来非常方便。
@@ -201,7 +201,7 @@ require('alice/poptip/1.0.0/poptip.css');
 </style>
 
 ````js
-seajs.use(['arale/tip/1.1.2/atip'], function(Atip) {
+seajs.use(['arale/tip/1.1.4/atip'], function(Atip) {
     new Atip({
         trigger: '#atip',
         content: '我是 Tip 的内容'
@@ -222,7 +222,7 @@ seajs.use(['arale/tip/1.1.2/atip'], function(Atip) {
 ````
 
 ````js
-seajs.use(['arale/dialog/1.1.0/confirmbox'], function(ConfirmBox) {
+seajs.use(['arale/dialog/1.1.3/confirmbox'], function(ConfirmBox) {
     new ConfirmBox({
         trigger: '#confirmbox',
         title: '您好~',

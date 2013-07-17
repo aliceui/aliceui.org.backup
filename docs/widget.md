@@ -140,12 +140,12 @@ seajs.use(['$', 'gallery/underscore/1.4.4/underscore'], function($, _) {
             code.animate({
                 opacity: 1,
                 height: 'toggle'
-            }, 300);
+            }, 200);
         } else {
             code.animate({
                 opacity: 0,
                 height: 'toggle'
-            }, 300);
+            }, 200);
         }
     });
 

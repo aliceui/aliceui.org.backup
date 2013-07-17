@@ -170,7 +170,7 @@ $ spm doc publish
 ```
 
 这样可以发布页面到对应的源服务中，默认的地址为 http://{{family}}.spmjs.org/{{name}}。
-就可以访问 http://alice.spmjs.org.com/box 来访问对应的文档页了。
+就可以访问 http://alice.spmjs.org/box 来访问对应的文档页了。
 
 > 注意：要使用 spmjs.org 的文档服务，你需要到网站上注册你自己的用户名作为项目的 `family`。
 

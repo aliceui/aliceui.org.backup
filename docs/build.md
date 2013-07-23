@@ -313,6 +313,7 @@ $ curl https://raw.github.com/aliceui/stylib/alipay/bootstrap.sh | sh
 在 package.json 的 spm.alias 字段中写上你要在样式库显示的样式模块。比如：
 
 ```js
+"keywords": ["alipay"],
 "spm": {
   "alias": {
     "box": "app/box/1.0.0/box.css",
@@ -321,6 +322,8 @@ $ curl https://raw.github.com/aliceui/stylib/alipay/bootstrap.sh | sh
   }
 }
 ```
+
+需要引用内网的静态文件源地址：https://yuan.alipay.im/assets/ ，加上 `keywords` 表明这点即可。
 
 然后运行下面的命令就可以将样式库部署到基础技术组提供的 `yuan.alipay.im` 静态站点服务上。
 具体的地址是 `http://arale.alipay.im/{{family}}/stylib` 。比如`http://arale.alipay.im/app/stylib`。
@@ -338,12 +341,6 @@ http://arale.alipay.im/模块family/模块名
 比如你建立的 Stylib 是部署到 http://arale.alipay.im/app/stylib 的，那么 Stylib 页面会用 Ajax 的方式去读取
 arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav 这三个页面并取到
 对应的示例展示在 Stylib 的页面上。
-
-在支付宝内部，需要引用的是内网的静态文件源地址：https://yuan.alipay.im/assets/， 此时你需要在 package.json 中表明:
-
-```
-"keywords": ["alipay"]
-```
 
 这样你就拥有了一个样式库地址为 [arale.alipay.im/app/stylib](http://arale.alipay.im/app/stylib) 的业务线样式库。
 你可以进一步修改这个仓库中的样式和文档来，然后运行 `spm doc publish` 就能不断优化更新它。

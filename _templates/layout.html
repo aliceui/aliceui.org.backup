@@ -65,7 +65,7 @@
                 </script>
                 <div class="content-area">
                     <h1>{{post.title}}</h1>
-                    <div class="content">{{post.html}}</div>
+                    <div class="content">{{ post.html|replace_code|add_anchor }}</div>
                 </div>
                 {%- if post.filename == 'index' %}
                 <div class="comment-area">

@@ -339,6 +339,12 @@ http://arale.alipay.im/模块family/模块名
 arale.alipay.im/app/box、arale.alipay.im/app/button 和 arale.alipay.im/app/nav 这三个页面并取到
 对应的示例展示在 Stylib 的页面上。
 
+在支付宝内部，需要引用的是内网的静态文件源地址：https://yuan.alipay.im/assets/， 此时你需要在 package.json 中表明:
+
+```
+"keywords": ["alipay"]
+```
+
 这样你就拥有了一个样式库地址为 [arale.alipay.im/app/stylib](http://arale.alipay.im/app/stylib) 的业务线样式库。
 你可以进一步修改这个仓库中的样式和文档来，然后运行 `spm doc publish` 就能不断优化更新它。
 

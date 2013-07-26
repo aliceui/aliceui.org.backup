@@ -79,10 +79,12 @@ p.alice-module-description {
     border-bottom: none;
     padding: 20px 130px 20px 20px;
     position: relative;
-    margin-bottom: 8px;
 }
 .alice-module-demo:hover {
     background: #fdfdfd;
+}
+.alice-module-dom {
+    margin-bottom: 8px;
 }
 .alice-module-code {
     display: none;

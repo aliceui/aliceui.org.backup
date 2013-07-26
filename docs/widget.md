@@ -124,17 +124,31 @@ a {
 .alice-loading {
     margin-bottom: 20px;
 }
+.black {
+    font-size: 12px;
+    padding: 2px;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+}
 </style>
 
 <div class="alice-modules"></div>
 
 <script type="text/javascript">
-seajs.use(['$', 'gallery/underscore/1.4.4/underscore'], function($, _) {
+seajs.use(['$', 'gallery/underscore/1.4.4/underscore', 'arale/popup/1.1.2/popup'], function($, _, Popup) {
 
     $('.alice-modules').on('mouseenter', '.alice-module-demo', function() {
         $(this).find('.alice-module-sourcecode').fadeIn(200);
     }).on('mouseleave', '.alice-module-demo', function() {
         $(this).find('.alice-module-sourcecode').fadeOut(200);         
+    });
+
+    new Popup({
+        trigger: '.alice-module-sourcecode',
+        template: '<div class="black">源码在下方</div>',
+        delay: -1,
+        delegateNode: '.alice-modules'
     });
 
     $('.alice-modules').on('click', '.alice-module-sourcecode', function() {
@@ -165,7 +179,7 @@ seajs.use(['$', 'gallery/underscore/1.4.4/underscore'], function($, _) {
             var match = dep[1].match(reg);
 
             // 解析 name 和 family
-            var family = match[1];            
+            var family = match[1];
             var name = match[2];
             var version = match[3];
 
@@ -174,7 +188,7 @@ seajs.use(['$', 'gallery/underscore/1.4.4/underscore'], function($, _) {
                 .attr('href', '/' + dep[0])
                 .attr('id', 'modules-' + dep[0])
                 .html(dep[0]);
-            moduleNode.find('.alice-module-version').html(version);                
+            moduleNode.find('.alice-module-version').html(version);
             moduleNode.appendTo('.alice-modules');
             var list = substractTitle(moduleNode.find('h2'));
 

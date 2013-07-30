@@ -78,20 +78,15 @@ Peaches 通过分析 CSS 样式规则，提取背景图片，自动合并成雪�
 
 使用范例：[afc163/peaches-example](https://github.com/afc163/peaches-example)
 
-## Stylus - 预编译
+## 样式预编译
 
-Stylus 是样式的预编译工具，Alice 使用它也是出于个人喜好，但并不排斥使用 less 或 sass。Stylus 还有类似 [nib](https://github.com/visionmedia/nib) 这种强大的 mixin 库，你可以少写几行代码多干些别的。
+Alice 默认支持 stylus 和 less 文件的预编译，
+我们使用了 [grunt-contrib-stylus](https://github.com/gruntjs/grunt-contrib-stylus) 和 [grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less)。
 
-使用之前要先安装：
+安装 `apm` 后只需执行 `spm build`，我们会帮你编译 styl 和 less 文件，就这么简单。
 
-```
-$ npm install stylus nib -g
-```
-
-编译的时候只需执行 `spm build`，就这么简单。
-
-
-[访问主页](http://learnboost.github.com/stylus/)
+[less 主页](http://www.lesscss.net/)
+[stylus 主页](http://learnboost.github.com/stylus/)
 
 ## Stylib - 样式库搭建工具
 

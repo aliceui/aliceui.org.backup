@@ -81,13 +81,13 @@ Peaches 通过分析 CSS 样式规则，提取背景图片，自动合并成雪�
 ## 样式预编译
 
 Alice 默认支持 stylus 和 less 文件的预编译，
-我们使用了 [grunt-contrib-stylus](https://github.com/gruntjs/grunt-contrib-stylus) 和 [grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less)。
+使用了 [grunt-contrib-stylus](https://github.com/gruntjs/grunt-contrib-stylus) 和 [grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less)。
+[alice/select](https://github.com/aliceui/select) 模块使用了 stylus 进行开发。
 
 安装 `apm` 后只需执行 `spm build`，我们会帮你编译 styl 和 less 文件，就这么简单。
 
-[alice/select](https://github.com/aliceui/select) 模块使用了 stylus 进行开发。
-
 [less 主页](http://www.lesscss.net/)
+
 [stylus 主页](http://learnboost.github.com/stylus/)
 
 ## Stylib - 样式库搭建工具

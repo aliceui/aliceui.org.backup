@@ -85,6 +85,8 @@ Alice 默认支持 stylus 和 less 文件的预编译，
 
 安装 `apm` 后只需执行 `spm build`，我们会帮你编译 styl 和 less 文件，就这么简单。
 
+[alice/select](https://github.com/aliceui/select) 模块使用了 stylus 进行开发。
+
 [less 主页](http://www.lesscss.net/)
 [stylus 主页](http://learnboost.github.com/stylus/)
 

@@ -88,6 +88,7 @@ p.alice-module-description {
 }
 .alice-module-code {
     display: none;
+    margin: 0!important;
 }
 h3.alice-module-subtitle {
     position: absolute;
